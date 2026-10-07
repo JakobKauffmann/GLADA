@@ -1,0 +1,93 @@
+[2026-01-08 00:12:01] Experiment: ablation_dann_only
+[2026-01-08 00:12:01] Run ID: 20260108_001201
+[2026-01-08 00:12:01] Logging to: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201
+[2026-01-08 00:12:01] 
+Verifying paths:
+[2026-01-08 00:12:01] ASV Protocol exists: True
+[2026-01-08 00:12:01] ITW Metadata exists: True
+[2026-01-08 00:12:02] 
+Initializing datasets...
+[2026-01-08 00:12:02] Source samples: 25380
+[2026-01-08 00:12:02] Target samples: 31779
+[2026-01-08 00:12:02] Eval samples: 31779
+[2026-01-08 00:12:02] 
+Initializing model...
+[2026-01-08 00:12:03] 
+============================================================
+[2026-01-08 00:12:03] Training Configuration
+[2026-01-08 00:12:03] ============================================================
+[2026-01-08 00:12:03] Model: microsoft/wavlm-base-plus
+[2026-01-08 00:12:03] LoRA: True (r=8)
+[2026-01-08 00:12:03] Domain Adversarial: True
+[2026-01-08 00:12:03] Batch size: 64 x 4 = 256
+[2026-01-08 00:12:03] Mixed Precision: True
+[2026-01-08 00:12:03] Debug Mode: False
+[2026-01-08 00:12:03] Device: cuda
+[2026-01-08 00:12:03] Parameters: 985,604 trainable / 95,367,540 total (1.03%)
+[2026-01-08 00:12:03] ============================================================
+
+[2026-01-08 00:13:32] 
+Epoch 1/10
+[2026-01-08 00:13:32]   Task Loss: 0.4788 | Domain Loss: 0.3534
+[2026-01-08 00:13:32]   Eval EER: 50.00% | AUC: nan% | Acc: 98.64%
+[2026-01-08 00:13:32]   ★ New best EER!
+[2026-01-08 00:13:32] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_000.pt
+[2026-01-08 00:13:33] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/best_model.pt
+[2026-01-08 00:15:02] 
+Epoch 2/10
+[2026-01-08 00:15:02]   Task Loss: 0.1484 | Domain Loss: 0.0243
+[2026-01-08 00:15:02]   Eval EER: 50.00% | AUC: nan% | Acc: 99.31%
+[2026-01-08 00:15:03] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_001.pt
+[2026-01-08 00:16:32] 
+Epoch 3/10
+[2026-01-08 00:16:32]   Task Loss: 0.0961 | Domain Loss: 0.0105
+[2026-01-08 00:16:32]   Eval EER: 50.00% | AUC: nan% | Acc: 99.21%
+[2026-01-08 00:16:32] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_002.pt
+[2026-01-08 00:18:02] 
+Epoch 4/10
+[2026-01-08 00:18:02]   Task Loss: 0.0715 | Domain Loss: 0.0066
+[2026-01-08 00:18:02]   Eval EER: 50.00% | AUC: nan% | Acc: 99.21%
+[2026-01-08 00:18:03] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_003.pt
+[2026-01-08 00:18:04] Removed old checkpoint: checkpoint_epoch_000.pt
+[2026-01-08 00:19:33] 
+Epoch 5/10
+[2026-01-08 00:19:33]   Task Loss: 0.0592 | Domain Loss: 0.0056
+[2026-01-08 00:19:33]   Eval EER: 50.00% | AUC: nan% | Acc: 98.44%
+[2026-01-08 00:19:34] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_004.pt
+[2026-01-08 00:19:35] Removed old checkpoint: checkpoint_epoch_001.pt
+[2026-01-08 00:21:03] 
+Epoch 6/10
+[2026-01-08 00:21:03]   Task Loss: 0.0504 | Domain Loss: 0.0048
+[2026-01-08 00:21:03]   Eval EER: 50.00% | AUC: nan% | Acc: 98.83%
+[2026-01-08 00:21:04] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_005.pt
+[2026-01-08 00:21:06] Removed old checkpoint: checkpoint_epoch_002.pt
+[2026-01-08 00:22:34] 
+Epoch 7/10
+[2026-01-08 00:22:34]   Task Loss: 0.0438 | Domain Loss: 0.0041
+[2026-01-08 00:22:34]   Eval EER: 50.00% | AUC: nan% | Acc: 99.14%
+[2026-01-08 00:22:34] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_006.pt
+[2026-01-08 00:22:35] Removed old checkpoint: checkpoint_epoch_003.pt
+[2026-01-08 00:24:04] 
+Epoch 8/10
+[2026-01-08 00:24:04]   Task Loss: 0.0445 | Domain Loss: 0.0038
+[2026-01-08 00:24:04]   Eval EER: 50.00% | AUC: nan% | Acc: 99.23%
+[2026-01-08 00:24:04] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_007.pt
+[2026-01-08 00:24:05] Removed old checkpoint: checkpoint_epoch_004.pt
+[2026-01-08 00:25:33] 
+Epoch 9/10
+[2026-01-08 00:25:33]   Task Loss: 0.0422 | Domain Loss: 0.0035
+[2026-01-08 00:25:33]   Eval EER: 50.00% | AUC: nan% | Acc: 99.02%
+[2026-01-08 00:25:34] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_008.pt
+[2026-01-08 00:25:35] Removed old checkpoint: checkpoint_epoch_005.pt
+[2026-01-08 00:27:03] 
+Epoch 10/10
+[2026-01-08 00:27:03]   Task Loss: 0.0406 | Domain Loss: 0.0036
+[2026-01-08 00:27:03]   Eval EER: 50.00% | AUC: nan% | Acc: 98.99%
+[2026-01-08 00:27:04] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201/checkpoints/checkpoint_epoch_009.pt
+[2026-01-08 00:27:05] Removed old checkpoint: checkpoint_epoch_006.pt
+[2026-01-08 00:27:05] 
+============================================================
+[2026-01-08 00:27:05] Training complete!
+[2026-01-08 00:27:05] Best EER: 50.00% (epoch 1)
+[2026-01-08 00:27:05] Logs saved to: /content/drive/MyDrive/Jakob/Experiments/ablation_dann_only/20260108_001201
+[2026-01-08 00:27:05] ============================================================

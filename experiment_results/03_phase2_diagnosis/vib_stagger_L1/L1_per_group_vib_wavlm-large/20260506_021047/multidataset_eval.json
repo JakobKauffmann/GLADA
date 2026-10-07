@@ -1,0 +1,39 @@
+{
+  "backbone": "wavlm-large",
+  "variant": "per_group_vib",
+  "model_class": "PerGroupVIBModel",
+  "staggered": false,
+  "l0_source_eer": 11.668599646312503,
+  "results": {
+    "ITW": {
+      "eer": 13.513389030030536,
+      "ci_low": 13.142151073356125,
+      "ci_high": 13.903003271717902,
+      "auc": 0.9392019934746579,
+      "acc": 86.47849208596871,
+      "n_samples": 31779,
+      "name": "ITW"
+    },
+    "2019_LA": {
+      "eer": 0.9791242610360943,
+      "ci_low": 0.9008440219720444,
+      "ci_high": 1.0594716135984106,
+      "auc": 0.9980447634895159,
+      "acc": 98.41655319567079,
+      "n_samples": 71237,
+      "name": "2019_LA"
+    },
+    "2021_LA": {
+      "error": "LA: keys=None audio=/content/data/asvspoof21_la/ASVspoof2021_LA_eval/flac"
+    },
+    "CodecFakePlus": {
+      "eer": 50.0,
+      "ci_low": 50.0,
+      "ci_high": 50.0,
+      "auc": 0.5,
+      "acc": 0.0,
+      "n_samples": 0,
+      "name": "CodecFakePlus"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+[2026-01-08 03:20:27] Experiment: ablation_baseline_frozen
+[2026-01-08 03:20:27] Run ID: 20260108_032027
+[2026-01-08 03:20:27] Logging to: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_032027
+[2026-01-08 03:20:27] 
+Verifying paths:
+[2026-01-08 03:20:27] ASV Train Protocol: True
+[2026-01-08 03:20:27] ASV Eval Protocol: True
+[2026-01-08 03:20:27] ITW Metadata: True
+[2026-01-08 03:20:28] 
+Initializing datasets...
+[2026-01-08 03:20:28] Source train samples: 25380
+[2026-01-08 03:20:28]   Class distribution: bonafide=2580, spoof=22800
+[2026-01-08 03:20:28] Target train samples: 31779
+[2026-01-08 03:20:28] Source eval samples: 71237
+[2026-01-08 03:20:28]   Class distribution: bonafide=7355, spoof=63882
+[2026-01-08 03:20:28] Target eval samples: 31779
+[2026-01-08 03:20:28]   Class distribution: bonafide=0, spoof=31779
+[2026-01-08 03:20:28] 
+Initializing model...
+[2026-01-08 03:20:29] Class counts: bonafide=2580, spoof=22800
+[2026-01-08 03:20:29] Class weights: bonafide=1.797, spoof=0.203
+[2026-01-08 03:20:29] 
+============================================================
+[2026-01-08 03:20:29] Training Configuration
+[2026-01-08 03:20:29] ============================================================
+[2026-01-08 03:20:29] Model: microsoft/wavlm-base-plus
+[2026-01-08 03:20:29] LoRA: False (r=8)
+[2026-01-08 03:20:29] Domain Adversarial: False
+[2026-01-08 03:20:29] Class Weighting: True
+[2026-01-08 03:20:29] Focal Loss: False
+[2026-01-08 03:20:29] Batch size: 32 x 4
+[2026-01-08 03:20:29] GRL warmup epochs: 5
+[2026-01-08 03:20:29] Domain loss weight: 0.05
+[2026-01-08 03:20:29] Device: cuda
+[2026-01-08 03:20:29] Parameters: 90,577,268 trainable / 94,777,716 total (95.57%)
+[2026-01-08 03:20:29] ============================================================
+
+[2026-01-08 03:23:58] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 03:23:58]                  Predicted
+[2026-01-08 03:23:58]                  Bonafide  Spoof
+[2026-01-08 03:23:58] Actual Bonafide     7333       22
+[2026-01-08 03:23:58] Actual Spoof        2985    60897

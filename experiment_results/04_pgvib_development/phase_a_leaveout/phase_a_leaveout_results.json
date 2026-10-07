@@ -1,0 +1,17 @@
+{
+  "drop_vib_g0": {
+    "best_eer": 17.605240437870314,
+    "best_epoch": 3,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_a_leaveout/drop_vib_g0/20260506_202402"
+  },
+  "drop_vib_g1": {
+    "best_eer": 13.799419625359043,
+    "best_epoch": 3,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_a_leaveout/drop_vib_g1/20260506_232130"
+  },
+  "drop_vib_g2": {
+    "best_eer": 11.989695111650525,
+    "best_epoch": 5,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_a_leaveout/drop_vib_g2/20260507_021817"
+  }
+}

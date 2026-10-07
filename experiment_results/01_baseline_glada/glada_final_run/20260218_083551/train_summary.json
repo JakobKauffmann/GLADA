@@ -1,0 +1,8 @@
+{
+  "experiment_name": "glada_final_run",
+  "backbone": "wavlm-large",
+  "seed": 42,
+  "best_eer": 17.043412718742946,
+  "best_epoch": 19,
+  "total_epochs": 50
+}

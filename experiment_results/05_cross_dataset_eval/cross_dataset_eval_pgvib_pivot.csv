@@ -1,0 +1,7 @@
+condition,backbone,2021_LA,2021_DF,WaveFake,CodecFake
+drop_vib_g0,wavlm-base-plus,29.67±1.19,43.93±0.15,22.61±1.77,36.90±1.59
+g0_only_large,wavlm-large,27.26,43.81,31.55,35.37
+g0_only_vib,wavlm-base-plus,27.94±0.65,43.89±0.12,19.98±2.94,36.46±2.48
+g0_only_xlsr,xlsr-300m,27.26,44.25,27.50,32.78
+monolithic_vib,wavlm-base-plus,28.69±0.65,44.04±0.01,21.36±2.10,38.65±1.02
+pergroup_vib,wavlm-base-plus,31.18±2.09,43.97±0.12,23.12±3.81,37.49±2.78

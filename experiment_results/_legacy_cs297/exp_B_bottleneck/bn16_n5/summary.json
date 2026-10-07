@@ -1,0 +1,10 @@
+{
+  "best_eer": 20.71877764826337,
+  "best_epoch": 13,
+  "bn_dim": 16,
+  "noise_std": 0.05,
+  "config": {
+    "bottleneck_dim": 16,
+    "feature_noise_std": 0.05
+  }
+}

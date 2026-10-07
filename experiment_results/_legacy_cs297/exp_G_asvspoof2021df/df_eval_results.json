@@ -1,0 +1,767 @@
+{
+  "dataset": "ASVspoof 2021 DF eval",
+  "training_data": "ASVspoof 2019 LA",
+  "n_eval_samples": 611829,
+  "individual_eers": {
+    "wavlm_base_plus__no_adapt": 27.6018,
+    "wavlm_base_plus__dann": 34.579,
+    "wavlm_base_plus__dann_ib": 28.8761,
+    "wavlm_base_plus__caan": 28.8567,
+    "wavlm_base_plus__mmd": 27.6179,
+    "wavlm_base_plus__coral": 27.594,
+    "wav2vec2_base__no_adapt": 33.796,
+    "wav2vec2_base__dann": 45.7449,
+    "wav2vec2_base__dann_ib": 46.9353,
+    "wav2vec2_base__caan": 48.6174,
+    "wav2vec2_base__mmd": 39.9497,
+    "wav2vec2_base__coral": 33.8996,
+    "wav2vec2_large__no_adapt": 36.3921,
+    "wav2vec2_large__dann": 42.2238,
+    "wav2vec2_large__mmd": 37.1645,
+    "wav2vec2_large__coral": 36.7582,
+    "xlsr_300m__no_adapt": 25.0691,
+    "xlsr_300m__dann": 39.3887,
+    "xlsr_300m__dann_ib": 24.7026,
+    "xlsr_300m__mmd": 24.6444,
+    "xlsr_300m__coral": 24.9915,
+    "wavlm_large__no_adapt": 25.8883,
+    "wavlm_large__dann": 25.9618,
+    "wavlm_large__dann_ib": 25.9022,
+    "wavlm_large__caan": 26.8105,
+    "wavlm_large__mmd": 26.9272,
+    "wavlm_large__coral": 27.1437,
+    "FUSION__wavlm_bp+xlsr": 25.9802
+  },
+  "comprehensive_metrics": {
+    "wavlm_base_plus__no_adapt": {
+      "eer": 27.6018,
+      "auc": 82.4448,
+      "accuracy": 54.7723,
+      "precision": 6.999,
+      "recall": 91.4312,
+      "f1": 13.0026,
+      "confusion_matrix": [
+        [
+          314434,
+          274778
+        ],
+        [
+          1938,
+          20679
+        ]
+      ]
+    },
+    "wavlm_base_plus__dann": {
+      "eer": 34.579,
+      "auc": 78.5142,
+      "accuracy": 81.5097,
+      "precision": 9.6814,
+      "recall": 48.0479,
+      "f1": 16.1156,
+      "confusion_matrix": [
+        [
+          487833,
+          101379
+        ],
+        [
+          11750,
+          10867
+        ]
+      ]
+    },
+    "wavlm_base_plus__dann_ib": {
+      "eer": 28.8761,
+      "auc": 81.3296,
+      "accuracy": 56.2855,
+      "precision": 6.9338,
+      "recall": 87.1468,
+      "f1": 12.8455,
+      "confusion_matrix": [
+        [
+          324661,
+          264551
+        ],
+        [
+          2907,
+          19710
+        ]
+      ]
+    },
+    "wavlm_base_plus__caan": {
+      "eer": 28.8567,
+      "auc": 81.385,
+      "accuracy": 56.3926,
+      "precision": 6.9446,
+      "recall": 87.0717,
+      "f1": 12.8633,
+      "confusion_matrix": [
+        [
+          325333,
+          263879
+        ],
+        [
+          2924,
+          19693
+        ]
+      ]
+    },
+    "wavlm_base_plus__mmd": {
+      "eer": 27.6179,
+      "auc": 82.3147,
+      "accuracy": 54.4096,
+      "precision": 6.9702,
+      "recall": 91.7894,
+      "f1": 12.9566,
+      "confusion_matrix": [
+        [
+          312134,
+          277078
+        ],
+        [
+          1857,
+          20760
+        ]
+      ]
+    },
+    "wavlm_base_plus__coral": {
+      "eer": 27.594,
+      "auc": 82.4178,
+      "accuracy": 54.5621,
+      "precision": 6.9846,
+      "recall": 91.6744,
+      "f1": 12.9802,
+      "confusion_matrix": [
+        [
+          313093,
+          276119
+        ],
+        [
+          1883,
+          20734
+        ]
+      ]
+    },
+    "wav2vec2_base__no_adapt": {
+      "eer": 33.796,
+      "auc": 79.2889,
+      "accuracy": 84.2297,
+      "precision": 11.126,
+      "recall": 46.7392,
+      "f1": 17.9735,
+      "confusion_matrix": [
+        [
+          504771,
+          84441
+        ],
+        [
+          12046,
+          10571
+        ]
+      ]
+    },
+    "wav2vec2_base__dann": {
+      "eer": 45.7449,
+      "auc": 66.8837,
+      "accuracy": 58.0666,
+      "precision": 4.4189,
+      "recall": 50.1393,
+      "f1": 8.122,
+      "confusion_matrix": [
+        [
+          343928,
+          245284
+        ],
+        [
+          11277,
+          11340
+        ]
+      ]
+    },
+    "wav2vec2_base__dann_ib": {
+      "eer": 46.9353,
+      "auc": 65.7568,
+      "accuracy": 55.9171,
+      "precision": 4.1916,
+      "recall": 49.9845,
+      "f1": 7.7346,
+      "confusion_matrix": [
+        [
+          330812,
+          258400
+        ],
+        [
+          11312,
+          11305
+        ]
+      ]
+    },
+    "wav2vec2_base__caan": {
+      "eer": 48.6174,
+      "auc": 64.0562,
+      "accuracy": 52.6283,
+      "precision": 3.9044,
+      "recall": 50.0376,
+      "f1": 7.2436,
+      "confusion_matrix": [
+        [
+          310678,
+          278534
+        ],
+        [
+          11300,
+          11317
+        ]
+      ]
+    },
+    "wav2vec2_base__mmd": {
+      "eer": 39.9497,
+      "auc": 72.9064,
+      "accuracy": 69.8674,
+      "precision": 6.0746,
+      "recall": 49.4495,
+      "f1": 10.82,
+      "confusion_matrix": [
+        [
+          416285,
+          172927
+        ],
+        [
+          11433,
+          11184
+        ]
+      ]
+    },
+    "wav2vec2_base__coral": {
+      "eer": 33.8996,
+      "auc": 79.1427,
+      "accuracy": 84.0875,
+      "precision": 11.0136,
+      "recall": 46.6773,
+      "f1": 17.8221,
+      "confusion_matrix": [
+        [
+          503915,
+          85297
+        ],
+        [
+          12060,
+          10557
+        ]
+      ]
+    },
+    "wav2vec2_large__no_adapt": {
+      "eer": 36.3921,
+      "auc": 74.5429,
+      "accuracy": 58.1793,
+      "precision": 5.9363,
+      "recall": 69.4699,
+      "f1": 10.9379,
+      "confusion_matrix": [
+        [
+          340246,
+          248966
+        ],
+        [
+          6905,
+          15712
+        ]
+      ]
+    },
+    "wav2vec2_large__dann": {
+      "eer": 42.2238,
+      "auc": 65.934,
+      "accuracy": 57.773,
+      "precision": 4.9901,
+      "recall": 57.7795,
+      "f1": 9.1869,
+      "confusion_matrix": [
+        [
+          340404,
+          248808
+        ],
+        [
+          9549,
+          13068
+        ]
+      ]
+    },
+    "wav2vec2_large__mmd": {
+      "eer": 37.1645,
+      "auc": 73.7415,
+      "accuracy": 58.1288,
+      "precision": 5.8123,
+      "recall": 67.9179,
+      "f1": 10.7082,
+      "confusion_matrix": [
+        [
+          340288,
+          248924
+        ],
+        [
+          7256,
+          15361
+        ]
+      ]
+    },
+    "wav2vec2_large__coral": {
+      "eer": 36.7582,
+      "auc": 74.2298,
+      "accuracy": 58.1622,
+      "precision": 5.8779,
+      "recall": 68.7271,
+      "f1": 10.8296,
+      "confusion_matrix": [
+        [
+          340309,
+          248903
+        ],
+        [
+          7073,
+          15544
+        ]
+      ]
+    },
+    "xlsr_300m__no_adapt": {
+      "eer": 25.0691,
+      "auc": 85.5694,
+      "accuracy": 57.1774,
+      "precision": 7.5485,
+      "recall": 94.1018,
+      "f1": 13.9759,
+      "confusion_matrix": [
+        [
+          328545,
+          260667
+        ],
+        [
+          1334,
+          21283
+        ]
+      ]
+    },
+    "xlsr_300m__dann": {
+      "eer": 39.3887,
+      "auc": 74.4359,
+      "accuracy": 70.2149,
+      "precision": 6.2317,
+      "recall": 50.241,
+      "f1": 11.088,
+      "confusion_matrix": [
+        [
+          418232,
+          170980
+        ],
+        [
+          11254,
+          11363
+        ]
+      ]
+    },
+    "xlsr_300m__dann_ib": {
+      "eer": 24.7026,
+      "auc": 85.7272,
+      "accuracy": 55.2095,
+      "precision": 7.4285,
+      "recall": 96.989,
+      "f1": 13.8,
+      "confusion_matrix": [
+        [
+          315852,
+          273360
+        ],
+        [
+          681,
+          21936
+        ]
+      ]
+    },
+    "xlsr_300m__mmd": {
+      "eer": 24.6444,
+      "auc": 86.0173,
+      "accuracy": 57.3812,
+      "precision": 7.6273,
+      "recall": 94.765,
+      "f1": 14.1183,
+      "confusion_matrix": [
+        [
+          329642,
+          259570
+        ],
+        [
+          1184,
+          21433
+        ]
+      ]
+    },
+    "xlsr_300m__coral": {
+      "eer": 24.9915,
+      "auc": 85.5999,
+      "accuracy": 56.7946,
+      "precision": 7.5252,
+      "recall": 94.6766,
+      "f1": 13.9422,
+      "confusion_matrix": [
+        [
+          326073,
+          263139
+        ],
+        [
+          1204,
+          21413
+        ]
+      ]
+    },
+    "wavlm_large__no_adapt": {
+      "eer": 25.8883,
+      "auc": 84.8157,
+      "accuracy": 57.4545,
+      "precision": 7.4566,
+      "recall": 92.0989,
+      "f1": 13.7963,
+      "confusion_matrix": [
+        [
+          330693,
+          258519
+        ],
+        [
+          1787,
+          20830
+        ]
+      ]
+    },
+    "wavlm_large__dann": {
+      "eer": 25.9618,
+      "auc": 84.6648,
+      "accuracy": 57.2309,
+      "precision": 7.4264,
+      "recall": 92.1873,
+      "f1": 13.7454,
+      "confusion_matrix": [
+        [
+          329305,
+          259907
+        ],
+        [
+          1767,
+          20850
+        ]
+      ]
+    },
+    "wavlm_large__dann_ib": {
+      "eer": 25.9022,
+      "auc": 84.7886,
+      "accuracy": 57.3293,
+      "precision": 7.4435,
+      "recall": 92.205,
+      "f1": 13.775,
+      "confusion_matrix": [
+        [
+          329903,
+          259309
+        ],
+        [
+          1763,
+          20854
+        ]
+      ]
+    },
+    "wavlm_large__caan": {
+      "eer": 26.8105,
+      "auc": 84.1058,
+      "accuracy": 58.1635,
+      "precision": 7.3861,
+      "recall": 89.415,
+      "f1": 13.6451,
+      "confusion_matrix": [
+        [
+          335638,
+          253574
+        ],
+        [
+          2394,
+          20223
+        ]
+      ]
+    },
+    "wavlm_large__mmd": {
+      "eer": 26.9272,
+      "auc": 83.9846,
+      "accuracy": 58.3441,
+      "precision": 7.3851,
+      "recall": 88.9773,
+      "f1": 13.6383,
+      "confusion_matrix": [
+        [
+          336842,
+          252370
+        ],
+        [
+          2493,
+          20124
+        ]
+      ]
+    },
+    "wavlm_large__coral": {
+      "eer": 27.1437,
+      "auc": 83.8494,
+      "accuracy": 58.439,
+      "precision": 7.3617,
+      "recall": 88.4246,
+      "f1": 13.5918,
+      "confusion_matrix": [
+        [
+          337548,
+          251664
+        ],
+        [
+          2618,
+          19999
+        ]
+      ]
+    },
+    "FUSION__wavlm_bp+xlsr": {
+      "eer": 25.9802,
+      "auc": 84.5338,
+      "accuracy": 56.225,
+      "precision": 7.3375,
+      "recall": 93.2352,
+      "f1": 13.6044,
+      "confusion_matrix": [
+        [
+          322914,
+          266298
+        ],
+        [
+          1530,
+          21087
+        ]
+      ]
+    }
+  },
+  "cross_domain_comparison": [
+    {
+      "backbone": "FUSION",
+      "method": "wavlm_bp+xlsr",
+      "itw_eer": 13.7,
+      "df_eer": 25.98022005900877,
+      "delta": 12.28022005900877,
+      "ratio": 1.8963664276648737
+    },
+    {
+      "backbone": "wav2vec2_base",
+      "method": "caan",
+      "itw_eer": 28.99,
+      "df_eer": 48.61735337081646,
+      "delta": 19.62735337081646,
+      "ratio": 1.6770387502868735
+    },
+    {
+      "backbone": "wav2vec2_base",
+      "method": "coral",
+      "itw_eer": 34.22,
+      "df_eer": 33.89958757167224,
+      "delta": -0.3204124283277565,
+      "ratio": 0.9906366911651737
+    },
+    {
+      "backbone": "wav2vec2_base",
+      "method": "dann",
+      "itw_eer": 30.13,
+      "df_eer": 45.744941589235935,
+      "delta": 15.614941589235936,
+      "ratio": 1.518252293038033
+    },
+    {
+      "backbone": "wav2vec2_base",
+      "method": "dann_ib",
+      "itw_eer": 28.38,
+      "df_eer": 46.93532896975077,
+      "delta": 18.55532896975077,
+      "ratio": 1.6538170884337833
+    },
+    {
+      "backbone": "wav2vec2_base",
+      "method": "mmd",
+      "itw_eer": 28.73,
+      "df_eer": 39.94966501949649,
+      "delta": 11.219665019496492,
+      "ratio": 1.3905208847718933
+    },
+    {
+      "backbone": "wav2vec2_base",
+      "method": "no_adapt",
+      "itw_eer": 33.7,
+      "df_eer": 33.79599801188872,
+      "delta": 0.09599801188871737,
+      "ratio": 1.0028486056940271
+    },
+    {
+      "backbone": "wav2vec2_large",
+      "method": "coral",
+      "itw_eer": 32.24,
+      "df_eer": 36.75815269839687,
+      "delta": 4.518152698396868,
+      "ratio": 1.1401412127294315
+    },
+    {
+      "backbone": "wav2vec2_large",
+      "method": "dann",
+      "itw_eer": 31.5,
+      "df_eer": 42.223849761002874,
+      "delta": 10.723849761002874,
+      "ratio": 1.3404396749524723
+    },
+    {
+      "backbone": "wav2vec2_large",
+      "method": "mmd",
+      "itw_eer": 32.46,
+      "df_eer": 37.16449767887771,
+      "delta": 4.704497678877708,
+      "ratio": 1.1449321527688758
+    },
+    {
+      "backbone": "wav2vec2_large",
+      "method": "no_adapt",
+      "itw_eer": 32.14,
+      "df_eer": 36.392096778982506,
+      "delta": 4.252096778982505,
+      "ratio": 1.1322992152763691
+    },
+    {
+      "backbone": "wavlm_base_plus",
+      "method": "caan",
+      "itw_eer": 14.49,
+      "df_eer": 28.856698560154015,
+      "delta": 14.366698560154015,
+      "ratio": 1.9914905838615606
+    },
+    {
+      "backbone": "wavlm_base_plus",
+      "method": "coral",
+      "itw_eer": 23.46,
+      "df_eer": 27.594007714604597,
+      "delta": 4.134007714604596,
+      "ratio": 1.1762151626003665
+    },
+    {
+      "backbone": "wavlm_base_plus",
+      "method": "dann",
+      "itw_eer": 25.58,
+      "df_eer": 34.578966419215234,
+      "delta": 8.998966419215236,
+      "ratio": 1.3517969671311665
+    },
+    {
+      "backbone": "wavlm_base_plus",
+      "method": "dann_ib",
+      "itw_eer": 14.24,
+      "df_eer": 28.876141525760644,
+      "delta": 14.636141525760644,
+      "ratio": 2.0278189273708316
+    },
+    {
+      "backbone": "wavlm_base_plus",
+      "method": "mmd",
+      "itw_eer": 19.55,
+      "df_eer": 27.617908703894617,
+      "delta": 8.067908703894616,
+      "ratio": 1.4126807521173717
+    },
+    {
+      "backbone": "wavlm_base_plus",
+      "method": "no_adapt",
+      "itw_eer": 22.41,
+      "df_eer": 27.601801616030087,
+      "delta": 5.191801616030087,
+      "ratio": 1.2316734322191025
+    },
+    {
+      "backbone": "wavlm_large",
+      "method": "caan",
+      "itw_eer": 17.75,
+      "df_eer": 26.81054051946855,
+      "delta": 9.06054051946855,
+      "ratio": 1.5104529870123127
+    },
+    {
+      "backbone": "wavlm_large",
+      "method": "coral",
+      "itw_eer": 22.21,
+      "df_eer": 27.14366236217819,
+      "delta": 4.93366236217819,
+      "ratio": 1.2221369816379193
+    },
+    {
+      "backbone": "wavlm_large",
+      "method": "dann",
+      "itw_eer": 19.71,
+      "df_eer": 25.9618277186217,
+      "delta": 6.251827718621698,
+      "ratio": 1.317190650361324
+    },
+    {
+      "backbone": "wavlm_large",
+      "method": "dann_ib",
+      "itw_eer": 18.27,
+      "df_eer": 25.902239071072497,
+      "delta": 7.632239071072497,
+      "ratio": 1.4177470755923645
+    },
+    {
+      "backbone": "wavlm_large",
+      "method": "mmd",
+      "itw_eer": 19.61,
+      "df_eer": 26.92723208115448,
+      "delta": 7.317232081154479,
+      "ratio": 1.3731377909818705
+    },
+    {
+      "backbone": "wavlm_large",
+      "method": "no_adapt",
+      "itw_eer": 21.9,
+      "df_eer": 25.888257816784677,
+      "delta": 3.988257816784678,
+      "ratio": 1.182112229076926
+    },
+    {
+      "backbone": "xlsr_300m",
+      "method": "coral",
+      "itw_eer": 21.53,
+      "df_eer": 24.99145334128995,
+      "delta": 3.4614533412899497,
+      "ratio": 1.16077349471853
+    },
+    {
+      "backbone": "xlsr_300m",
+      "method": "dann",
+      "itw_eer": 21.63,
+      "df_eer": 39.38872431828994,
+      "delta": 17.75872431828994,
+      "ratio": 1.8210228533652306
+    },
+    {
+      "backbone": "xlsr_300m",
+      "method": "dann_ib",
+      "itw_eer": 19.06,
+      "df_eer": 24.70258827130023,
+      "delta": 5.64258827130023,
+      "ratio": 1.296043455996864
+    },
+    {
+      "backbone": "xlsr_300m",
+      "method": "mmd",
+      "itw_eer": 20.73,
+      "df_eer": 24.64437668467263,
+      "delta": 3.9143766846726287,
+      "ratio": 1.1888266611033589
+    },
+    {
+      "backbone": "xlsr_300m",
+      "method": "no_adapt",
+      "itw_eer": 22.3,
+      "df_eer": 25.069076084024722,
+      "delta": 2.7690760840247215,
+      "ratio": 1.1241738154271175
+    }
+  ]
+}

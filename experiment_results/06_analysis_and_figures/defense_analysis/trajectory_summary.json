@@ -1,0 +1,66 @@
+{
+  "full_glada": {
+    "p2_epochs": 15,
+    "first_eer": 24.14854837576802,
+    "best_eer": 20.682763578090015,
+    "last_eer": 21.1287356728431,
+    "slope_last5_pp_per_epoch": 0.051027860411087485,
+    "first_to_best_gap": 3.4657847976780047
+  },
+  "no_glada": {
+    "p2_epochs": 13,
+    "first_eer": 27.626754807836605,
+    "best_eer": 22.673657293413264,
+    "last_eer": 25.541945812345933,
+    "slope_last5_pp_per_epoch": -0.15295625105497251,
+    "first_to_best_gap": 4.953097514423341
+  },
+  "backbone_only": {
+    "p2_epochs": 17,
+    "first_eer": 20.303810356539422,
+    "best_eer": 13.40017815117751,
+    "last_eer": 27.255190000960138,
+    "slope_last5_pp_per_epoch": -0.25710099652535984,
+    "first_to_best_gap": 6.903632205361912
+  },
+  "no_cka": {
+    "p2_epochs": 13,
+    "first_eer": 17.488392159550685,
+    "best_eer": 15.302984692296862,
+    "last_eer": 29.72015514585531,
+    "slope_last5_pp_per_epoch": 2.506395697137874,
+    "first_to_best_gap": 2.185407467253823
+  },
+  "no_speaker": {
+    "p2_epochs": 15,
+    "first_eer": 19.606162438086628,
+    "best_eer": 16.432144558835336,
+    "last_eer": 16.87997393180091,
+    "slope_last5_pp_per_epoch": -0.054643278623341805,
+    "first_to_best_gap": 3.1740178792512914
+  },
+  "no_vib": {
+    "p2_epochs": 14,
+    "first_eer": 17.20071434794858,
+    "best_eer": 15.889479533413049,
+    "last_eer": 20.822325042018324,
+    "slope_last5_pp_per_epoch": 0.2300437045840146,
+    "first_to_best_gap": 1.3112348145355313
+  },
+  "wavlm-large_s42": {
+    "p2_epochs": 17,
+    "first_eer": 16.990943443406863,
+    "best_eer": 12.58723738781336,
+    "last_eer": 13.416920787207175,
+    "slope_last5_pp_per_epoch": 0.02783452111524508,
+    "first_to_best_gap": 4.403706055593503
+  },
+  "wavlm-large_s123": {
+    "p2_epochs": 17,
+    "first_eer": 16.867530464534745,
+    "best_eer": 15.950276672982458,
+    "last_eer": 16.97436020856594,
+    "slope_last5_pp_per_epoch": -0.1458744928964895,
+    "first_to_best_gap": 0.9172537915522874
+  }
+}

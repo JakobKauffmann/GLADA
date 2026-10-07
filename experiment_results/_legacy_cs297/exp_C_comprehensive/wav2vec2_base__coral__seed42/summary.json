@@ -1,0 +1,12 @@
+{
+  "best_eer": 34.217310360320965,
+  "best_epoch": 14,
+  "backbone": "wav2vec2_base",
+  "method": "coral",
+  "seed": 42,
+  "domain_weight": 0.3,
+  "lr": 0.0001,
+  "input_dim": 768,
+  "num_epochs": 30,
+  "elapsed_min": 1.1490512212117514
+}

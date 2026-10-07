@@ -1,0 +1,116 @@
+[2026-02-03 06:30:35] Experiment: coral_lora_seed456
+[2026-02-03 06:30:35] Run ID: 20260203_063034
+[2026-02-03 06:30:35] Logging to: /content/drive/MyDrive/Jakob/Experiments/coral_lora_seed456/20260203_063034
+[2026-02-03 06:30:35] 
+============================================================
+[2026-02-03 06:30:35] Training Configuration
+[2026-02-03 06:30:35] ============================================================
+[2026-02-03 06:30:35] Model: microsoft/wavlm-base-plus
+[2026-02-03 06:30:35] LoRA: True (r=8)
+[2026-02-03 06:30:35] Domain Adversarial: False
+[2026-02-03 06:30:35] Batch size: 32 x 2 = 64
+[2026-02-03 06:30:35] Mixed Precision: True
+[2026-02-03 06:30:35] Debug Mode: False
+[2026-02-03 06:30:35] Device: cuda
+[2026-02-03 06:30:35] Parameters: 886,404 trainable / 95,268,340 total (0.93%)
+[2026-02-03 06:30:35] ============================================================
+
+[2026-02-03 06:32:05] 
+Epoch 1/20
+[2026-02-03 06:32:05]   Task Loss: 0.4143 | Domain Loss: 0.6932
+[2026-02-03 06:32:05]   Eval EER: 36.97% | AUC: 68.89% | Acc: 39.94%
+[2026-02-03 06:32:05]   â˜… New best EER!
+[2026-02-03 06:33:35] 
+Epoch 2/20
+[2026-02-03 06:33:35]   Task Loss: 0.1280 | Domain Loss: 0.6934
+[2026-02-03 06:33:35]   Eval EER: 30.80% | AUC: 77.19% | Acc: 39.38%
+[2026-02-03 06:33:35]   â˜… New best EER!
+[2026-02-03 06:35:05] 
+Epoch 3/20
+[2026-02-03 06:35:05]   Task Loss: 0.0666 | Domain Loss: 0.6934
+[2026-02-03 06:35:05]   Eval EER: 23.22% | AUC: 84.54% | Acc: 39.07%
+[2026-02-03 06:35:05]   â˜… New best EER!
+[2026-02-03 06:36:35] 
+Epoch 4/20
+[2026-02-03 06:36:35]   Task Loss: 0.0468 | Domain Loss: 0.6933
+[2026-02-03 06:36:35]   Eval EER: 21.79% | AUC: 86.04% | Acc: 38.51%
+[2026-02-03 06:36:35]   â˜… New best EER!
+[2026-02-03 06:38:06] 
+Epoch 5/20
+[2026-02-03 06:38:06]   Task Loss: 0.0321 | Domain Loss: 0.6934
+[2026-02-03 06:38:06]   Eval EER: 22.52% | AUC: 85.33% | Acc: 38.93%
+[2026-02-03 06:39:36] 
+Epoch 6/20
+[2026-02-03 06:39:36]   Task Loss: 0.0266 | Domain Loss: 0.6933
+[2026-02-03 06:39:36]   Eval EER: 21.49% | AUC: 86.37% | Acc: 39.20%
+[2026-02-03 06:39:36]   â˜… New best EER!
+[2026-02-03 06:39:37] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/coral_lora_seed456/20260203_063034/checkpoints/checkpoint_epoch_005.pt
+[2026-02-03 06:39:37] Saved best model: /content/drive/MyDrive/Jakob/Experiments/coral_lora_seed456/20260203_063034/checkpoints/best_model.pt
+[2026-02-03 06:41:09] 
+Epoch 7/20
+[2026-02-03 06:41:09]   Task Loss: 0.0220 | Domain Loss: 0.6934
+[2026-02-03 06:41:09]   Eval EER: 20.22% | AUC: 87.70% | Acc: 39.33%
+[2026-02-03 06:41:09]   â˜… New best EER!
+[2026-02-03 06:42:40] 
+Epoch 8/20
+[2026-02-03 06:42:40]   Task Loss: 0.0186 | Domain Loss: 0.6933
+[2026-02-03 06:42:40]   Eval EER: 21.21% | AUC: 86.53% | Acc: 38.46%
+[2026-02-03 06:44:10] 
+Epoch 9/20
+[2026-02-03 06:44:10]   Task Loss: 0.0161 | Domain Loss: 0.6933
+[2026-02-03 06:44:10]   Eval EER: 20.78% | AUC: 86.95% | Acc: 38.65%
+[2026-02-03 06:45:39] 
+Epoch 10/20
+[2026-02-03 06:45:39]   Task Loss: 0.0159 | Domain Loss: 0.6932
+[2026-02-03 06:45:39]   Eval EER: 19.62% | AUC: 88.00% | Acc: 38.72%
+[2026-02-03 06:45:39]   â˜… New best EER!
+[2026-02-03 06:47:09] 
+Epoch 11/20
+[2026-02-03 06:47:09]   Task Loss: 0.0133 | Domain Loss: 0.6932
+[2026-02-03 06:47:09]   Eval EER: 20.73% | AUC: 87.01% | Acc: 39.37%
+[2026-02-03 06:48:39] 
+Epoch 12/20
+[2026-02-03 06:48:39]   Task Loss: 0.0114 | Domain Loss: 0.6933
+[2026-02-03 06:48:39]   Eval EER: 20.06% | AUC: 87.70% | Acc: 38.84%
+[2026-02-03 06:48:39] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/coral_lora_seed456/20260203_063034/checkpoints/checkpoint_epoch_011.pt
+[2026-02-03 06:50:10] 
+Epoch 13/20
+[2026-02-03 06:50:10]   Task Loss: 0.0111 | Domain Loss: 0.6934
+[2026-02-03 06:50:10]   Eval EER: 19.62% | AUC: 88.14% | Acc: 39.07%
+[2026-02-03 06:51:40] 
+Epoch 14/20
+[2026-02-03 06:51:40]   Task Loss: 0.0111 | Domain Loss: 0.6934
+[2026-02-03 06:51:40]   Eval EER: 20.05% | AUC: 87.81% | Acc: 39.09%
+[2026-02-03 06:53:09] 
+Epoch 15/20
+[2026-02-03 06:53:09]   Task Loss: 0.0088 | Domain Loss: 0.6932
+[2026-02-03 06:53:09]   Eval EER: 19.91% | AUC: 87.91% | Acc: 38.87%
+[2026-02-03 06:54:39] 
+Epoch 16/20
+[2026-02-03 06:54:39]   Task Loss: 0.0092 | Domain Loss: 0.6934
+[2026-02-03 06:54:39]   Eval EER: 19.69% | AUC: 88.04% | Acc: 38.95%
+[2026-02-03 06:56:09] 
+Epoch 17/20
+[2026-02-03 06:56:09]   Task Loss: 0.0081 | Domain Loss: 0.6933
+[2026-02-03 06:56:09]   Eval EER: 19.83% | AUC: 87.91% | Acc: 38.74%
+[2026-02-03 06:57:38] 
+Epoch 18/20
+[2026-02-03 06:57:38]   Task Loss: 0.0084 | Domain Loss: 0.6934
+[2026-02-03 06:57:38]   Eval EER: 19.51% | AUC: 88.21% | Acc: 38.57%
+[2026-02-03 06:57:38]   â˜… New best EER!
+[2026-02-03 06:57:39] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/coral_lora_seed456/20260203_063034/checkpoints/checkpoint_epoch_017.pt
+[2026-02-03 06:57:40] Saved best model: /content/drive/MyDrive/Jakob/Experiments/coral_lora_seed456/20260203_063034/checkpoints/best_model.pt
+[2026-02-03 06:59:12] 
+Epoch 19/20
+[2026-02-03 06:59:12]   Task Loss: 0.0090 | Domain Loss: 0.6934
+[2026-02-03 06:59:12]   Eval EER: 19.67% | AUC: 88.11% | Acc: 38.74%
+[2026-02-03 07:00:42] 
+Epoch 20/20
+[2026-02-03 07:00:42]   Task Loss: 0.0072 | Domain Loss: 0.6933
+[2026-02-03 07:00:42]   Eval EER: 19.67% | AUC: 88.11% | Acc: 38.73%
+[2026-02-03 07:00:42] 
+============================================================
+[2026-02-03 07:00:42] Training complete!
+[2026-02-03 07:00:42] Best EER: 19.51% (epoch 18)
+[2026-02-03 07:00:42] Logs saved to: /content/drive/MyDrive/Jakob/Experiments/coral_lora_seed456/20260203_063034
+[2026-02-03 07:00:42] ============================================================

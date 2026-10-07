@@ -1,0 +1,20 @@
+[2026-01-08 03:31:20] Experiment: dann_wavlm_fixed
+[2026-01-08 03:31:20] Run ID: 20260108_033120
+[2026-01-08 03:31:20] Logging to: /content/drive/MyDrive/Jakob/Experiments/dann_wavlm_fixed/20260108_033120
+[2026-01-08 03:31:20] 
+Verifying paths:
+[2026-01-08 03:31:20] ASV Train Protocol: True
+[2026-01-08 03:31:20] ASV Eval Protocol: True
+[2026-01-08 03:31:20] ITW Metadata: True
+[2026-01-08 03:31:20] 
+Initializing datasets...
+[2026-01-08 03:31:20] Source train samples: 500
+[2026-01-08 03:31:20]   Class distribution: bonafide=500, spoof=0
+[2026-01-08 03:31:20] Target train samples: 500
+[2026-01-08 03:31:20] Source eval samples: 200
+[2026-01-08 03:31:20]   Class distribution: bonafide=28, spoof=172
+[2026-01-08 03:31:20] Target eval samples: 200
+[2026-01-08 03:31:20]   Class distribution: bonafide=0, spoof=200
+[2026-01-08 03:31:20] 
+Initializing model...
+[2026-01-08 03:31:21] Class counts: bonafide=500, spoof=0

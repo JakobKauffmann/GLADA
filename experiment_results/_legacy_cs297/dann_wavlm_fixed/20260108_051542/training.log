@@ -1,0 +1,49 @@
+[2026-01-08 05:15:42] Experiment: dann_wavlm_fixed
+[2026-01-08 05:15:42] Run ID: 20260108_051542
+[2026-01-08 05:15:42] Logging to: /content/drive/MyDrive/Jakob/Experiments/dann_wavlm_fixed/20260108_051542
+[2026-01-08 05:15:42] 
+Verifying paths:
+[2026-01-08 05:15:42] ASV Train Protocol: True
+[2026-01-08 05:15:42] ASV Eval Protocol: True
+[2026-01-08 05:15:42] ITW Metadata: True
+[2026-01-08 05:15:42] 
+Initializing datasets...
+[2026-01-08 05:15:42] Source train samples: 500
+[2026-01-08 05:15:42]   Class distribution: bonafide=500, spoof=0
+[2026-01-08 05:15:42] Target train samples: 500
+[2026-01-08 05:15:42] Source eval samples: 200
+[2026-01-08 05:15:42]   Class distribution: bonafide=28, spoof=172
+[2026-01-08 05:15:42] Target eval samples: 200
+[2026-01-08 05:15:42]   Class distribution: bonafide=0, spoof=200
+[2026-01-08 05:15:42] 
+Initializing model...
+[2026-01-08 05:15:43] Class counts: bonafide=500, spoof=0
+[2026-01-08 05:15:43] Class weights: bonafide=0.004, spoof=1.996
+[2026-01-08 05:15:43] 
+============================================================
+[2026-01-08 05:15:43] Training Configuration
+[2026-01-08 05:15:43] ============================================================
+[2026-01-08 05:15:43] Model: microsoft/wavlm-base-plus
+[2026-01-08 05:15:43] LoRA: True (r=8)
+[2026-01-08 05:15:43] Domain Adversarial: True
+[2026-01-08 05:15:43] Class Weighting: True
+[2026-01-08 05:15:43] Focal Loss: False
+[2026-01-08 05:15:43] Batch size: 32 x 4
+[2026-01-08 05:15:43] GRL warmup epochs: 5
+[2026-01-08 05:15:43] Domain loss weight: 0.05
+[2026-01-08 05:15:43] Device: cuda
+[2026-01-08 05:15:43] Parameters: 985,604 trainable / 95,367,540 total (1.03%)
+[2026-01-08 05:15:43] ============================================================
+
+[2026-01-08 05:15:47] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 05:15:47]                  Predicted
+[2026-01-08 05:15:47]                  Bonafide  Spoof
+[2026-01-08 05:15:47] Actual Bonafide       28        0
+[2026-01-08 05:15:47] Actual Spoof         172        0
+[2026-01-08 05:15:48] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 05:15:49]                  Predicted
+[2026-01-08 05:15:49]                  Bonafide  Spoof
+[2026-01-08 05:15:49] Actual Bonafide        0        0
+[2026-01-08 05:15:49] Actual Spoof         200        0

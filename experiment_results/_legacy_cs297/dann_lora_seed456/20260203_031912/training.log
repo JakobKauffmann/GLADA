@@ -1,0 +1,116 @@
+[2026-02-03 03:19:12] Experiment: dann_lora_seed456
+[2026-02-03 03:19:12] Run ID: 20260203_031912
+[2026-02-03 03:19:12] Logging to: /content/drive/MyDrive/Jakob/Experiments/dann_lora_seed456/20260203_031912
+[2026-02-03 03:19:12] 
+============================================================
+[2026-02-03 03:19:12] Training Configuration
+[2026-02-03 03:19:12] ============================================================
+[2026-02-03 03:19:12] Model: microsoft/wavlm-base-plus
+[2026-02-03 03:19:12] LoRA: True (r=8)
+[2026-02-03 03:19:12] Domain Adversarial: True
+[2026-02-03 03:19:12] Batch size: 32 x 2 = 64
+[2026-02-03 03:19:12] Mixed Precision: True
+[2026-02-03 03:19:12] Debug Mode: False
+[2026-02-03 03:19:12] Device: cuda
+[2026-02-03 03:19:12] Parameters: 886,404 trainable / 95,268,340 total (0.93%)
+[2026-02-03 03:19:12] ============================================================
+
+[2026-02-03 03:20:42] 
+Epoch 1/20
+[2026-02-03 03:20:42]   Task Loss: 0.4143 | Domain Loss: 0.6436
+[2026-02-03 03:20:42]   Eval EER: 36.96% | AUC: 68.90% | Acc: 39.94%
+[2026-02-03 03:20:42]   â˜… New best EER!
+[2026-02-03 03:22:12] 
+Epoch 2/20
+[2026-02-03 03:22:12]   Task Loss: 0.1280 | Domain Loss: 0.2563
+[2026-02-03 03:22:12]   Eval EER: 30.81% | AUC: 77.19% | Acc: 39.38%
+[2026-02-03 03:22:12]   â˜… New best EER!
+[2026-02-03 03:23:42] 
+Epoch 3/20
+[2026-02-03 03:23:42]   Task Loss: 0.0666 | Domain Loss: 0.0747
+[2026-02-03 03:23:42]   Eval EER: 23.23% | AUC: 84.54% | Acc: 39.07%
+[2026-02-03 03:23:42]   â˜… New best EER!
+[2026-02-03 03:25:12] 
+Epoch 4/20
+[2026-02-03 03:25:12]   Task Loss: 0.0468 | Domain Loss: 0.0380
+[2026-02-03 03:25:12]   Eval EER: 21.79% | AUC: 86.05% | Acc: 38.51%
+[2026-02-03 03:25:12]   â˜… New best EER!
+[2026-02-03 03:26:42] 
+Epoch 5/20
+[2026-02-03 03:26:42]   Task Loss: 0.0321 | Domain Loss: 0.0254
+[2026-02-03 03:26:42]   Eval EER: 22.50% | AUC: 85.34% | Acc: 38.93%
+[2026-02-03 03:28:12] 
+Epoch 6/20
+[2026-02-03 03:28:12]   Task Loss: 0.0266 | Domain Loss: 0.0193
+[2026-02-03 03:28:12]   Eval EER: 21.50% | AUC: 86.37% | Acc: 39.20%
+[2026-02-03 03:28:12]   â˜… New best EER!
+[2026-02-03 03:28:13] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/dann_lora_seed456/20260203_031912/checkpoints/checkpoint_epoch_005.pt
+[2026-02-03 03:28:14] Saved best model: /content/drive/MyDrive/Jakob/Experiments/dann_lora_seed456/20260203_031912/checkpoints/best_model.pt
+[2026-02-03 03:29:45] 
+Epoch 7/20
+[2026-02-03 03:29:45]   Task Loss: 0.0219 | Domain Loss: 0.0155
+[2026-02-03 03:29:45]   Eval EER: 20.22% | AUC: 87.70% | Acc: 39.33%
+[2026-02-03 03:29:45]   â˜… New best EER!
+[2026-02-03 03:31:15] 
+Epoch 8/20
+[2026-02-03 03:31:15]   Task Loss: 0.0186 | Domain Loss: 0.0120
+[2026-02-03 03:31:15]   Eval EER: 21.21% | AUC: 86.53% | Acc: 38.46%
+[2026-02-03 03:32:45] 
+Epoch 9/20
+[2026-02-03 03:32:45]   Task Loss: 0.0161 | Domain Loss: 0.0107
+[2026-02-03 03:32:45]   Eval EER: 20.77% | AUC: 86.95% | Acc: 38.65%
+[2026-02-03 03:34:15] 
+Epoch 10/20
+[2026-02-03 03:34:15]   Task Loss: 0.0159 | Domain Loss: 0.0092
+[2026-02-03 03:34:15]   Eval EER: 19.62% | AUC: 88.01% | Acc: 38.72%
+[2026-02-03 03:34:15]   â˜… New best EER!
+[2026-02-03 03:35:45] 
+Epoch 11/20
+[2026-02-03 03:35:45]   Task Loss: 0.0133 | Domain Loss: 0.0094
+[2026-02-03 03:35:45]   Eval EER: 20.72% | AUC: 87.02% | Acc: 39.36%
+[2026-02-03 03:37:15] 
+Epoch 12/20
+[2026-02-03 03:37:15]   Task Loss: 0.0114 | Domain Loss: 0.0097
+[2026-02-03 03:37:15]   Eval EER: 20.04% | AUC: 87.70% | Acc: 38.83%
+[2026-02-03 03:37:16] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/dann_lora_seed456/20260203_031912/checkpoints/checkpoint_epoch_011.pt
+[2026-02-03 03:38:50] 
+Epoch 13/20
+[2026-02-03 03:38:50]   Task Loss: 0.0111 | Domain Loss: 0.0075
+[2026-02-03 03:38:50]   Eval EER: 19.62% | AUC: 88.15% | Acc: 39.07%
+[2026-02-03 03:40:19] 
+Epoch 14/20
+[2026-02-03 03:40:19]   Task Loss: 0.0111 | Domain Loss: 0.0071
+[2026-02-03 03:40:19]   Eval EER: 20.04% | AUC: 87.82% | Acc: 39.08%
+[2026-02-03 03:41:50] 
+Epoch 15/20
+[2026-02-03 03:41:50]   Task Loss: 0.0088 | Domain Loss: 0.0080
+[2026-02-03 03:41:50]   Eval EER: 19.92% | AUC: 87.91% | Acc: 38.87%
+[2026-02-03 03:43:19] 
+Epoch 16/20
+[2026-02-03 03:43:19]   Task Loss: 0.0092 | Domain Loss: 0.0071
+[2026-02-03 03:43:19]   Eval EER: 19.69% | AUC: 88.04% | Acc: 38.95%
+[2026-02-03 03:44:49] 
+Epoch 17/20
+[2026-02-03 03:44:49]   Task Loss: 0.0081 | Domain Loss: 0.0064
+[2026-02-03 03:44:49]   Eval EER: 19.81% | AUC: 87.91% | Acc: 38.74%
+[2026-02-03 03:46:19] 
+Epoch 18/20
+[2026-02-03 03:46:19]   Task Loss: 0.0084 | Domain Loss: 0.0074
+[2026-02-03 03:46:19]   Eval EER: 19.51% | AUC: 88.21% | Acc: 38.57%
+[2026-02-03 03:46:19]   â˜… New best EER!
+[2026-02-03 03:46:20] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/dann_lora_seed456/20260203_031912/checkpoints/checkpoint_epoch_017.pt
+[2026-02-03 03:46:21] Saved best model: /content/drive/MyDrive/Jakob/Experiments/dann_lora_seed456/20260203_031912/checkpoints/best_model.pt
+[2026-02-03 03:47:52] 
+Epoch 19/20
+[2026-02-03 03:47:52]   Task Loss: 0.0090 | Domain Loss: 0.0063
+[2026-02-03 03:47:52]   Eval EER: 19.66% | AUC: 88.11% | Acc: 38.74%
+[2026-02-03 03:49:22] 
+Epoch 20/20
+[2026-02-03 03:49:22]   Task Loss: 0.0072 | Domain Loss: 0.0072
+[2026-02-03 03:49:22]   Eval EER: 19.68% | AUC: 88.11% | Acc: 38.73%
+[2026-02-03 03:49:22] 
+============================================================
+[2026-02-03 03:49:22] Training complete!
+[2026-02-03 03:49:22] Best EER: 19.51% (epoch 18)
+[2026-02-03 03:49:22] Logs saved to: /content/drive/MyDrive/Jakob/Experiments/dann_lora_seed456/20260203_031912
+[2026-02-03 03:49:22] ============================================================

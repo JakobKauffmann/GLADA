@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2026-01-08T03:28:19.798486",
+    "epoch": 0,
+    "train_task_loss": 0.11159028701673873,
+    "train_domain_loss": 0.7079270760919828,
+    "grl_alpha": 0.0,
+    "learning_rate": 9.999995037213413e-05,
+    "epoch_time": 126.6368625164032,
+    "source_eer": 2.7429284078345426,
+    "source_eer_threshold": 

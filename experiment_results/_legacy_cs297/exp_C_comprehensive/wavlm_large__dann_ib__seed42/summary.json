@@ -1,0 +1,13 @@
+{
+  "best_eer": 18.38215504879016,
+  "best_epoch": 15,
+  "backbone": "wavlm_large",
+  "method": "dann_ib",
+  "seed": 42,
+  "domain_weight": 0.3,
+  "lr": 0.0001,
+  "input_dim": 1024,
+  "num_epochs": 30,
+  "bn_dim": 24,
+  "elapsed_min": 1.385751469930013
+}

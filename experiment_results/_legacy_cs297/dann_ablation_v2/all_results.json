@@ -1,0 +1,556 @@
+[
+  {
+    "config_name": "baseline_frozen",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.638010545571645,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "Frozen WavLM + classifier only",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "baseline_frozen",
+    "seed": 123,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.642603075504303,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "Frozen WavLM + classifier only",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "baseline_frozen",
+    "seed": 456,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6351685325304667,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "Frozen WavLM + classifier only",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "baseline_lora",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6686291575431824,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "LoRA fine-tuning without DANN",
+      "use_lora": true,
+      "use_domain_adversarial": false,
+      "lora_r": 8,
+      "lora_alpha": 32
+    }
+  },
+  {
+    "config_name": "baseline_lora",
+    "seed": 123,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6516361554463704,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "LoRA fine-tuning without DANN",
+      "use_lora": true,
+      "use_domain_adversarial": false,
+      "lora_r": 8,
+      "lora_alpha": 32
+    }
+  },
+  {
+    "config_name": "baseline_lora",
+    "seed": 456,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6491360783576965,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "LoRA fine-tuning without DANN",
+      "use_lora": true,
+      "use_domain_adversarial": false,
+      "lora_r": 8,
+      "lora_alpha": 32
+    }
+  },
+  {
+    "config_name": "baseline_full_ft",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.7108611027399699,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "Full fine-tuning without DANN",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": false
+    }
+  },
+  {
+    "config_name": "baseline_full_ft",
+    "seed": 123,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 1.408528463045756,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "Full fine-tuning without DANN",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": false
+    }
+  },
+  {
+    "config_name": "baseline_full_ft",
+    "seed": 456,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6721407334009807,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "Full fine-tuning without DANN",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": false
+    }
+  },
+  {
+    "config_name": "dann_frozen",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.650420602162679,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "dann_frozen",
+    "seed": 123,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6587321400642395,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "dann_frozen",
+    "seed": 456,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6750703970591228,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "dann_lora",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6808723688125611,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN + LoRA",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "lora_r": 8,
+      "lora_alpha": 32
+    }
+  },
+  {
+    "config_name": "dann_lora",
+    "seed": 123,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.685447347164154,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN + LoRA",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "lora_r": 8,
+      "lora_alpha": 32
+    }
+  },
+  {
+    "config_name": "dann_lora",
+    "seed": 456,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6915627280871074,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN + LoRA",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "lora_r": 8,
+      "lora_alpha": 32
+    }
+  },
+  {
+    "config_name": "dann_full_ft",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6837303400039673,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN + full fine-tuning",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": false
+    }
+  },
+  {
+    "config_name": "dann_full_ft",
+    "seed": 123,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.695688529809316,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN + full fine-tuning",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": false
+    }
+  },
+  {
+    "config_name": "dann_full_ft",
+    "seed": 456,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.70201682249705,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN + full fine-tuning",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": false
+    }
+  },
+  {
+    "config_name": "ablation_lambda_0.01",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.7078262448310852,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.01,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "ablation_lambda_0.05",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.702042826016744,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.05,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "ablation_lambda_0.1",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6789347529411316,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "ablation_lambda_0.2",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6914275328318278,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.2,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "ablation_lambda_0.5",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.703234851360321,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.5,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true
+    }
+  },
+  {
+    "config_name": "ablation_lora_r4",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 2.734176675478617,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true,
+      "lora_r": 4,
+      "lora_alpha": 16
+    }
+  },
+  {
+    "config_name": "ablation_lora_r8",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.7098286906878154,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true,
+      "lora_r": 8,
+      "lora_alpha": 32
+    }
+  },
+  {
+    "config_name": "ablation_lora_r16",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6901312748591105,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true,
+      "lora_r": 16,
+      "lora_alpha": 64
+    }
+  },
+  {
+    "config_name": "ablation_lora_r32",
+    "seed": 42,
+    "best_eer": 50.0,
+    "best_epoch": 0,
+    "final_eer": 50.0,
+    "final_auc": NaN,
+    "train_time_min": 0.6871587634086609,
+    "config": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "num_epochs": 15,
+      "domain_loss_weight": 0.1,
+      "grl_warmup_epochs": 2,
+      "description": "DANN with frozen WavLM (YOUR KEY FINDING)",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true,
+      "lora_r": 32,
+      "lora_alpha": 128
+    }
+  }
+]

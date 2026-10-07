@@ -1,0 +1,190 @@
+{
+  "full_glada": {
+    "best_eer": 19.636561007871332,
+    "best_epoch": 3,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_full_glada/20260303_063553",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {},
+    "total_epochs": 20
+  },
+  "no_glada": {
+    "best_eer": 15.01449779248007,
+    "best_epoch": 1,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_no_glada/20260303_090542",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_glada": false,
+      "use_global_domain_disc": true
+    },
+    "total_epochs": 20
+  },
+  "no_vib": {
+    "best_eer": 14.654149360473953,
+    "best_epoch": 2,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_no_vib/20260303_111736",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_vib": false
+    },
+    "total_epochs": 20
+  },
+  "no_speaker": {
+    "best_eer": 13.439211305302084,
+    "best_epoch": 3,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_no_speaker/20260303_133649",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_speaker_adversary": false
+    },
+    "total_epochs": 20
+  },
+  "no_cka": {
+    "best_eer": 12.720147243626165,
+    "best_epoch": 1,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_no_cka/20260303_160528",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_cka_loss": false
+    },
+    "total_epochs": 20
+  },
+  "no_rawboost": {
+    "best_eer": 16.81778076001198,
+    "best_epoch": 12,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_no_rawboost/20260303_181937",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_rawboost": false,
+      "rawboost_prob": 0.0
+    },
+    "total_epochs": 20
+  },
+  "no_hier": {
+    "best_eer": 17.493138160369874,
+    "best_epoch": 9,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_no_hier/20260303_205457",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_hierarchical": false
+    },
+    "total_epochs": 20
+  },
+  "global_da_only": {
+    "best_eer": 15.01449779248007,
+    "best_epoch": 1,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_global_da_only/20260303_234419",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_glada": false,
+      "use_global_domain_disc": true,
+      "use_vib": true
+    },
+    "total_epochs": 20
+  },
+  "hierarchical_only": {
+    "best_eer": 13.466407225404915,
+    "best_epoch": 3,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_hierarchical_only/20260304_060544",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_glada": false,
+      "use_global_domain_disc": false,
+      "use_vib": false,
+      "use_speaker_adversary": false
+    },
+    "total_epochs": 20
+  },
+  "no_da": {
+    "best_eer": 14.296023006475316,
+    "best_epoch": 3,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_no_da/20260304_083204",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_glada": false,
+      "use_global_domain_disc": false,
+      "use_speaker_adversary": false
+    },
+    "total_epochs": 20
+  },
+  "backbone_only": {
+    "best_eer": 13.40017815117751,
+    "best_epoch": 7,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_backbone_only/20260304_105845",
+    "backbone": "wavlm-base-plus",
+    "seed": 42,
+    "overrides": {
+      "use_glada": false,
+      "use_global_domain_disc": false,
+      "use_vib": false,
+      "use_speaker_adversary": false,
+      "use_cka_loss": false,
+      "use_rawboost": false,
+      "rawboost_prob": 0.0
+    },
+    "total_epochs": 20
+  },
+  "full_wavlm-large": {
+    "best_eer": 12.58723738781336,
+    "best_epoch": 9,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_full_wavlm-large/20260304_222006",
+    "backbone": "wavlm-large",
+    "seed": 42,
+    "overrides": {},
+    "total_epochs": 20
+  },
+  "full_xlsr-300m": {
+    "best_eer": 19.67482852756272,
+    "best_epoch": 1,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_full_xlsr-300m/20260305_030614",
+    "backbone": "xlsr-300m",
+    "seed": 42,
+    "overrides": {},
+    "total_epochs": 20
+  },
+  "full_data2vec-large": {
+    "best_eer": 18.152965391186964,
+    "best_epoch": 11,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_full_data2vec-large/20260305_061003",
+    "backbone": "data2vec-large",
+    "seed": 42,
+    "overrides": {},
+    "total_epochs": 20
+  },
+  "full_wav2vec2-robust": {
+    "best_eer": 21.87634823305987,
+    "best_epoch": 18,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_full_wav2vec2-robust/20260306_022041",
+    "backbone": "wav2vec2-robust",
+    "seed": 42,
+    "overrides": {},
+    "total_epochs": 20
+  },
+  "full_wavlm-large_s123": {
+    "best_eer": 15.950276672982458,
+    "best_epoch": 9,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_full_wavlm-large_s123/20260306_061824",
+    "backbone": "wavlm-large",
+    "seed": 123,
+    "overrides": {},
+    "total_epochs": 20
+  },
+  "full_wavlm-large_s2026": {
+    "best_eer": 14.801224725118583,
+    "best_epoch": 2,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/ablation_full_wavlm-large_s2026/20260306_110555",
+    "backbone": "wavlm-large",
+    "seed": 2026,
+    "overrides": {},
+    "total_epochs": 20
+  }
+}

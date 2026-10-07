@@ -1,0 +1,12 @@
+{
+  "best_eer": 22.014127244067737,
+  "best_epoch": 27,
+  "backbone": "wavlm_base_plus",
+  "method": "caan",
+  "seed": 456,
+  "domain_weight": 0.3,
+  "lr": 0.0001,
+  "input_dim": 768,
+  "num_epochs": 30,
+  "elapsed_min": 1.6815200010935465
+}

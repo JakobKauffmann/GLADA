@@ -1,0 +1,827 @@
+[
+  {
+    "epoch": 1,
+    "phase": 1,
+    "train": {
+      "spoof_loss": 0.14472800139525924,
+      "domain_loss": 0.0,
+      "glada_loss": 0.569794550914355,
+      "speaker_loss": 3.0204751371133205,
+      "kl_loss": 1.2548816600118322,
+      "kl_raw": 1.2548816600118322,
+      "cka_loss": 0.5589333417439701,
+      "total_loss": 0.20980656056693106,
+      "spoof_acc": 0.92578125,
+      "speaker_acc": 0.05125473484848485,
+      "effective_beta": 0.002
+    },
+    "kl_loss_raw": 1.2548816600118322,
+    "kl_loss_clamped": 1.2548816600118322,
+    "eval": {
+      "ITW": {
+        "eer": 18.005706460811673,
+        "auc": 0.9003304852975975,
+        "acc": 81.96922495987916,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.5807726180052688,
+        "auc": 0.9931047846097786,
+        "acc": 98.68607605598214,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.0,
+    "speaker_alpha": 0.0,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0008399023461040262
+  },
+  {
+    "epoch": 2,
+    "phase": 1,
+    "train": {
+      "spoof_loss": 0.011124932931529151,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6197715547650752,
+      "speaker_loss": 2.9581340443004263,
+      "kl_loss": 0.7116302193866836,
+      "kl_raw": 0.7116302193866836,
+      "cka_loss": 0.3893040791906492,
+      "total_loss": 0.1094229939732362,
+      "spoof_acc": 0.9970801767676768,
+      "speaker_acc": 0.06632733585858586,
+      "effective_beta": 0.004
+    },
+    "kl_loss_raw": 0.7116302193866836,
+    "kl_loss_clamped": 0.7116302193866836,
+    "eval": {
+      "ITW": {
+        "eer": 19.213393881592253,
+        "auc": 0.8837782213445585,
+        "acc": 80.78605368324995,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 5.252559363838976,
+        "auc": 0.9767813014610065,
+        "acc": 95.66096270196668,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.2,
+    "speaker_alpha": 0.01,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0002979237285560342
+  },
+  {
+    "epoch": 3,
+    "phase": 1,
+    "train": {
+      "spoof_loss": 0.0039404129628280195,
+      "domain_loss": 0.0,
+      "glada_loss": 0.7214594362962126,
+      "speaker_loss": 2.915317111545139,
+      "kl_loss": 0.5894222837505918,
+      "kl_raw": 0.5894222837505918,
+      "cka_loss": 0.3492302753106512,
+      "total_loss": 0.14142153903164648,
+      "spoof_acc": 0.9990530303030303,
+      "speaker_acc": 0.07950599747474747,
+      "effective_beta": 0.006
+    },
+    "kl_loss_raw": 0.5894222837505918,
+    "kl_loss_clamped": 0.5894222837505918,
+    "eval": {
+      "ITW": {
+        "eer": 18.086277402632923,
+        "auc": 0.9100093572737187,
+        "acc": 81.91573051386135,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.6695817328563234,
+        "auc": 0.9947393553260833,
+        "acc": 98.03051784887067,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.4,
+    "speaker_alpha": 0.02,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 2.3424945727294787e-08
+  },
+  {
+    "epoch": 4,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.006593308585573628,
+      "domain_loss": 0.0,
+      "glada_loss": 0.5406941830961391,
+      "speaker_loss": 2.9236348470052085,
+      "kl_loss": 0.3297560243970818,
+      "kl_raw": 0.3297560243970818,
+      "cka_loss": 0.36975834849807954,
+      "total_loss": 0.06330077798867767,
+      "spoof_acc": 0.9981455176767676,
+      "speaker_acc": 0.0833727904040404,
+      "effective_beta": 0.008,
+      "grad_norm_backbone": 0.027004769402756486,
+      "grad_norm_task_classifier": 0.006818491834451136,
+      "grad_norm_glada_disc": 0.04504496658030485,
+      "grad_norm_speaker_adversary": 0.0,
+      "grad_norm_pooling": 0.011101597499220194
+    },
+    "kl_loss_raw": 0.3297560243970818,
+    "kl_loss_clamped": 0.3297560243970818,
+    "eval": {
+      "ITW": {
+        "eer": 14.038903165846662,
+        "auc": 0.9310575359947386,
+        "acc": 85.9592812863841,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 2.5199954939012623,
+        "auc": 0.9779724262598288,
+        "acc": 96.04138298917697,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.0,
+    "speaker_alpha": 0.0,
+    "p2_adv_ramp_factor": 0.0,
+    "lr": 0.00099976512447369
+  },
+  {
+    "epoch": 5,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.005678425067941649,
+      "domain_loss": 0.0,
+      "glada_loss": 0.41764027595218983,
+      "speaker_loss": 2.913109056877367,
+      "kl_loss": 0.22646854050231702,
+      "kl_raw": 0.22646854050231702,
+      "cka_loss": 0.3865041868253188,
+      "total_loss": 0.08983694341485247,
+      "spoof_acc": 0.9983033459595959,
+      "speaker_acc": 0.08483270202020202,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.8377324516928902,
+      "grad_norm_task_classifier": 0.07678109324395986,
+      "grad_norm_glada_disc": 0.02491008001921051,
+      "grad_norm_speaker_adversary": 0.006454989433455217,
+      "grad_norm_pooling": 0.3430150492381504
+    },
+    "kl_loss_raw": 0.22646854050231702,
+    "kl_loss_clamped": 0.22646854050231702,
+    "eval": {
+      "ITW": {
+        "eer": 13.82791979481608,
+        "auc": 0.9374407226829351,
+        "acc": 86.17011233833664,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.3092104236799083,
+        "auc": 0.9732512438860815,
+        "acc": 95.19772028580653,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.26666666666666666,
+    "speaker_alpha": 0.013333333333333332,
+    "p2_adv_ramp_factor": 0.3333333333333333,
+    "lr": 0.0009873771928599342
+  },
+  {
+    "epoch": 6,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.005126687265330493,
+      "domain_loss": 0.0,
+      "glada_loss": 0.5400753966485611,
+      "speaker_loss": 2.9135287506411776,
+      "kl_loss": 0.19262761389366304,
+      "kl_raw": 0.19262761389366304,
+      "cka_loss": 0.32836245226137567,
+      "total_loss": 0.16036722041440732,
+      "spoof_acc": 0.9984217171717171,
+      "speaker_acc": 0.08779198232323232,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.4816038848682664,
+      "grad_norm_task_classifier": 0.02664887399720439,
+      "grad_norm_glada_disc": 0.019506274718397672,
+      "grad_norm_speaker_adversary": 0.013736274707899912,
+      "grad_norm_pooling": 0.10977083148862284
+    },
+    "kl_loss_raw": 0.19262761389366304,
+    "kl_loss_clamped": 0.19262761389366304,
+    "eval": {
+      "ITW": {
+        "eer": 12.866360315669972,
+        "auc": 0.9309291523272014,
+        "acc": 87.13301236665723,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.402065811729567,
+        "auc": 0.9700665407249102,
+        "acc": 94.63200303213219,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.6666666666666666,
+    "speaker_alpha": 0.03333333333333333,
+    "p2_adv_ramp_factor": 0.6666666666666666,
+    "lr": 0.0009566049148866851
+  },
+  {
+    "epoch": 7,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.003994951311574139,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6144974951190177,
+      "speaker_loss": 2.9371111320726797,
+      "kl_loss": 0.1607204753943164,
+      "kl_raw": 0.1607204753943164,
+      "cka_loss": 0.27462053690293825,
+      "total_loss": 0.24602478432158628,
+      "spoof_acc": 0.998895202020202,
+      "speaker_acc": 0.07705965909090909,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.46043493673813923,
+      "grad_norm_task_classifier": 0.0390030429121791,
+      "grad_norm_glada_disc": 0.024799195362567916,
+      "grad_norm_speaker_adversary": 0.02830462902948433,
+      "grad_norm_pooling": 0.11618688792546578
+    },
+    "kl_loss_raw": 0.1607204753943164,
+    "kl_loss_clamped": 0.1607204753943164,
+    "eval": {
+      "ITW": {
+        "eer": 15.136741758644828,
+        "auc": 0.9169184258651016,
+        "acc": 84.86421850907833,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.7239226189704655,
+        "auc": 0.9865745830108117,
+        "acc": 96.2772154919494,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.06000000000000001,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0009086090558633364
+  },
+  {
+    "epoch": 8,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.004970262946579793,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6464525766745962,
+      "speaker_loss": 2.9495145239011205,
+      "kl_loss": 0.1387645299875676,
+      "kl_raw": 0.1387645299875676,
+      "cka_loss": 0.248793936889581,
+      "total_loss": 0.279957131680214,
+      "spoof_acc": 0.9987373737373737,
+      "speaker_acc": 0.07129892676767677,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.48864392481945945,
+      "grad_norm_task_classifier": 0.0387802359379044,
+      "grad_norm_glada_disc": 0.015070209482744214,
+      "grad_norm_speaker_adversary": 0.023327723542839292,
+      "grad_norm_pooling": 0.14247768065028857
+    },
+    "kl_loss_raw": 0.1387645299875676,
+    "kl_loss_clamped": 0.1387645299875676,
+    "eval": {
+      "ITW": {
+        "eer": 14.781187656541716,
+        "auc": 0.9172265555699167,
+        "acc": 85.21979923849082,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 4.948127188361464,
+        "auc": 0.974117016309664,
+        "acc": 95.27913864985892,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.07,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.000845200074157555
+  },
+  {
+    "epoch": 9,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0037624626467474783,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6541518499754896,
+      "speaker_loss": 2.9595757686730586,
+      "kl_loss": 0.13196469322223253,
+      "kl_raw": 0.13196469322223253,
+      "cka_loss": 0.21960018127404077,
+      "total_loss": 0.30945936195326573,
+      "spoof_acc": 0.9988557449494949,
+      "speaker_acc": 0.07374526515151515,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.4021756038747002,
+      "grad_norm_task_classifier": 0.035063665703403434,
+      "grad_norm_glada_disc": 0.015628295241968224,
+      "grad_norm_speaker_adversary": 0.025209249960627872,
+      "grad_norm_pooling": 0.07086107849889828
+    },
+    "kl_loss_raw": 0.13196469322223253,
+    "kl_loss_clamped": 0.13196469322223253,
+    "eval": {
+      "ITW": {
+        "eer": 12.779739123675343,
+        "auc": 0.937461152319333,
+        "acc": 87.21797413386199,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.31769607249396,
+        "auc": 0.9782327507266063,
+        "acc": 96.04559428386933,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.08,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0007687698286473881
+  },
+  {
+    "epoch": 10,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0031225632245868743,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6619111263390743,
+      "speaker_loss": 2.95837279040404,
+      "kl_loss": 0.1335207394352465,
+      "kl_raw": 0.1335207394352465,
+      "cka_loss": 0.16857566946007388,
+      "total_loss": 0.33858821089520597,
+      "spoof_acc": 0.9992108585858586,
+      "speaker_acc": 0.07627051767676768,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.03151059210041801,
+      "grad_norm_task_classifier": 0.0015571921581953804,
+      "grad_norm_glada_disc": 0.01722597217990649,
+      "grad_norm_speaker_adversary": 0.030608010494293982,
+      "grad_norm_pooling": 0.008428260929284772
+    },
+    "kl_loss_raw": 0.1335207394352465,
+    "kl_loss_clamped": 0.1335207394352465,
+    "eval": {
+      "ITW": {
+        "eer": 14.55750963419089,
+        "auc": 0.9232765895342403,
+        "acc": 85.44007048679946,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 4.273408605103423,
+        "auc": 0.9683803463179084,
+        "acc": 94.36388393671827,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.09,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0006822013550851369
+  },
+  {
+    "epoch": 11,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0035226065571410487,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6655164419701605,
+      "speaker_loss": 2.9610786823311237,
+      "kl_loss": 0.1271876407542614,
+      "kl_raw": 0.1271876407542614,
+      "cka_loss": 0.16389154672923714,
+      "total_loss": 0.3690929277941133,
+      "spoof_acc": 0.9990530303030303,
+      "speaker_acc": 0.07023358585858586,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.04065709227112983,
+      "grad_norm_task_classifier": 0.0032364314972481933,
+      "grad_norm_glada_disc": 0.021980928180198315,
+      "grad_norm_speaker_adversary": 0.03228522031059437,
+      "grad_norm_pooling": 0.008345163110502693
+    },
+    "kl_loss_raw": 0.1271876407542614,
+    "kl_loss_clamped": 0.1271876407542614,
+    "eval": {
+      "ITW": {
+        "eer": 12.655376944639388,
+        "auc": 0.9398041208666637,
+        "acc": 87.34384341860978,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 4.137140301445063,
+        "auc": 0.9786313133722014,
+        "acc": 95.50374103345172,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0005887601147111286
+  },
+  {
+    "epoch": 12,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.00347747468398978,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6657991049566654,
+      "speaker_loss": 2.9539566810684974,
+      "kl_loss": 0.12497305902040969,
+      "kl_raw": 0.12497305902040969,
+      "cka_loss": 0.1558380542379437,
+      "total_loss": 0.3682611792376547,
+      "spoof_acc": 0.9989741161616161,
+      "speaker_acc": 0.07406092171717171,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.4741120920211299,
+      "grad_norm_task_classifier": 0.026231761168415132,
+      "grad_norm_glada_disc": 0.010152423468807016,
+      "grad_norm_speaker_adversary": 0.025128787614997615,
+      "grad_norm_pooling": 0.10516913695311217
+    },
+    "kl_loss_raw": 0.12497305902040969,
+    "kl_loss_clamped": 0.12497305902040969,
+    "eval": {
+      "ITW": {
+        "eer": 12.524278581591247,
+        "auc": 0.9380267891333565,
+        "acc": 87.47600616759496,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.5703376962593625,
+        "auc": 0.9804322672936384,
+        "acc": 96.42320704128473,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0004919708173433086
+  },
+  {
+    "epoch": 13,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.002815302282647051,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6694717678156766,
+      "speaker_loss": 2.962296302872475,
+      "kl_loss": 0.1210945090937494,
+      "kl_raw": 0.1210945090937494,
+      "cka_loss": 0.14788898261207523,
+      "total_loss": 0.3686819593563224,
+      "spoof_acc": 0.9992503156565656,
+      "speaker_acc": 0.07323232323232323,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.026988542341592647,
+      "grad_norm_task_classifier": 0.0014030777295409335,
+      "grad_norm_glada_disc": 0.01787434861202801,
+      "grad_norm_speaker_adversary": 0.03287472548197005,
+      "grad_norm_pooling": 0.00740697954654023
+    },
+    "kl_loss_raw": 0.1210945090937494,
+    "kl_loss_clamped": 0.1210945090937494,
+    "eval": {
+      "ITW": {
+        "eer": 12.810915410164187,
+        "auc": 0.9276266310175517,
+        "acc": 87.18965354479373,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 4.064011652517641,
+        "auc": 0.9678002797518565,
+        "acc": 94.24316015553715,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0003954844653157521
+  },
+  {
+    "epoch": 14,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0011626625377120395,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6718262233818421,
+      "speaker_loss": 2.9649186567826704,
+      "kl_loss": 0.11962599860447826,
+      "kl_raw": 0.11962599860447826,
+      "cka_loss": 0.13512885318410517,
+      "total_loss": 0.36738471252222854,
+      "spoof_acc": 0.9995659722222222,
+      "speaker_acc": 0.06924715909090909,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.12428507672814726,
+      "grad_norm_task_classifier": 0.011044802981105868,
+      "grad_norm_glada_disc": 0.014519525995761253,
+      "grad_norm_speaker_adversary": 0.03343192721452804,
+      "grad_norm_pooling": 0.021757071362331203
+    },
+    "kl_loss_raw": 0.11962599860447826,
+    "kl_loss_clamped": 0.11962599860447826,
+    "eval": {
+      "ITW": {
+        "eer": 12.669627029367906,
+        "auc": 0.9325626626422049,
+        "acc": 87.3281097580163,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 4.615252446136723,
+        "auc": 0.9708157466825039,
+        "acc": 94.75413057821076,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0003029406335198887
+  },
+  {
+    "epoch": 15,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.002603373217462289,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6718654817703998,
+      "speaker_loss": 2.96331787109375,
+      "kl_loss": 0.1188808000185574,
+      "kl_raw": 0.1188808000185574,
+      "cka_loss": 0.1354310738694186,
+      "total_loss": 0.3686648436793775,
+      "spoof_acc": 0.9992503156565656,
+      "speaker_acc": 0.07161458333333333,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.24411911824297308,
+      "grad_norm_task_classifier": 0.019832135033276,
+      "grad_norm_glada_disc": 0.015007195587463976,
+      "grad_norm_speaker_adversary": 0.032513681821574575,
+      "grad_norm_pooling": 0.017792261599687255
+    },
+    "kl_loss_raw": 0.1188808000185574,
+    "kl_loss_clamped": 0.1188808000185574,
+    "eval": {
+      "ITW": {
+        "eer": 12.166997562620164,
+        "auc": 0.9380615415600784,
+        "acc": 87.83158689700747,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.7921462138373734,
+        "auc": 0.9717276570280805,
+        "acc": 94.91415977652062,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0002178301805018542
+  },
+  {
+    "epoch": 16,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.003428993196311322,
+      "domain_loss": 0.0,
+      "glada_loss": 0.672936240079427,
+      "speaker_loss": 2.9574748337870895,
+      "kl_loss": 0.11941112391650677,
+      "kl_raw": 0.11941112391650677,
+      "cka_loss": 0.1271121461471223,
+      "total_loss": 0.36893534948202694,
+      "spoof_acc": 0.9990530303030303,
+      "speaker_acc": 0.07240372474747475,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.4962545357000245,
+      "grad_norm_task_classifier": 0.02952177779596658,
+      "grad_norm_glada_disc": 0.01504722810953429,
+      "grad_norm_speaker_adversary": 0.025745510622394753,
+      "grad_norm_pooling": 0.10070524126416189
+    },
+    "kl_loss_raw": 0.11941112391650677,
+    "kl_loss_clamped": 0.11941112391650677,
+    "eval": {
+      "ITW": {
+        "eer": 11.668599646312503,
+        "auc": 0.9438947157183238,
+        "acc": 88.33191730387992,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.615424010759469,
+        "auc": 0.9788649273065944,
+        "acc": 96.11578252874209,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 0.0001433635693094608
+  },
+  {
+    "epoch": 17,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.002192991432931387,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6729244630445134,
+      "speaker_loss": 2.958239622790404,
+      "kl_loss": 0.11951157627533181,
+      "kl_raw": 0.11951157627533181,
+      "cka_loss": 0.125428376606468,
+      "total_loss": 0.3677588158258886,
+      "spoof_acc": 0.9994870580808081,
+      "speaker_acc": 0.07469223484848485,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.07184235441375178,
+      "grad_norm_task_classifier": 0.004604554174754713,
+      "grad_norm_glada_disc": 0.012990906722251495,
+      "grad_norm_speaker_adversary": 0.03707087991832933,
+      "grad_norm_pooling": 0.012546895876312985
+    },
+    "kl_loss_raw": 0.11951157627533181,
+    "kl_loss_clamped": 0.11951157627533181,
+    "eval": {
+      "ITW": {
+        "eer": 11.866110649318706,
+        "auc": 0.9415899695411459,
+        "acc": 88.13367318040216,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.503100475594329,
+        "auc": 0.9782576543074374,
+        "acc": 96.02594157530497,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 8.234976517613587e-05
+  },
+  {
+    "epoch": 18,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0011517919712897503,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6755862881739935,
+      "speaker_loss": 2.961679169625947,
+      "kl_loss": 0.11772731443246205,
+      "kl_raw": 0.11772731443246205,
+      "cka_loss": 0.1223109955664235,
+      "total_loss": 0.36727873591536825,
+      "spoof_acc": 0.9995659722222222,
+      "speaker_acc": 0.07417929292929293,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.3804639253912675,
+      "grad_norm_task_classifier": 0.03499141207574346,
+      "grad_norm_glada_disc": 0.015554486818933186,
+      "grad_norm_speaker_adversary": 0.030568283794930713,
+      "grad_norm_pooling": 0.05453897334431139
+    },
+    "kl_loss_raw": 0.11772731443246205,
+    "kl_loss_clamped": 0.11772731443246205,
+    "eval": {
+      "ITW": {
+        "eer": 11.883036851079032,
+        "auc": 0.9421265643912464,
+        "acc": 88.12108625192737,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.433750675292276,
+        "auc": 0.980362682632201,
+        "acc": 96.3768827996687,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 3.7090278158875144e-05
+  },
+  {
+    "epoch": 19,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0015499280257658525,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6754542614775475,
+      "speaker_loss": 2.9631293711036144,
+      "kl_loss": 0.11743944104422223,
+      "kl_raw": 0.11743944104422223,
+      "cka_loss": 0.12115712761126383,
+      "total_loss": 0.3677942720665173,
+      "spoof_acc": 0.9992897727272727,
+      "speaker_acc": 0.07271938131313131,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.0245238860295003,
+      "grad_norm_task_classifier": 0.0018600896255717351,
+      "grad_norm_glada_disc": 0.02051003668421577,
+      "grad_norm_speaker_adversary": 0.030786910233940614,
+      "grad_norm_pooling": 0.005573242892161863
+    },
+    "kl_loss_raw": 0.11743944104422223,
+    "kl_loss_clamped": 0.11743944104422223,
+    "eval": {
+      "ITW": {
+        "eer": 12.08633483793359,
+        "auc": 0.9404141314105435,
+        "acc": 87.91340193209352,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.467564080961559,
+        "auc": 0.9795581784234193,
+        "acc": 96.24071760461558,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 9.292347562362513e-06
+  },
+  {
+    "epoch": 20,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0016614592991618796,
+      "domain_loss": 0.0,
+      "glada_loss": 0.6760471046271951,
+      "speaker_loss": 2.9641732880563447,
+      "kl_loss": 0.11705234191483921,
+      "kl_raw": 0.11705234191483921,
+      "cka_loss": 0.12166131427041207,
+      "total_loss": 0.3680706506199909,
+      "spoof_acc": 0.9994870580808081,
+      "speaker_acc": 0.06932607323232323,
+      "effective_beta": 0.01,
+      "grad_norm_backbone": 0.4210025847173291,
+      "grad_norm_task_classifier": 0.03155988495524046,
+      "grad_norm_glada_disc": 0.012440044108096984,
+      "grad_norm_speaker_adversary": 0.027381450149082574,
+      "grad_norm_pooling": 0.09648043674368567
+    },
+    "kl_loss_raw": 0.11705234191483921,
+    "kl_loss_clamped": 0.11705234191483921,
+    "eval": {
+      "ITW": {
+        "eer": 12.056885468312725,
+        "auc": 0.9408281081680188,
+        "acc": 87.94172252116176,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.466623785088463,
+        "auc": 0.9800197289738679,
+        "acc": 96.31792467397561,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "p2_adv_ramp_factor": 1.0,
+    "lr": 4.542931478858945e-09
+  }
+]

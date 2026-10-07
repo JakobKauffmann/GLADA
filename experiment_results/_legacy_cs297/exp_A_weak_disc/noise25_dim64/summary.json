@@ -1,0 +1,6 @@
+{
+  "best_eer": 24.40887086607855,
+  "best_epoch": 12,
+  "noise_rate": 0.25,
+  "disc_dim": 64
+}

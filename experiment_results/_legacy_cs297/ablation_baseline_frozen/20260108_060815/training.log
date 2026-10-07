@@ -1,0 +1,266 @@
+[2026-01-08 06:08:15] Experiment: ablation_baseline_frozen
+[2026-01-08 06:08:16] Run ID: 20260108_060815
+[2026-01-08 06:08:16] Logging to: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815
+[2026-01-08 06:08:16] 
+Verifying paths:
+[2026-01-08 06:08:16] ASV Train Protocol: True
+[2026-01-08 06:08:16] ASV Eval Protocol: True
+[2026-01-08 06:08:16] ITW Metadata: True
+[2026-01-08 06:08:16] 
+Initializing datasets...
+[2026-01-08 06:08:16] Source train samples: 25380
+[2026-01-08 06:08:16]   Class distribution: bonafide=2580, spoof=22800
+[2026-01-08 06:08:16] Target train samples: 31779
+[2026-01-08 06:08:16] Source eval samples: 71237
+[2026-01-08 06:08:16]   Class distribution: bonafide=7355, spoof=63882
+[2026-01-08 06:08:16] Target eval samples: 31779
+[2026-01-08 06:08:16]   Class distribution: bonafide=19963, spoof=11816
+[2026-01-08 06:08:16] 
+Initializing model...
+[2026-01-08 06:08:17] Class counts: bonafide=2580, spoof=22800
+[2026-01-08 06:08:17] Class weights: bonafide=1.797, spoof=0.203
+[2026-01-08 06:08:17] 
+============================================================
+[2026-01-08 06:08:17] Training Configuration
+[2026-01-08 06:08:17] ============================================================
+[2026-01-08 06:08:17] Model: microsoft/wavlm-base-plus
+[2026-01-08 06:08:17] LoRA: False (r=8)
+[2026-01-08 06:08:17] Domain Adversarial: False
+[2026-01-08 06:08:17] Class Weighting: True
+[2026-01-08 06:08:17] Focal Loss: False
+[2026-01-08 06:08:17] Batch size: 32 x 4
+[2026-01-08 06:08:17] GRL warmup epochs: 5
+[2026-01-08 06:08:17] Domain loss weight: 0.05
+[2026-01-08 06:08:17] Device: cuda
+[2026-01-08 06:08:17] Parameters: 90,577,268 trainable / 94,777,716 total (95.57%)
+[2026-01-08 06:08:17] ============================================================
+
+[2026-01-08 06:11:57] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:11:57]                  Predicted
+[2026-01-08 06:11:57]                  Bonafide  Spoof
+[2026-01-08 06:11:57] Actual Bonafide     7316       39
+[2026-01-08 06:11:57] Actual Spoof        3765    60117
+[2026-01-08 06:12:31] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:12:31]                  Predicted
+[2026-01-08 06:12:31]                  Bonafide  Spoof
+[2026-01-08 06:12:31] Actual Bonafide    14303     5660
+[2026-01-08 06:12:31] Actual Spoof         519    11297
+[2026-01-08 06:12:31] 
+============================================================
+[2026-01-08 06:12:31] Epoch 1/10
+[2026-01-08 06:12:31]   Task Loss: 0.1129 | Domain Loss: 0.7042
+[2026-01-08 06:12:31]   ASVspoof Eval - EER: 0.73% | AUC: 99.90%
+[2026-01-08 06:12:31]     Spoof Recall: 94.1% | Bonafide Recall: 99.5%
+[2026-01-08 06:12:31]   In-the-Wild - EER: 12.70% | AUC: 94.05%
+[2026-01-08 06:12:31]     Spoof Recall: 95.6% | Bonafide Recall: 71.6%
+[2026-01-08 06:12:31]   ★ New best EER: 12.70%
+[2026-01-08 06:12:34] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_000.pt
+[2026-01-08 06:12:36] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/best_model.pt
+[2026-01-08 06:16:10] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:16:10]                  Predicted
+[2026-01-08 06:16:10]                  Bonafide  Spoof
+[2026-01-08 06:16:10] Actual Bonafide     7348        7
+[2026-01-08 06:16:10] Actual Spoof        2489    61393
+[2026-01-08 06:16:44] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:16:44]                  Predicted
+[2026-01-08 06:16:44]                  Bonafide  Spoof
+[2026-01-08 06:16:44] Actual Bonafide    11863     8100
+[2026-01-08 06:16:44] Actual Spoof         235    11581
+[2026-01-08 06:16:44] 
+============================================================
+[2026-01-08 06:16:44] Epoch 2/10
+[2026-01-08 06:16:44]   Task Loss: 0.0109 | Domain Loss: 0.6973
+[2026-01-08 06:16:44]   ASVspoof Eval - EER: 1.26% | AUC: 99.78%
+[2026-01-08 06:16:44]     Spoof Recall: 96.1% | Bonafide Recall: 99.9%
+[2026-01-08 06:16:44]   In-the-Wild - EER: 14.35% | AUC: 92.58%
+[2026-01-08 06:16:44]     Spoof Recall: 98.0% | Bonafide Recall: 59.4%
+[2026-01-08 06:16:46] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_001.pt
+[2026-01-08 06:20:19] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:20:19]                  Predicted
+[2026-01-08 06:20:19]                  Bonafide  Spoof
+[2026-01-08 06:20:19] Actual Bonafide     7346        9
+[2026-01-08 06:20:19] Actual Spoof        2257    61625
+[2026-01-08 06:20:53] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:20:53]                  Predicted
+[2026-01-08 06:20:53]                  Bonafide  Spoof
+[2026-01-08 06:20:53] Actual Bonafide    12113     7850
+[2026-01-08 06:20:53] Actual Spoof         246    11570
+[2026-01-08 06:20:53] 
+============================================================
+[2026-01-08 06:20:53] Epoch 3/10
+[2026-01-08 06:20:53]   Task Loss: 0.0040 | Domain Loss: 0.7245
+[2026-01-08 06:20:53]   ASVspoof Eval - EER: 1.02% | AUC: 99.82%
+[2026-01-08 06:20:53]     Spoof Recall: 96.5% | Bonafide Recall: 99.9%
+[2026-01-08 06:20:53]   In-the-Wild - EER: 16.30% | AUC: 89.03%
+[2026-01-08 06:20:53]     Spoof Recall: 97.9% | Bonafide Recall: 60.7%
+[2026-01-08 06:20:55] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_002.pt
+[2026-01-08 06:24:37] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:24:37]                  Predicted
+[2026-01-08 06:24:37]                  Bonafide  Spoof
+[2026-01-08 06:24:37] Actual Bonafide     7349        6
+[2026-01-08 06:24:37] Actual Spoof        5385    58497
+[2026-01-08 06:25:11] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:25:11]                  Predicted
+[2026-01-08 06:25:11]                  Bonafide  Spoof
+[2026-01-08 06:25:11] Actual Bonafide    13666     6297
+[2026-01-08 06:25:11] Actual Spoof         246    11570
+[2026-01-08 06:25:11] 
+============================================================
+[2026-01-08 06:25:11] Epoch 4/10
+[2026-01-08 06:25:11]   Task Loss: 0.0036 | Domain Loss: 0.7126
+[2026-01-08 06:25:11]   ASVspoof Eval - EER: 1.16% | AUC: 99.83%
+[2026-01-08 06:25:11]     Spoof Recall: 91.6% | Bonafide Recall: 99.9%
+[2026-01-08 06:25:11]   In-the-Wild - EER: 12.66% | AUC: 93.25%
+[2026-01-08 06:25:11]     Spoof Recall: 97.9% | Bonafide Recall: 68.5%
+[2026-01-08 06:25:11]   ★ New best EER: 12.66%
+[2026-01-08 06:25:13] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_003.pt
+[2026-01-08 06:25:15] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/best_model.pt
+[2026-01-08 06:25:22] Removed old checkpoint: checkpoint_epoch_000.pt
+[2026-01-08 06:29:15] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:29:15]                  Predicted
+[2026-01-08 06:29:15]                  Bonafide  Spoof
+[2026-01-08 06:29:15] Actual Bonafide     7343       12
+[2026-01-08 06:29:15] Actual Spoof        1484    62398
+[2026-01-08 06:29:48] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:29:48]                  Predicted
+[2026-01-08 06:29:48]                  Bonafide  Spoof
+[2026-01-08 06:29:48] Actual Bonafide    11981     7982
+[2026-01-08 06:29:49] Actual Spoof         107    11709
+[2026-01-08 06:29:49] 
+============================================================
+[2026-01-08 06:29:49] Epoch 5/10
+[2026-01-08 06:29:49]   Task Loss: 0.0009 | Domain Loss: 0.6898
+[2026-01-08 06:29:49]   ASVspoof Eval - EER: 0.72% | AUC: 99.92%
+[2026-01-08 06:29:49]     Spoof Recall: 97.7% | Bonafide Recall: 99.8%
+[2026-01-08 06:29:49]   In-the-Wild - EER: 10.78% | AUC: 90.39%
+[2026-01-08 06:29:49]     Spoof Recall: 99.1% | Bonafide Recall: 60.0%
+[2026-01-08 06:29:49]   ★ New best EER: 10.78%
+[2026-01-08 06:29:51] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_004.pt
+[2026-01-08 06:29:53] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/best_model.pt
+[2026-01-08 06:29:57] Removed old checkpoint: checkpoint_epoch_001.pt
+[2026-01-08 06:33:50] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:33:50]                  Predicted
+[2026-01-08 06:33:50]                  Bonafide  Spoof
+[2026-01-08 06:33:50] Actual Bonafide     7295       60
+[2026-01-08 06:33:50] Actual Spoof         461    63421
+[2026-01-08 06:34:24] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:34:24]                  Predicted
+[2026-01-08 06:34:24]                  Bonafide  Spoof
+[2026-01-08 06:34:24] Actual Bonafide     8355    11608
+[2026-01-08 06:34:24] Actual Spoof          48    11768
+[2026-01-08 06:34:24] 
+============================================================
+[2026-01-08 06:34:24] Epoch 6/10
+[2026-01-08 06:34:24]   Task Loss: 0.0002 | Domain Loss: 0.7125
+[2026-01-08 06:34:24]   ASVspoof Eval - EER: 0.78% | AUC: 99.86%
+[2026-01-08 06:34:24]     Spoof Recall: 99.3% | Bonafide Recall: 99.2%
+[2026-01-08 06:34:24]   In-the-Wild - EER: 16.65% | AUC: 83.62%
+[2026-01-08 06:34:24]     Spoof Recall: 99.6% | Bonafide Recall: 41.9%
+[2026-01-08 06:34:26] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_005.pt
+[2026-01-08 06:34:28] Removed old checkpoint: checkpoint_epoch_002.pt
+[2026-01-08 06:38:20] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:38:20]                  Predicted
+[2026-01-08 06:38:20]                  Bonafide  Spoof
+[2026-01-08 06:38:20] Actual Bonafide     7283       72
+[2026-01-08 06:38:20] Actual Spoof         388    63494
+[2026-01-08 06:38:54] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:38:54]                  Predicted
+[2026-01-08 06:38:54]                  Bonafide  Spoof
+[2026-01-08 06:38:54] Actual Bonafide     7790    12173
+[2026-01-08 06:38:54] Actual Spoof          41    11775
+[2026-01-08 06:38:54] 
+============================================================
+[2026-01-08 06:38:54] Epoch 7/10
+[2026-01-08 06:38:54]   Task Loss: 0.0001 | Domain Loss: 0.7149
+[2026-01-08 06:38:54]   ASVspoof Eval - EER: 0.79% | AUC: 99.86%
+[2026-01-08 06:38:54]     Spoof Recall: 99.4% | Bonafide Recall: 99.0%
+[2026-01-08 06:38:54]   In-the-Wild - EER: 18.22% | AUC: 81.93%
+[2026-01-08 06:38:54]     Spoof Recall: 99.7% | Bonafide Recall: 39.0%
+[2026-01-08 06:38:56] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_006.pt
+[2026-01-08 06:38:58] Removed old checkpoint: checkpoint_epoch_003.pt
+[2026-01-08 06:42:32] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:42:32]                  Predicted
+[2026-01-08 06:42:32]                  Bonafide  Spoof
+[2026-01-08 06:42:32] Actual Bonafide     7342       13
+[2026-01-08 06:42:32] Actual Spoof        1725    62157
+[2026-01-08 06:43:06] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:43:06]                  Predicted
+[2026-01-08 06:43:06]                  Bonafide  Spoof
+[2026-01-08 06:43:06] Actual Bonafide    12873     7090
+[2026-01-08 06:43:06] Actual Spoof         129    11687
+[2026-01-08 06:43:06] 
+============================================================
+[2026-01-08 06:43:06] Epoch 8/10
+[2026-01-08 06:43:06]   Task Loss: 0.0002 | Domain Loss: 0.6934
+[2026-01-08 06:43:06]   ASVspoof Eval - EER: 0.73% | AUC: 99.89%
+[2026-01-08 06:43:06]     Spoof Recall: 97.3% | Bonafide Recall: 99.8%
+[2026-01-08 06:43:06]   In-the-Wild - EER: 12.01% | AUC: 89.36%
+[2026-01-08 06:43:06]     Spoof Recall: 98.9% | Bonafide Recall: 64.5%
+[2026-01-08 06:43:08] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_007.pt
+[2026-01-08 06:43:12] Removed old checkpoint: checkpoint_epoch_004.pt
+[2026-01-08 06:47:02] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:47:02]                  Predicted
+[2026-01-08 06:47:02]                  Bonafide  Spoof
+[2026-01-08 06:47:02] Actual Bonafide     7340       15
+[2026-01-08 06:47:02] Actual Spoof        1347    62535
+[2026-01-08 06:47:36] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:47:36]                  Predicted
+[2026-01-08 06:47:36]                  Bonafide  Spoof
+[2026-01-08 06:47:36] Actual Bonafide    12178     7785
+[2026-01-08 06:47:36] Actual Spoof         105    11711
+[2026-01-08 06:47:36] 
+============================================================
+[2026-01-08 06:47:36] Epoch 9/10
+[2026-01-08 06:47:36]   Task Loss: 0.0001 | Domain Loss: 0.6941
+[2026-01-08 06:47:36]   ASVspoof Eval - EER: 0.67% | AUC: 99.90%
+[2026-01-08 06:47:36]     Spoof Recall: 97.9% | Bonafide Recall: 99.8%
+[2026-01-08 06:47:36]   In-the-Wild - EER: 12.58% | AUC: 88.54%
+[2026-01-08 06:47:36]     Spoof Recall: 99.1% | Bonafide Recall: 61.0%
+[2026-01-08 06:47:38] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_008.pt
+[2026-01-08 06:47:40] Removed old checkpoint: checkpoint_epoch_005.pt
+[2026-01-08 06:51:11] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:51:11]                  Predicted
+[2026-01-08 06:51:11]                  Bonafide  Spoof
+[2026-01-08 06:51:11] Actual Bonafide     7336       19
+[2026-01-08 06:51:11] Actual Spoof        1150    62732
+[2026-01-08 06:51:45] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:51:45]                  Predicted
+[2026-01-08 06:51:45]                  Bonafide  Spoof
+[2026-01-08 06:51:45] Actual Bonafide    11663     8300
+[2026-01-08 06:51:45] Actual Spoof          92    11724
+[2026-01-08 06:51:45] 
+============================================================
+[2026-01-08 06:51:45] Epoch 10/10
+[2026-01-08 06:51:45]   Task Loss: 0.0001 | Domain Loss: 0.6976
+[2026-01-08 06:51:45]   ASVspoof Eval - EER: 0.62% | AUC: 99.91%
+[2026-01-08 06:51:45]     Spoof Recall: 98.2% | Bonafide Recall: 99.7%
+[2026-01-08 06:51:45]   In-the-Wild - EER: 13.25% | AUC: 87.71%
+[2026-01-08 06:51:45]     Spoof Recall: 99.2% | Bonafide Recall: 58.4%
+[2026-01-08 06:51:47] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815/checkpoints/checkpoint_epoch_009.pt
+[2026-01-08 06:51:54] Removed old checkpoint: checkpoint_epoch_006.pt
+[2026-01-08 06:51:54] 
+============================================================
+[2026-01-08 06:51:54] Training complete!
+[2026-01-08 06:51:54] Best EER: 10.78% (epoch 5)
+[2026-01-08 06:51:54] Logs saved to: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_060815
+[2026-01-08 06:51:54] ============================================================

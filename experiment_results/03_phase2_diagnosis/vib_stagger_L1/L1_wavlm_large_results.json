@@ -1,0 +1,7 @@
+{
+  "best_eer": 13.516671380306782,
+  "best_epoch": 1,
+  "run_dir": "/content/drive/MyDrive/Jakob/Experiments/vib_stagger_L1/L1_per_group_vib_wavlm-large/20260506_021047",
+  "source_l0_variant": "per_group_vib",
+  "source_l0_eer": 11.668599646312503
+}

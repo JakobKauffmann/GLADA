@@ -1,0 +1,108 @@
+[2026-01-08 05:23:48] Experiment: dann_wavlm_fixed
+[2026-01-08 05:23:48] Run ID: 20260108_052348
+[2026-01-08 05:23:48] Logging to: /content/drive/MyDrive/Jakob/Experiments/dann_wavlm_fixed/20260108_052348
+[2026-01-08 05:23:48] 
+Verifying paths:
+[2026-01-08 05:23:48] ASV Train Protocol: True
+[2026-01-08 05:23:48] ASV Eval Protocol: True
+[2026-01-08 05:23:48] ITW Metadata: True
+[2026-01-08 05:23:48] 
+Initializing datasets...
+[2026-01-08 05:23:48] Source train samples: 500
+[2026-01-08 05:23:48]   Class distribution: bonafide=500, spoof=0
+[2026-01-08 05:23:48] Target train samples: 500
+[2026-01-08 05:23:48] Source eval samples: 200
+[2026-01-08 05:23:48]   Class distribution: bonafide=28, spoof=172
+[2026-01-08 05:23:48] Target eval samples: 200
+[2026-01-08 05:23:48]   Class distribution: bonafide=0, spoof=200
+[2026-01-08 05:23:48] 
+Initializing model...
+[2026-01-08 05:23:49] Class counts: bonafide=500, spoof=0
+[2026-01-08 05:23:49] Class weights: bonafide=0.004, spoof=1.996
+[2026-01-08 05:23:49] 
+============================================================
+[2026-01-08 05:23:49] Training Configuration
+[2026-01-08 05:23:49] ============================================================
+[2026-01-08 05:23:49] Model: microsoft/wavlm-base-plus
+[2026-01-08 05:23:49] LoRA: True (r=8)
+[2026-01-08 05:23:49] Domain Adversarial: True
+[2026-01-08 05:23:49] Class Weighting: True
+[2026-01-08 05:23:49] Focal Loss: False
+[2026-01-08 05:23:49] Batch size: 32 x 4
+[2026-01-08 05:23:49] GRL warmup epochs: 5
+[2026-01-08 05:23:49] Domain loss weight: 0.05
+[2026-01-08 05:23:49] Device: cuda
+[2026-01-08 05:23:49] Parameters: 985,604 trainable / 95,367,540 total (1.03%)
+[2026-01-08 05:23:49] ============================================================
+
+[2026-01-08 05:23:53] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 05:23:53]                  Predicted
+[2026-01-08 05:23:53]                  Bonafide  Spoof
+[2026-01-08 05:23:53] Actual Bonafide       28        0
+[2026-01-08 05:23:53] Actual Spoof         172        0
+[2026-01-08 05:23:54] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 05:23:54]                  Predicted
+[2026-01-08 05:23:54]                  Bonafide  Spoof
+[2026-01-08 05:23:54] Actual Bonafide        0        0
+[2026-01-08 05:23:54] Actual Spoof         200        0
+[2026-01-08 05:23:54] 
+============================================================
+[2026-01-08 05:23:54] Epoch 1/3
+[2026-01-08 05:23:54]   Task Loss: 0.4109 | Domain Loss: 0.6251
+[2026-01-08 05:23:54]   ASVspoof Eval - EER: 42.94% | AUC: 57.60%
+[2026-01-08 05:23:54]     Spoof Recall: 0.0% | Bonafide Recall: 100.0%
+[2026-01-08 05:23:54]   In-the-Wild - EER: 50.00% | AUC: nan%
+[2026-01-08 05:23:54]     Spoof Recall: 0.0% | Bonafide Recall: 0.0%
+[2026-01-08 05:23:54]   ★ New best EER: 50.00%
+[2026-01-08 05:23:55] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/dann_wavlm_fixed/20260108_052348/checkpoints/checkpoint_epoch_000.pt
+[2026-01-08 05:23:56] Saved best model: /content/drive/MyDrive/Jakob/Experiments/dann_wavlm_fixed/20260108_052348/checkpoints/best_model.pt
+[2026-01-08 05:24:01] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 05:24:01]                  Predicted
+[2026-01-08 05:24:01]                  Bonafide  Spoof
+[2026-01-08 05:24:01] Actual Bonafide       28        0
+[2026-01-08 05:24:01] Actual Spoof         172        0
+[2026-01-08 05:24:02] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 05:24:02]                  Predicted
+[2026-01-08 05:24:02]                  Bonafide  Spoof
+[2026-01-08 05:24:02] Actual Bonafide        0        0
+[2026-01-08 05:24:02] Actual Spoof         200        0
+[2026-01-08 05:24:02] 
+============================================================
+[2026-01-08 05:24:02] Epoch 2/3
+[2026-01-08 05:24:02]   Task Loss: 0.2059 | Domain Loss: 0.5430
+[2026-01-08 05:24:02]   ASVspoof Eval - EER: 36.46% | AUC: 69.22%
+[2026-01-08 05:24:02]     Spoof Recall: 0.0% | Bonafide Recall: 100.0%
+[2026-01-08 05:24:02]   In-the-Wild - EER: 50.00% | AUC: nan%
+[2026-01-08 05:24:02]     Spoof Recall: 0.0% | Bonafide Recall: 0.0%
+[2026-01-08 05:24:03] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/dann_wavlm_fixed/20260108_052348/checkpoints/checkpoint_epoch_001.pt
+[2026-01-08 05:24:08] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 05:24:08]                  Predicted
+[2026-01-08 05:24:08]                  Bonafide  Spoof
+[2026-01-08 05:24:08] Actual Bonafide       28        0
+[2026-01-08 05:24:08] Actual Spoof         172        0
+[2026-01-08 05:24:09] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 05:24:09]                  Predicted
+[2026-01-08 05:24:09]                  Bonafide  Spoof
+[2026-01-08 05:24:09] Actual Bonafide        0        0
+[2026-01-08 05:24:09] Actual Spoof         200        0
+[2026-01-08 05:24:09] 
+============================================================
+[2026-01-08 05:24:09] Epoch 3/3
+[2026-01-08 05:24:09]   Task Loss: 0.1630 | Domain Loss: 0.4917
+[2026-01-08 05:24:09]   ASVspoof Eval - EER: 29.69% | AUC: 73.20%
+[2026-01-08 05:24:09]     Spoof Recall: 0.0% | Bonafide Recall: 100.0%
+[2026-01-08 05:24:09]   In-the-Wild - EER: 50.00% | AUC: nan%
+[2026-01-08 05:24:09]     Spoof Recall: 0.0% | Bonafide Recall: 0.0%
+[2026-01-08 05:24:10] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/dann_wavlm_fixed/20260108_052348/checkpoints/checkpoint_epoch_002.pt
+[2026-01-08 05:24:11] 
+============================================================
+[2026-01-08 05:24:11] Training complete!
+[2026-01-08 05:24:11] Best EER: 50.00% (epoch 1)
+[2026-01-08 05:24:11] Logs saved to: /content/drive/MyDrive/Jakob/Experiments/dann_wavlm_fixed/20260108_052348
+[2026-01-08 05:24:11] ============================================================

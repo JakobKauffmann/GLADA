@@ -1,0 +1,32 @@
+{
+  "backbone": "wavlm-large",
+  "results": {
+    "ITW": {
+      "name": "ITW",
+      "eer": 11.88,
+      "auc": 0.9494,
+      "acc": 88.1,
+      "n_samples": 31779,
+      "ci_low": 11.55,
+      "ci_high": 12.27
+    },
+    "2019_LA_eval": {
+      "name": "2019_LA_eval",
+      "eer": 1.66,
+      "auc": 0.9881,
+      "acc": 97.4,
+      "n_samples": 71237,
+      "ci_low": 1.57,
+      "ci_high": 1.76
+    },
+    "2019_LA_dev": {
+      "name": "2019_LA_dev",
+      "eer": 0.24,
+      "auc": 0.999,
+      "acc": 99.7,
+      "n_samples": 24844,
+      "ci_low": 0.16,
+      "ci_high": 0.34
+    }
+  }
+}

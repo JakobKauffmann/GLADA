@@ -1,0 +1,2 @@
+timestamp,epoch,step,task_loss,domain_loss,grl_alpha,learning_rate
+2026-02-02T22:05:24.560431,0,0,0.738677978515625,0.8035049438476562,0.0,4.000000000000002e-06

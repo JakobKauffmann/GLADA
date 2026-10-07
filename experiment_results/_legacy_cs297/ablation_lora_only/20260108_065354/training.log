@@ -1,0 +1,272 @@
+[2026-01-08 06:53:54] Experiment: ablation_lora_only
+[2026-01-08 06:53:54] Run ID: 20260108_065354
+[2026-01-08 06:53:54] Logging to: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354
+[2026-01-08 06:53:54] 
+Verifying paths:
+[2026-01-08 06:53:54] ASV Train Protocol: True
+[2026-01-08 06:53:54] ASV Eval Protocol: True
+[2026-01-08 06:53:54] ITW Metadata: True
+[2026-01-08 06:53:54] 
+Initializing datasets...
+[2026-01-08 06:53:54] Source train samples: 25380
+[2026-01-08 06:53:54]   Class distribution: bonafide=2580, spoof=22800
+[2026-01-08 06:53:54] Target train samples: 31779
+[2026-01-08 06:53:54] Source eval samples: 71237
+[2026-01-08 06:53:54]   Class distribution: bonafide=7355, spoof=63882
+[2026-01-08 06:53:54] Target eval samples: 31779
+[2026-01-08 06:53:54]   Class distribution: bonafide=19963, spoof=11816
+[2026-01-08 06:53:54] 
+Initializing model...
+[2026-01-08 06:53:55] Class counts: bonafide=2580, spoof=22800
+[2026-01-08 06:53:55] Class weights: bonafide=1.797, spoof=0.203
+[2026-01-08 06:53:55] 
+============================================================
+[2026-01-08 06:53:55] Training Configuration
+[2026-01-08 06:53:55] ============================================================
+[2026-01-08 06:53:55] Model: microsoft/wavlm-base-plus
+[2026-01-08 06:53:55] LoRA: True (r=8)
+[2026-01-08 06:53:55] Domain Adversarial: False
+[2026-01-08 06:53:55] Class Weighting: True
+[2026-01-08 06:53:55] Focal Loss: False
+[2026-01-08 06:53:55] Batch size: 32 x 4
+[2026-01-08 06:53:55] GRL warmup epochs: 5
+[2026-01-08 06:53:55] Domain loss weight: 0.05
+[2026-01-08 06:53:55] Device: cuda
+[2026-01-08 06:53:55] Parameters: 985,604 trainable / 95,367,540 total (1.03%)
+[2026-01-08 06:53:55] ============================================================
+
+[2026-01-08 06:56:19] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:56:19]                  Predicted
+[2026-01-08 06:56:19]                  Bonafide  Spoof
+[2026-01-08 06:56:19] Actual Bonafide     7225      130
+[2026-01-08 06:56:19] Actual Spoof       14720    49162
+[2026-01-08 06:56:53] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:56:53]                  Predicted
+[2026-01-08 06:56:53]                  Bonafide  Spoof
+[2026-01-08 06:56:53] Actual Bonafide     4741    15222
+[2026-01-08 06:56:53] Actual Spoof         354    11462
+[2026-01-08 06:56:53] 
+============================================================
+[2026-01-08 06:56:53] Epoch 1/10
+[2026-01-08 06:56:53]   Task Loss: 0.2280 | Domain Loss: 0.6562
+[2026-01-08 06:56:53]   ASVspoof Eval - EER: 9.66% | AUC: 95.71%
+[2026-01-08 06:56:53]     Spoof Recall: 77.0% | Bonafide Recall: 98.2%
+[2026-01-08 06:56:53]   In-the-Wild - EER: 31.31% | AUC: 75.84%
+[2026-01-08 06:56:53]     Spoof Recall: 97.0% | Bonafide Recall: 23.7%
+[2026-01-08 06:56:53]   ★ New best EER: 31.31%
+[2026-01-08 06:56:53] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_000.pt
+[2026-01-08 06:56:54] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/best_model.pt
+[2026-01-08 06:59:18] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 06:59:18]                  Predicted
+[2026-01-08 06:59:18]                  Bonafide  Spoof
+[2026-01-08 06:59:18] Actual Bonafide     7222      133
+[2026-01-08 06:59:18] Actual Spoof       10330    53552
+[2026-01-08 06:59:52] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 06:59:52]                  Predicted
+[2026-01-08 06:59:52]                  Bonafide  Spoof
+[2026-01-08 06:59:52] Actual Bonafide     2098    17865
+[2026-01-08 06:59:52] Actual Spoof          64    11752
+[2026-01-08 06:59:52] 
+============================================================
+[2026-01-08 06:59:52] Epoch 2/10
+[2026-01-08 06:59:52]   Task Loss: 0.0615 | Domain Loss: 0.6557
+[2026-01-08 06:59:52]   ASVspoof Eval - EER: 7.34% | AUC: 97.33%
+[2026-01-08 06:59:52]     Spoof Recall: 83.8% | Bonafide Recall: 98.2%
+[2026-01-08 06:59:52]   In-the-Wild - EER: 26.56% | AUC: 81.57%
+[2026-01-08 06:59:52]     Spoof Recall: 99.5% | Bonafide Recall: 10.5%
+[2026-01-08 06:59:52]   ★ New best EER: 26.56%
+[2026-01-08 06:59:53] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_001.pt
+[2026-01-08 06:59:53] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/best_model.pt
+[2026-01-08 07:02:18] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 07:02:18]                  Predicted
+[2026-01-08 07:02:18]                  Bonafide  Spoof
+[2026-01-08 07:02:18] Actual Bonafide     7234      121
+[2026-01-08 07:02:18] Actual Spoof        8563    55319
+[2026-01-08 07:02:52] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 07:02:52]                  Predicted
+[2026-01-08 07:02:52]                  Bonafide  Spoof
+[2026-01-08 07:02:52] Actual Bonafide     1222    18741
+[2026-01-08 07:02:52] Actual Spoof          26    11790
+[2026-01-08 07:02:52] 
+============================================================
+[2026-01-08 07:02:52] Epoch 3/10
+[2026-01-08 07:02:52]   Task Loss: 0.0396 | Domain Loss: 0.6566
+[2026-01-08 07:02:52]   ASVspoof Eval - EER: 6.73% | AUC: 97.77%
+[2026-01-08 07:02:52]     Spoof Recall: 86.6% | Bonafide Recall: 98.4%
+[2026-01-08 07:02:52]   In-the-Wild - EER: 24.26% | AUC: 83.83%
+[2026-01-08 07:02:52]     Spoof Recall: 99.8% | Bonafide Recall: 6.1%
+[2026-01-08 07:02:52]   ★ New best EER: 24.26%
+[2026-01-08 07:02:53] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_002.pt
+[2026-01-08 07:02:54] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/best_model.pt
+[2026-01-08 07:05:19] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 07:05:19]                  Predicted
+[2026-01-08 07:05:19]                  Bonafide  Spoof
+[2026-01-08 07:05:19] Actual Bonafide     7258       97
+[2026-01-08 07:05:19] Actual Spoof        9452    54430
+[2026-01-08 07:05:53] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 07:05:53]                  Predicted
+[2026-01-08 07:05:53]                  Bonafide  Spoof
+[2026-01-08 07:05:53] Actual Bonafide     1437    18526
+[2026-01-08 07:05:53] Actual Spoof          36    11780
+[2026-01-08 07:05:53] 
+============================================================
+[2026-01-08 07:05:53] Epoch 4/10
+[2026-01-08 07:05:53]   Task Loss: 0.0286 | Domain Loss: 0.6556
+[2026-01-08 07:05:53]   ASVspoof Eval - EER: 6.43% | AUC: 97.97%
+[2026-01-08 07:05:53]     Spoof Recall: 85.2% | Bonafide Recall: 98.7%
+[2026-01-08 07:05:53]   In-the-Wild - EER: 22.57% | AUC: 85.48%
+[2026-01-08 07:05:53]     Spoof Recall: 99.7% | Bonafide Recall: 7.2%
+[2026-01-08 07:05:53]   ★ New best EER: 22.57%
+[2026-01-08 07:05:54] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_003.pt
+[2026-01-08 07:05:55] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/best_model.pt
+[2026-01-08 07:05:56] Removed old checkpoint: checkpoint_epoch_000.pt
+[2026-01-08 07:08:19] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 07:08:19]                  Predicted
+[2026-01-08 07:08:19]                  Bonafide  Spoof
+[2026-01-08 07:08:19] Actual Bonafide     7230      125
+[2026-01-08 07:08:19] Actual Spoof        7890    55992
+[2026-01-08 07:08:53] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 07:08:53]                  Predicted
+[2026-01-08 07:08:53]                  Bonafide  Spoof
+[2026-01-08 07:08:53] Actual Bonafide     1064    18899
+[2026-01-08 07:08:53] Actual Spoof          18    11798
+[2026-01-08 07:08:53] 
+============================================================
+[2026-01-08 07:08:53] Epoch 5/10
+[2026-01-08 07:08:53]   Task Loss: 0.0234 | Domain Loss: 0.6568
+[2026-01-08 07:08:53]   ASVspoof Eval - EER: 6.25% | AUC: 98.11%
+[2026-01-08 07:08:53]     Spoof Recall: 87.6% | Bonafide Recall: 98.3%
+[2026-01-08 07:08:53]   In-the-Wild - EER: 21.54% | AUC: 86.15%
+[2026-01-08 07:08:53]     Spoof Recall: 99.8% | Bonafide Recall: 5.3%
+[2026-01-08 07:08:53]   ★ New best EER: 21.54%
+[2026-01-08 07:08:54] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_004.pt
+[2026-01-08 07:08:55] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/best_model.pt
+[2026-01-08 07:08:59] Removed old checkpoint: checkpoint_epoch_001.pt
+[2026-01-08 07:11:22] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 07:11:22]                  Predicted
+[2026-01-08 07:11:22]                  Bonafide  Spoof
+[2026-01-08 07:11:22] Actual Bonafide     7235      120
+[2026-01-08 07:11:22] Actual Spoof        7210    56672
+[2026-01-08 07:11:56] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 07:11:56]                  Predicted
+[2026-01-08 07:11:56]                  Bonafide  Spoof
+[2026-01-08 07:11:56] Actual Bonafide      890    19073
+[2026-01-08 07:11:56] Actual Spoof          17    11799
+[2026-01-08 07:11:56] 
+============================================================
+[2026-01-08 07:11:56] Epoch 6/10
+[2026-01-08 07:11:56]   Task Loss: 0.0212 | Domain Loss: 0.6567
+[2026-01-08 07:11:56]   ASVspoof Eval - EER: 5.93% | AUC: 98.29%
+[2026-01-08 07:11:56]     Spoof Recall: 88.7% | Bonafide Recall: 98.4%
+[2026-01-08 07:11:56]   In-the-Wild - EER: 20.83% | AUC: 86.87%
+[2026-01-08 07:11:56]     Spoof Recall: 99.9% | Bonafide Recall: 4.5%
+[2026-01-08 07:11:56]   ★ New best EER: 20.83%
+[2026-01-08 07:11:57] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_005.pt
+[2026-01-08 07:11:57] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/best_model.pt
+[2026-01-08 07:11:59] Removed old checkpoint: checkpoint_epoch_002.pt
+[2026-01-08 07:14:22] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 07:14:22]                  Predicted
+[2026-01-08 07:14:22]                  Bonafide  Spoof
+[2026-01-08 07:14:22] Actual Bonafide     7240      115
+[2026-01-08 07:14:22] Actual Spoof        7439    56443
+[2026-01-08 07:14:56] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 07:14:56]                  Predicted
+[2026-01-08 07:14:56]                  Bonafide  Spoof
+[2026-01-08 07:14:56] Actual Bonafide      915    19048
+[2026-01-08 07:14:56] Actual Spoof          17    11799
+[2026-01-08 07:14:56] 
+============================================================
+[2026-01-08 07:14:56] Epoch 7/10
+[2026-01-08 07:14:56]   Task Loss: 0.0185 | Domain Loss: 0.6553
+[2026-01-08 07:14:56]   ASVspoof Eval - EER: 6.01% | AUC: 98.26%
+[2026-01-08 07:14:56]     Spoof Recall: 88.4% | Bonafide Recall: 98.4%
+[2026-01-08 07:14:56]   In-the-Wild - EER: 20.98% | AUC: 86.91%
+[2026-01-08 07:14:56]     Spoof Recall: 99.9% | Bonafide Recall: 4.6%
+[2026-01-08 07:14:57] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_006.pt
+[2026-01-08 07:14:58] Removed old checkpoint: checkpoint_epoch_003.pt
+[2026-01-08 07:17:21] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 07:17:21]                  Predicted
+[2026-01-08 07:17:21]                  Bonafide  Spoof
+[2026-01-08 07:17:21] Actual Bonafide     7249      106
+[2026-01-08 07:17:21] Actual Spoof        8076    55806
+[2026-01-08 07:17:54] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 07:17:54]                  Predicted
+[2026-01-08 07:17:54]                  Bonafide  Spoof
+[2026-01-08 07:17:54] Actual Bonafide     1011    18952
+[2026-01-08 07:17:54] Actual Spoof          26    11790
+[2026-01-08 07:17:54] 
+============================================================
+[2026-01-08 07:17:55] Epoch 8/10
+[2026-01-08 07:17:55]   Task Loss: 0.0172 | Domain Loss: 0.6558
+[2026-01-08 07:17:55]   ASVspoof Eval - EER: 6.12% | AUC: 98.19%
+[2026-01-08 07:17:55]     Spoof Recall: 87.4% | Bonafide Recall: 98.6%
+[2026-01-08 07:17:55]   In-the-Wild - EER: 21.64% | AUC: 86.10%
+[2026-01-08 07:17:55]     Spoof Recall: 99.8% | Bonafide Recall: 5.1%
+[2026-01-08 07:17:55] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_007.pt
+[2026-01-08 07:17:56] Removed old checkpoint: checkpoint_epoch_004.pt
+[2026-01-08 07:20:20] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 07:20:20]                  Predicted
+[2026-01-08 07:20:20]                  Bonafide  Spoof
+[2026-01-08 07:20:20] Actual Bonafide     7251      104
+[2026-01-08 07:20:20] Actual Spoof        7777    56105
+[2026-01-08 07:20:54] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 07:20:54]                  Predicted
+[2026-01-08 07:20:54]                  Bonafide  Spoof
+[2026-01-08 07:20:54] Actual Bonafide      915    19048
+[2026-01-08 07:20:54] Actual Spoof          18    11798
+[2026-01-08 07:20:54] 
+============================================================
+[2026-01-08 07:20:54] Epoch 9/10
+[2026-01-08 07:20:54]   Task Loss: 0.0151 | Domain Loss: 0.6553
+[2026-01-08 07:20:54]   ASVspoof Eval - EER: 6.01% | AUC: 98.25%
+[2026-01-08 07:20:54]     Spoof Recall: 87.8% | Bonafide Recall: 98.6%
+[2026-01-08 07:20:54]   In-the-Wild - EER: 21.61% | AUC: 86.23%
+[2026-01-08 07:20:54]     Spoof Recall: 99.8% | Bonafide Recall: 4.6%
+[2026-01-08 07:20:55] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_008.pt
+[2026-01-08 07:20:56] Removed old checkpoint: checkpoint_epoch_005.pt
+[2026-01-08 07:23:20] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 07:23:20]                  Predicted
+[2026-01-08 07:23:20]                  Bonafide  Spoof
+[2026-01-08 07:23:20] Actual Bonafide     7246      109
+[2026-01-08 07:23:20] Actual Spoof        7679    56203
+[2026-01-08 07:23:54] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 07:23:54]                  Predicted
+[2026-01-08 07:23:54]                  Bonafide  Spoof
+[2026-01-08 07:23:54] Actual Bonafide      904    19059
+[2026-01-08 07:23:54] Actual Spoof          17    11799
+[2026-01-08 07:23:54] 
+============================================================
+[2026-01-08 07:23:54] Epoch 10/10
+[2026-01-08 07:23:54]   Task Loss: 0.0161 | Domain Loss: 0.6551
+[2026-01-08 07:23:54]   ASVspoof Eval - EER: 6.03% | AUC: 98.25%
+[2026-01-08 07:23:54]     Spoof Recall: 88.0% | Bonafide Recall: 98.5%
+[2026-01-08 07:23:54]   In-the-Wild - EER: 21.50% | AUC: 86.31%
+[2026-01-08 07:23:54]     Spoof Recall: 99.9% | Bonafide Recall: 4.5%
+[2026-01-08 07:23:54] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354/checkpoints/checkpoint_epoch_009.pt
+[2026-01-08 07:23:55] Removed old checkpoint: checkpoint_epoch_006.pt
+[2026-01-08 07:23:55] 
+============================================================
+[2026-01-08 07:23:55] Training complete!
+[2026-01-08 07:23:55] Best EER: 20.83% (epoch 6)
+[2026-01-08 07:23:55] Logs saved to: /content/drive/MyDrive/Jakob/Experiments/ablation_lora_only/20260108_065354
+[2026-01-08 07:23:55] ============================================================

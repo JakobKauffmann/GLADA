@@ -1,0 +1,17 @@
+{
+  "wavlmbaseplus_s42_frz3_vb0.01_blr5e-06_llrd0.9": {
+    "best_eer": 14.177515429611132,
+    "best_epoch": 7,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/aug_validation/full_glada_aug/20260505_194531"
+  },
+  "wavlmbaseplus_s42_frz3_no-glada_globalDA_vb0.01_blr5e-06_llrd0.9": {
+    "best_eer": 13.553634650643975,
+    "best_epoch": 3,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/aug_validation/no_glada_aug/20260505_194531"
+  },
+  "wavlmlarge_s42_frz3_vb0.01_blr5e-06_llrd0.9": {
+    "best_eer": 12.034172282704045,
+    "best_epoch": 1,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/aug_validation/bb_wavlm-large_aug/20260505_194531"
+  }
+}

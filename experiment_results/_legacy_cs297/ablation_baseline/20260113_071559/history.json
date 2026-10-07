@@ -1,0 +1,122 @@
+{
+  "config": {
+    "experiment_name": "ablation_baseline",
+    "ablation_mode": "dann_kd",
+    "run_id": "20260113_071559",
+    "model_name": "microsoft/wavlm-base-plus",
+    "hidden_size": 768,
+    "teacher_embedding_dim": 1024,
+    "use_lora": false,
+    "lora_r": 8,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "lora_target_modules": [
+      "q_proj",
+      "v_proj",
+      "k_proj",
+      "out_proj"
+    ],
+    "domain_loss_weight": 0.1,
+    "kd_loss_weight": 0.5,
+    "batch_size": 96,
+    "effective_batch_size": 512,
+    "grad_accum_steps": 2,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "num_epochs": 10,
+    "warmup_epochs": 1,
+    "num_workers": 4,
+    "use_amp": true,
+    "compile_model": false,
+    "pin_memory": true,
+    "prefetch_factor": 2,
+    "persistent_workers": false,
+    "max_audio_len": 64000,
+    "drive_log_dir": "/content/drive/MyDrive/Jakob/Experiments",
+    "save_every_epoch": true,
+    "keep_last_n_checkpoints": 3,
+    "use_dann": true,
+    "use_kd": true,
+    "alpha_task": 1.0,
+    "alpha_dann": 0.0,
+    "alpha_kd": 0.0
+  },
+  "epochs": [
+    {
+      "epoch": 7,
+      "train": {
+        "task_loss": 0.0560045257619949,
+        "domain_loss": 0.698928221382878,
+        "kd_loss": 0.0
+      },
+      "eval": {
+        "eer": 30.41131806434999,
+        "auc": 0.7699816236713615,
+        "accuracy": 0.401082475848831,
+        "precision": 0.9884453781512605,
+        "recall": 0.0471372038270801,
+        "f1": 0.0899832655988525
+      },
+      "time": 258.1163012981415,
+      "lr": 8.825974034466299e-05
+    },
+    {
+      "epoch": 8,
+      "train": {
+        "task_loss": 0.0482673253969882,
+        "domain_loss": 0.6991225205587618,
+        "kd_loss": 0.0
+      },
+      "eval": {
+        "eer": 29.35389657562496,
+        "auc": 0.7851902945805189,
+        "accuracy": 0.40224676673274806,
+        "precision": 0.9898682877406282,
+        "recall": 0.048940539998998146,
+        "f1": 0.09326968973747017
+      },
+      "time": 257.99207162857056,
+      "lr": 8.208878011933434e-05
+    },
+    {
+      "epoch": 9,
+      "train": {
+        "task_loss": 0.04528133017116819,
+        "domain_loss": 0.6993901713779478,
+        "kd_loss": 0.0
+      },
+      "eval": {
+        "eer": 31.416576997845468,
+        "auc": 0.7629970281683267,
+        "accuracy": 0.40684099562604237,
+        "precision": 0.9903083700440528,
+        "recall": 0.05630416270099684,
+        "f1": 0.1065503839226467
+      },
+      "time": 258.517697095871,
+      "lr": 7.494282462468477e-05
+    },
+    {
+      "epoch": 10,
+      "train": {
+        "task_loss": 0.03771781930206061,
+        "domain_loss": 0.699593846545075,
+        "kd_loss": 0.0
+      },
+      "eval": {
+        "eer": 29.547953744895217,
+        "auc": 0.7834111081126353,
+        "accuracy": 0.40246703798105665,
+        "precision": 0.9889558232931727,
+        "recall": 0.04934128137053549,
+        "f1": 0.0939930340187986
+      },
+      "time": 258.27462792396545,
+      "lr": 6.703900010239119e-05
+    }
+  ],
+  "best_epoch": 8,
+  "best_eer": 29.35389657562496,
+  "total_training_time": 1037.4515509605408,
+  "completed_at": "2026-01-13T07:33:18.780917"
+}

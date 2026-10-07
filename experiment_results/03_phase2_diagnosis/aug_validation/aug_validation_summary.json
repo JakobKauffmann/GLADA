@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "config": "full_glada_aug",
+      "orig_itw_eer": 19.71,
+      "aug_itw_eer": null,
+      "delta_itw": null,
+      "orig_2019LA_eer": 1.04,
+      "aug_2019LA_eer": null
+    },
+    {
+      "config": "no_glada_aug",
+      "orig_itw_eer": 14.89,
+      "aug_itw_eer": null,
+      "delta_itw": null,
+      "orig_2019LA_eer": 1.36,
+      "aug_2019LA_eer": null
+    },
+    {
+      "config": "bb_wavlm-large_aug",
+      "orig_itw_eer": 12.64,
+      "aug_itw_eer": null,
+      "delta_itw": null,
+      "orig_2019LA_eer": 4.08,
+      "aug_2019LA_eer": null
+    }
+  ],
+  "configs": [
+    "full_glada_aug",
+    "no_glada_aug",
+    "bb_wavlm-large_aug"
+  ]
+}

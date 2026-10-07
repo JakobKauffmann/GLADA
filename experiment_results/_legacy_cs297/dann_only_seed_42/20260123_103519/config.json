@@ -1,0 +1,11 @@
+{
+  "config_name": "dann_only",
+  "seed": 42,
+  "use_dann": true,
+  "use_lora": false,
+  "batch_size": 256,
+  "num_epochs": 10,
+  "learning_rate": 0.0001,
+  "domain_loss_weight": 0.1,
+  "gpu": "NVIDIA A100-SXM4-80GB"
+}

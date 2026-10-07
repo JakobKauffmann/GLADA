@@ -1,0 +1,17 @@
+{
+  "per_group_vib": {
+    "best_eer": 11.668599646312503,
+    "best_epoch": 16,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/vib_stagger/per_group_vib/20260505_195057"
+  },
+  "staggered": {
+    "best_eer": 12.058349118855666,
+    "best_epoch": 12,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/vib_stagger/staggered/20260505_223808"
+  },
+  "per_group_vib_staggered": {
+    "best_eer": 14.244099553028894,
+    "best_epoch": 6,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/vib_stagger/per_group_vib_staggered/20260506_002410"
+  }
+}

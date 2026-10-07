@@ -1,0 +1,11 @@
+{
+  "experiment_name": "dann_only_seed_42",
+  "seed": 42,
+  "use_dann": true,
+  "use_lora": false,
+  "use_kd": false,
+  "batch_size": 96,
+  "num_epochs": 10,
+  "learning_rate": 0.0001,
+  "domain_loss_weight": 0.1
+}

@@ -1,0 +1,567 @@
+{
+  "wavlm_base_plus__no_adapt": {
+    "eer": 22.4159,
+    "eer_threshold": 8.4e-05,
+    "auc": 85.0965,
+    "accuracy": 77.5827,
+    "precision": 85.3984,
+    "recall": 77.5785,
+    "f1": 81.3009,
+    "confusion_matrix": [
+      [
+        9168,
+        2648
+      ],
+      [
+        4476,
+        15487
+      ]
+    ]
+  },
+  "wavlm_base_plus__dann": {
+    "eer": 25.5739,
+    "eer_threshold": 0.014333,
+    "auc": 83.3121,
+    "accuracy": 74.4265,
+    "precision": 83.0984,
+    "recall": 74.4277,
+    "f1": 78.5244,
+    "confusion_matrix": [
+      [
+        8794,
+        3022
+      ],
+      [
+        5105,
+        14858
+      ]
+    ]
+  },
+  "wavlm_base_plus__dann_ib": {
+    "eer": 14.2424,
+    "eer_threshold": 0.023563,
+    "auc": 92.9625,
+    "accuracy": 85.7579,
+    "precision": 91.0493,
+    "recall": 85.7587,
+    "f1": 88.3248,
+    "confusion_matrix": [
+      [
+        10133,
+        1683
+      ],
+      [
+        2843,
+        17120
+      ]
+    ],
+    "bootstrap_eer_mean": 14.262,
+    "bootstrap_eer_ci_lo": 13.8607,
+    "bootstrap_eer_ci_hi": 14.6641
+  },
+  "wavlm_base_plus__caan": {
+    "eer": 14.5063,
+    "eer_threshold": 0.027948,
+    "auc": 92.6033,
+    "accuracy": 85.4936,
+    "precision": 90.8738,
+    "recall": 85.4932,
+    "f1": 88.1014,
+    "confusion_matrix": [
+      [
+        10102,
+        1714
+      ],
+      [
+        2896,
+        17067
+      ]
+    ],
+    "bootstrap_eer_mean": 14.5091,
+    "bootstrap_eer_ci_lo": 14.1061,
+    "bootstrap_eer_ci_hi": 14.9239
+  },
+  "wavlm_base_plus__mmd": {
+    "eer": 19.5555,
+    "eer_threshold": 0.008324,
+    "auc": 89.1195,
+    "accuracy": 80.4431,
+    "precision": 87.4238,
+    "recall": 80.4388,
+    "f1": 83.786,
+    "confusion_matrix": [
+      [
+        9506,
+        2310
+      ],
+      [
+        3905,
+        16058
+      ]
+    ],
+    "bootstrap_eer_mean": 19.5454,
+    "bootstrap_eer_ci_lo": 19.1222,
+    "bootstrap_eer_ci_hi": 20.0141
+  },
+  "wavlm_base_plus__coral": {
+    "eer": 23.4598,
+    "eer_threshold": 0.000121,
+    "auc": 84.2194,
+    "accuracy": 76.538,
+    "precision": 84.6473,
+    "recall": 76.5316,
+    "f1": 80.3851,
+    "confusion_matrix": [
+      [
+        9045,
+        2771
+      ],
+      [
+        4685,
+        15278
+      ]
+    ]
+  },
+  "wav2vec2_base__no_adapt": {
+    "eer": 33.692,
+    "eer_threshold": 6e-06,
+    "auc": 70.529,
+    "accuracy": 66.3079,
+    "precision": 76.8788,
+    "recall": 66.3077,
+    "f1": 71.203,
+    "confusion_matrix": [
+      [
+        7835,
+        3981
+      ],
+      [
+        6726,
+        13237
+      ]
+    ]
+  },
+  "wav2vec2_base__dann": {
+    "eer": 30.1179,
+    "eer_threshold": 0.044733,
+    "auc": 74.798,
+    "accuracy": 69.8826,
+    "precision": 79.6745,
+    "recall": 69.8843,
+    "f1": 74.4589,
+    "confusion_matrix": [
+      [
+        8257,
+        3559
+      ],
+      [
+        6012,
+        13951
+      ]
+    ]
+  },
+  "wav2vec2_base__dann_ib": {
+    "eer": 28.3839,
+    "eer_threshold": 0.014097,
+    "auc": 76.7773,
+    "accuracy": 71.6165,
+    "precision": 80.9982,
+    "recall": 71.6175,
+    "f1": 76.0196,
+    "confusion_matrix": [
+      [
+        8462,
+        3354
+      ],
+      [
+        5666,
+        14297
+      ]
+    ]
+  },
+  "wav2vec2_base__caan": {
+    "eer": 29.0076,
+    "eer_threshold": 0.283491,
+    "auc": 75.5001,
+    "accuracy": 70.9934,
+    "precision": 80.5238,
+    "recall": 70.9963,
+    "f1": 75.4605,
+    "confusion_matrix": [
+      [
+        8388,
+        3428
+      ],
+      [
+        5790,
+        14173
+      ]
+    ]
+  },
+  "wav2vec2_base__mmd": {
+    "eer": 28.7377,
+    "eer_threshold": 0.016156,
+    "auc": 76.9384,
+    "accuracy": 71.2609,
+    "precision": 80.7321,
+    "recall": 71.2568,
+    "f1": 75.6991,
+    "confusion_matrix": [
+      [
+        8421,
+        3395
+      ],
+      [
+        5738,
+        14225
+      ]
+    ]
+  },
+  "wav2vec2_base__coral": {
+    "eer": 34.2173,
+    "eer_threshold": 5e-06,
+    "auc": 69.4291,
+    "accuracy": 65.7824,
+    "precision": 76.46,
+    "recall": 65.7817,
+    "f1": 70.72,
+    "confusion_matrix": [
+      [
+        7773,
+        4043
+      ],
+      [
+        6831,
+        13132
+      ]
+    ]
+  },
+  "wav2vec2_large__no_adapt": {
+    "eer": 32.1479,
+    "eer_threshold": 0.002625,
+    "auc": 74.6511,
+    "accuracy": 67.853,
+    "precision": 78.0974,
+    "recall": 67.8555,
+    "f1": 72.6171,
+    "confusion_matrix": [
+      [
+        8017,
+        3799
+      ],
+      [
+        6417,
+        13546
+      ]
+    ]
+  },
+  "wav2vec2_large__dann": {
+    "eer": 31.4897,
+    "eer_threshold": 0.021005,
+    "auc": 76.0602,
+    "accuracy": 68.5107,
+    "precision": 78.6125,
+    "recall": 68.5117,
+    "f1": 73.2154,
+    "confusion_matrix": [
+      [
+        8095,
+        3721
+      ],
+      [
+        6286,
+        13677
+      ]
+    ]
+  },
+  "wav2vec2_large__mmd": {
+    "eer": 32.4463,
+    "eer_threshold": 0.010307,
+    "auc": 74.1601,
+    "accuracy": 67.554,
+    "precision": 77.8637,
+    "recall": 67.555,
+    "f1": 72.344,
+    "confusion_matrix": [
+      [
+        7982,
+        3834
+      ],
+      [
+        6477,
+        13486
+      ]
+    ]
+  },
+  "wav2vec2_large__coral": {
+    "eer": 32.2815,
+    "eer_threshold": 0.002655,
+    "auc": 74.3205,
+    "accuracy": 67.7177,
+    "precision": 77.9945,
+    "recall": 67.7153,
+    "f1": 72.4923,
+    "confusion_matrix": [
+      [
+        8002,
+        3814
+      ],
+      [
+        6445,
+        13518
+      ]
+    ]
+  },
+  "xlsr_300m__no_adapt": {
+    "eer": 22.3302,
+    "eer_threshold": 0.001693,
+    "auc": 86.022,
+    "accuracy": 77.6708,
+    "precision": 85.456,
+    "recall": 77.6737,
+    "f1": 81.3792,
+    "confusion_matrix": [
+      [
+        9177,
+        2639
+      ],
+      [
+        4457,
+        15506
+      ]
+    ]
+  },
+  "xlsr_300m__dann": {
+    "eer": 21.6451,
+    "eer_threshold": 0.019102,
+    "auc": 87.2647,
+    "accuracy": 78.3536,
+    "precision": 85.949,
+    "recall": 78.3499,
+    "f1": 81.9737,
+    "confusion_matrix": [
+      [
+        9259,
+        2557
+      ],
+      [
+        4322,
+        15641
+      ]
+    ]
+  },
+  "xlsr_300m__dann_ib": {
+    "eer": 19.0066,
+    "eer_threshold": 0.002613,
+    "auc": 89.4055,
+    "accuracy": 80.9937,
+    "precision": 87.8034,
+    "recall": 80.9948,
+    "f1": 84.2618,
+    "confusion_matrix": [
+      [
+        9570,
+        2246
+      ],
+      [
+        3794,
+        16169
+      ]
+    ],
+    "bootstrap_eer_mean": 19.0027,
+    "bootstrap_eer_ci_lo": 18.5554,
+    "bootstrap_eer_ci_hi": 19.4406
+  },
+  "xlsr_300m__mmd": {
+    "eer": 20.734,
+    "eer_threshold": 0.084929,
+    "auc": 87.5975,
+    "accuracy": 79.2662,
+    "precision": 86.593,
+    "recall": 79.2666,
+    "f1": 82.768,
+    "confusion_matrix": [
+      [
+        9366,
+        2450
+      ],
+      [
+        4139,
+        15824
+      ]
+    ],
+    "bootstrap_eer_mean": 20.7515,
+    "bootstrap_eer_ci_lo": 20.2649,
+    "bootstrap_eer_ci_hi": 21.2063
+  },
+  "xlsr_300m__coral": {
+    "eer": 21.5232,
+    "eer_threshold": 0.00158,
+    "auc": 86.9694,
+    "accuracy": 78.4764,
+    "precision": 86.0344,
+    "recall": 78.4752,
+    "f1": 82.0811,
+    "confusion_matrix": [
+      [
+        9273,
+        2543
+      ],
+      [
+        4297,
+        15666
+      ]
+    ],
+    "bootstrap_eer_mean": 21.5303,
+    "bootstrap_eer_ci_lo": 21.0329,
+    "bootstrap_eer_ci_hi": 21.9896
+  },
+  "wavlm_large__no_adapt": {
+    "eer": 21.9082,
+    "eer_threshold": 5.5e-05,
+    "auc": 85.1145,
+    "accuracy": 78.0925,
+    "precision": 85.7583,
+    "recall": 78.0945,
+    "f1": 81.7472,
+    "confusion_matrix": [
+      [
+        9227,
+        2589
+      ],
+      [
+        4373,
+        15590
+      ]
+    ]
+  },
+  "wavlm_large__dann": {
+    "eer": 19.6908,
+    "eer_threshold": 0.012567,
+    "auc": 87.5769,
+    "accuracy": 80.3078,
+    "precision": 87.3291,
+    "recall": 80.3036,
+    "f1": 83.6691,
+    "confusion_matrix": [
+      [
+        9490,
+        2326
+      ],
+      [
+        3932,
+        16031
+      ]
+    ],
+    "bootstrap_eer_mean": 19.6943,
+    "bootstrap_eer_ci_lo": 19.2506,
+    "bootstrap_eer_ci_hi": 20.1315
+  },
+  "wavlm_large__dann_ib": {
+    "eer": 18.3897,
+    "eer_threshold": 0.001956,
+    "auc": 89.1949,
+    "accuracy": 81.6105,
+    "precision": 88.2318,
+    "recall": 81.611,
+    "f1": 84.7923,
+    "confusion_matrix": [
+      [
+        9643,
+        2173
+      ],
+      [
+        3671,
+        16292
+      ]
+    ],
+    "bootstrap_eer_mean": 18.3807,
+    "bootstrap_eer_ci_lo": 17.9645,
+    "bootstrap_eer_ci_hi": 18.8041
+  },
+  "wavlm_large__caan": {
+    "eer": 18.2636,
+    "eer_threshold": 0.000783,
+    "auc": 89.3746,
+    "accuracy": 81.7364,
+    "precision": 88.3194,
+    "recall": 81.7362,
+    "f1": 84.9004,
+    "confusion_matrix": [
+      [
+        9658,
+        2158
+      ],
+      [
+        3646,
+        16317
+      ]
+    ],
+    "bootstrap_eer_mean": 18.2634,
+    "bootstrap_eer_ci_lo": 17.775,
+    "bootstrap_eer_ci_hi": 18.7357
+  },
+  "wavlm_large__mmd": {
+    "eer": 19.5884,
+    "eer_threshold": 0.023118,
+    "auc": 88.095,
+    "accuracy": 80.4147,
+    "precision": 87.3932,
+    "recall": 80.4238,
+    "f1": 83.7638,
+    "confusion_matrix": [
+      [
+        9500,
+        2316
+      ],
+      [
+        3908,
+        16055
+      ]
+    ],
+    "bootstrap_eer_mean": 19.6029,
+    "bootstrap_eer_ci_lo": 19.1347,
+    "bootstrap_eer_ci_hi": 20.0482
+  },
+  "wavlm_large__coral": {
+    "eer": 22.2688,
+    "eer_threshold": 0.00024,
+    "auc": 84.4565,
+    "accuracy": 77.7306,
+    "precision": 85.5025,
+    "recall": 77.7288,
+    "f1": 81.4306,
+    "confusion_matrix": [
+      [
+        9185,
+        2631
+      ],
+      [
+        4446,
+        15517
+      ]
+    ]
+  },
+  "FUSION__wavlm_bp+xlsr": {
+    "eer": 13.7011,
+    "eer_threshold": 0.078441,
+    "auc": 94.2927,
+    "accuracy": 86.2991,
+    "precision": 91.4098,
+    "recall": 86.2997,
+    "f1": 88.7812,
+    "confusion_matrix": [
+      [
+        10197,
+        1619
+      ],
+      [
+        2735,
+        17228
+      ]
+    ],
+    "bootstrap_eer_mean": 13.7212,
+    "bootstrap_eer_ci_lo": 13.3355,
+    "bootstrap_eer_ci_hi": 14.0978
+  }
+}

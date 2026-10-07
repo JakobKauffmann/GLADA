@@ -1,0 +1,55 @@
+{
+  "published": [
+    {
+      "method": "RawNet2",
+      "backbone": "RawNet2 (fixed)",
+      "itw_eer": 31.2,
+      "la_eer": 5.13,
+      "reference": "Tak et al., Interspeech 2021"
+    },
+    {
+      "method": "AASIST",
+      "backbone": "AASIST (fixed)",
+      "itw_eer": 24.7,
+      "la_eer": 0.83,
+      "reference": "Jung et al., ICASSP 2022"
+    },
+    {
+      "method": "AASIST + SSL",
+      "backbone": "Wav2Vec2-XLSR",
+      "itw_eer": 10.8,
+      "la_eer": 0.9,
+      "reference": "Tak et al., Interspeech 2022"
+    },
+    {
+      "method": "HierCon",
+      "backbone": "XLS-R-300M",
+      "itw_eer": 6.87,
+      "la_eer": null,
+      "reference": "Liang et al., arXiv 2602.01032, 2026"
+    },
+    {
+      "method": "MultiConv+CKA",
+      "backbone": "WavLM-Large",
+      "itw_eer": 4.44,
+      "la_eer": null,
+      "reference": "Tran et al., ACM MM 2025"
+    },
+    {
+      "method": "IB-CAAN",
+      "backbone": "WavLM-Large",
+      "itw_eer": 4.93,
+      "la_eer": null,
+      "reference": "Huang et al., arXiv 2509.23618, 2025"
+    }
+  ],
+  "ours": [
+    {
+      "method": "GLADA (ours)",
+      "backbone": "wavlm-large",
+      "itw_eer": 11.88,
+      "la_eer": 1.66,
+      "reference": "Ours"
+    }
+  ]
+}

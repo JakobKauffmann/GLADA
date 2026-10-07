@@ -1,0 +1,227 @@
+[
+  {
+    "experiment_name": "baseline_frozen",
+    "seed": 42,
+    "config_overrides": {
+      "description": "Frozen WavLM + classifier only",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": true
+    },
+    "best_eer": 31.06352752931447,
+    "best_eer_epoch": 49.0,
+    "best_auc": 0.7485557807163292,
+    "final_eer": 31.497239722532044,
+    "final_auc": 0.7441967729161508,
+    "train_time_min": 1.5126574794451395,
+    "trainable_params": 197378,
+    "total_params": 197378,
+    "log_dir": null,
+    "used_embedding_cache": true
+  },
+  {
+    "experiment_name": "baseline_frozen",
+    "seed": 123,
+    "config_overrides": {
+      "description": "Frozen WavLM + classifier only",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": true
+    },
+    "best_eer": 31.142634820592775,
+    "best_eer_epoch": 46.0,
+    "best_auc": 0.7476643592440192,
+    "final_eer": 31.40483154668906,
+    "final_auc": 0.7457146622572002,
+    "train_time_min": 1.4772918979326883,
+    "trainable_params": 197378,
+    "total_params": 197378,
+    "log_dir": null,
+    "used_embedding_cache": true
+  },
+  {
+    "experiment_name": "baseline_frozen",
+    "seed": 456,
+    "config_overrides": {
+      "description": "Frozen WavLM + classifier only",
+      "use_lora": false,
+      "use_domain_adversarial": false,
+      "freeze_backbone": true
+    },
+    "best_eer": 30.441545150674987,
+    "best_eer_epoch": 50.0,
+    "best_auc": 0.7552273372970869,
+    "final_eer": 30.441545150674987,
+    "final_auc": 0.7552273372970869,
+    "train_time_min": 1.4703316847483316,
+    "trainable_params": 197378,
+    "total_params": 197378,
+    "log_dir": null,
+    "used_embedding_cache": true
+  },
+  {
+    "experiment_name": "baseline_lora",
+    "seed": 42,
+    "config_overrides": {
+      "description": "LoRA fine-tuning without DANN",
+      "use_lora": true,
+      "use_domain_adversarial": false,
+      "lora_r": 8,
+      "lora_alpha": 32
+    },
+    "best_eer": 17.189232163117207,
+    "best_eer_epoch": 10.0,
+    "best_auc": 90.43414495048745,
+    "final_eer": 19.702550980315614,
+    "final_auc": 88.04645355926066,
+    "train_time_min": 28.54924123287201,
+    "trainable_params": 985604,
+    "total_params": 95367540,
+    "log_dir": "/content/drive/MyDrive/Jakob/Experiments/baseline_lora_seed42/20260202_225834"
+  },
+  {
+    "experiment_name": "baseline_lora",
+    "seed": 123,
+    "config_overrides": {
+      "description": "LoRA fine-tuning without DANN",
+      "use_lora": true,
+      "use_domain_adversarial": false,
+      "lora_r": 8,
+      "lora_alpha": 32
+    },
+    "best_eer": 17.398660100739516,
+    "best_eer_epoch": 11.0,
+    "best_auc": 90.26326963175713,
+    "final_eer": 18.11054602164987,
+    "final_auc": 89.56655310801625,
+    "train_time_min": 28.53778791030248,
+    "trainable_params": 985604,
+    "total_params": 95367540,
+    "log_dir": "/content/drive/MyDrive/Jakob/Experiments/baseline_lora_seed123/20260202_232709"
+  },
+  {
+    "experiment_name": "baseline_lora",
+    "seed": 456,
+    "config_overrides": {
+      "description": "LoRA fine-tuning without DANN",
+      "use_lora": true,
+      "use_domain_adversarial": false,
+      "lora_r": 8,
+      "lora_alpha": 32
+    },
+    "best_eer": 18.839186660860847,
+    "best_eer_epoch": 18.0,
+    "best_auc": 88.8116873697722,
+    "final_eer": 18.931766320163526,
+    "final_auc": 88.78801671718271,
+    "train_time_min": 28.416518139839173,
+    "trainable_params": 985604,
+    "total_params": 95367540,
+    "log_dir": "/content/drive/MyDrive/Jakob/Experiments/baseline_lora_seed456/20260202_235543"
+  },
+  {
+    "experiment_name": "dann_frozen",
+    "seed": 42,
+    "config_overrides": {
+      "description": "DANN with frozen WavLM",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true,
+      "domain_loss_weight": 0.1
+    },
+    "best_eer": 31.269501633200843,
+    "best_eer_epoch": 50.0,
+    "best_auc": 0.7469534680967509,
+    "final_eer": 31.269501633200843,
+    "final_auc": 0.7469534680967509,
+    "train_time_min": 1.7601716955502829,
+    "trainable_params": 394756,
+    "total_params": 394756,
+    "log_dir": null,
+    "used_embedding_cache": true
+  },
+  {
+    "experiment_name": "dann_frozen",
+    "seed": 123,
+    "config_overrides": {
+      "description": "DANN with frozen WavLM",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true,
+      "domain_loss_weight": 0.1
+    },
+    "best_eer": 30.781122251181614,
+    "best_eer_epoch": 50.0,
+    "best_auc": 0.75136479001047,
+    "final_eer": 30.781122251181614,
+    "final_auc": 0.75136479001047,
+    "train_time_min": 1.7588364640871683,
+    "trainable_params": 394756,
+    "total_params": 394756,
+    "log_dir": null,
+    "used_embedding_cache": true
+  },
+  {
+    "experiment_name": "dann_frozen",
+    "seed": 456,
+    "config_overrides": {
+      "description": "DANN with frozen WavLM",
+      "use_lora": false,
+      "use_domain_adversarial": true,
+      "freeze_backbone": true,
+      "domain_loss_weight": 0.1
+    },
+    "best_eer": 29.99859213987312,
+    "best_eer_epoch": 50.0,
+    "best_auc": 0.7611331852552814,
+    "final_eer": 29.99859213987312,
+    "final_auc": 0.7611331852552814,
+    "train_time_min": 1.7599533716837565,
+    "trainable_params": 394756,
+    "total_params": 394756,
+    "log_dir": null,
+    "used_embedding_cache": true
+  },
+  {
+    "experiment_name": "dann_lora",
+    "seed": 42,
+    "config_overrides": {
+      "description": "DANN + LoRA fine-tuning",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "lora_r": 8,
+      "lora_alpha": 32,
+      "domain_loss_weight": 0.1
+    },
+    "best_eer": 17.18188974586058,
+    "best_eer_epoch": 10.0,
+    "best_auc": 90.43310354351894,
+    "final_eer": 19.73200034993648,
+    "final_auc": 88.04325620882045,
+    "train_time_min": 28.440599727630616,
+    "trainable_params": 985604,
+    "total_params": 95367540,
+    "log_dir": "/content/drive/MyDrive/Jakob/Experiments/dann_lora_seed42/20260203_002927"
+  },
+  {
+    "experiment_name": "dann_lora",
+    "seed": 123,
+    "config_overrides": {
+      "description": "DANN + LoRA fine-tuning",
+      "use_lora": true,
+      "use_domain_adversarial": true,
+      "lora_r": 8,
+      "lora_alpha": 32,
+      "domain_loss_weight": 0.1
+    },
+    "best_eer": 17.418868652776087,
+    "best_eer_epoch": 11.0,
+    "best_auc": 90.26044132050521,
+    "final_eer": 18.108990588241596,
+    "final_auc": 89.56319847608394,
+    "train_time_min": 28.443153262138367,
+    "trainable_params": 985604,
+    "total_params": 95367540,
+    "log_dir": "/content/drive/MyDrive/Jakob/Experiments/dann_lora_seed123/20260203_005755"
+  }
+]

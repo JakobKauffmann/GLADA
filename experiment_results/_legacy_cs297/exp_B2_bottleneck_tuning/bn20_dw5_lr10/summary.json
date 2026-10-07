@@ -1,0 +1,19 @@
+{
+  "best_eer": 18.55695286618769,
+  "best_epoch": 11,
+  "bn_dim": 20,
+  "domain_weight": 0.05,
+  "max_lr": 0.0001,
+  "num_epochs": 30,
+  "elapsed_min": 1.1280921657880147,
+  "fixed_settings": {
+    "feature_noise_std": 0.1,
+    "grl_warmup_epochs": 5,
+    "batch_size": 48,
+    "disc_hidden": 64,
+    "disc_dropout": 0.3,
+    "feature_dropout": 0.3,
+    "optimizer": "single_AdamW",
+    "weight_decay": 0.01
+  }
+}

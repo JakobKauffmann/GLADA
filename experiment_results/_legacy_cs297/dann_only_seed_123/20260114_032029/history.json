@@ -1,0 +1,63 @@
+{
+  "epoch_metrics": [
+    {
+      "timestamp": "2026-01-14T03:45:11.647206",
+      "epoch": 1,
+      "epoch_time_sec": 1481.521378993988,
+      "learning_rate": 2.80550541194999e-05,
+      "train_task_loss": 0.5510330850427801,
+      "train_domain_loss": 0.5068047376293124,
+      "train_kd_loss": 0,
+      "train_total_loss": 0.6017135588057114,
+      "grl_alpha": 0.0,
+      "val_eer": 36.88271380930822,
+      "val_auc": 0.6582065955395953,
+      "val_accuracy": 63.33742408508763,
+      "val_precision": 84.72593582887701,
+      "val_recall": 50.79396884235836,
+      "val_f1": 63.51194763709248,
+      "val_precision_real": 50.4164353137146,
+      "val_precision_fake": 84.72593582887701,
+      "val_recall_real": 84.52945159106297,
+      "val_recall_fake": 50.79396884235836,
+      "val_eer_threshold": 0.14325793087482452,
+      "val_optimal_threshold": 0.20017795264720917
+    },
+    {
+      "timestamp": "2026-01-14T04:09:19.796643",
+      "epoch": 2,
+      "epoch_time_sec": 1441.6308233737946,
+      "learning_rate": 7.610998194916338e-05,
+      "train_task_loss": 0.2137259299104864,
+      "train_domain_loss": 0.07302380879550721,
+      "train_kd_loss": 0,
+      "train_total_loss": 0.2210283107900371,
+      "grl_alpha": 0.4621171572600098,
+      "val_eer": 33.698703891976734,
+      "val_auc": 0.7301372340793908,
+      "val_accuracy": 64.45451398722427,
+      "val_precision": 79.55801104972376,
+      "val_recall": 58.42809197014477,
+      "val_f1": 67.37523105360444,
+      "val_precision_real": 51.51886902675547,
+      "val_precision_fake": 79.55801104972376,
+      "val_recall_real": 74.636086662153,
+      "val_recall_fake": 58.42809197014477,
+      "val_eer_threshold": 0.025088774040341377,
+      "val_optimal_threshold": 0.033114396035671234
+    }
+  ],
+  "best_eer": 33.698703891976734,
+  "best_epoch": 2,
+  "config": {
+    "experiment_name": "dann_only_seed_123",
+    "seed": 123,
+    "use_dann": true,
+    "use_lora": false,
+    "use_kd": false,
+    "batch_size": 32,
+    "num_epochs": 10,
+    "learning_rate": 0.0001,
+    "domain_loss_weight": 0.1
+  }
+}

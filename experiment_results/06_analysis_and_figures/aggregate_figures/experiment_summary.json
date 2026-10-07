@@ -1,0 +1,745 @@
+{
+  "generated": "2026-04-07T17:49:02.599346",
+  "total_training_runs": 21,
+  "total_eval_models": 16,
+  "figures_dir": "/content/drive/MyDrive/Jakob/Experiments/figures",
+  "figures_generated": [
+    "fig_training_curves.png",
+    "fig_eer_comparison.png",
+    "fig_backbone_comparison.png",
+    "fig_ablation_chart.png",
+    "fig_crossdataset_heatmap.png"
+  ],
+  "training_runs": {
+    "ablation_backbone_only": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 20,
+      "best_itw_eer": 13.40017815117751,
+      "best_epoch": 7,
+      "use_glada": false
+    },
+    "ablation_full_data2vec-large": {
+      "backbone": "data2vec-large",
+      "seed": 42,
+      "epochs": 20,
+      "best_itw_eer": 18.152965391186964,
+      "best_epoch": 11,
+      "use_glada": true
+    },
+    "ablation_full_glada": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 18,
+      "best_itw_eer": 19.636561007871332,
+      "best_epoch": 3,
+      "use_glada": true
+    },
+    "ablation_full_wav2vec2-robust": {
+      "backbone": "wav2vec2-robust",
+      "seed": 42,
+      "epochs": 20,
+      "best_itw_eer": 21.87634823305987,
+      "best_epoch": 18,
+      "use_glada": true
+    },
+    "ablation_full_wavlm-large": {
+      "backbone": "wavlm-large",
+      "seed": 42,
+      "epochs": 20,
+      "best_itw_eer": 12.58723738781336,
+      "best_epoch": 9,
+      "use_glada": true
+    },
+    "ablation_full_wavlm-large_s123": {
+      "backbone": "wavlm-large",
+      "seed": 123,
+      "epochs": 20,
+      "best_itw_eer": 15.950276672982458,
+      "best_epoch": 9,
+      "use_glada": true
+    },
+    "ablation_full_wavlm-large_s2026": {
+      "backbone": "wavlm-large",
+      "seed": 2026,
+      "epochs": 17,
+      "best_itw_eer": 14.801224725118583,
+      "best_epoch": 2,
+      "use_glada": true
+    },
+    "ablation_full_xlsr-300m": {
+      "backbone": "xlsr-300m",
+      "seed": 42,
+      "epochs": 16,
+      "best_itw_eer": 19.67482852756272,
+      "best_epoch": 1,
+      "use_glada": true
+    },
+    "ablation_full_xlsr-300m_s42": {
+      "backbone": "xlsr-300m",
+      "seed": 42,
+      "epochs": 8,
+      "best_itw_eer": 18.346747211861235,
+      "best_epoch": 7,
+      "use_glada": true
+    },
+    "ablation_global_da_only": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 16,
+      "best_itw_eer": 15.01449779248007,
+      "best_epoch": 1,
+      "use_glada": false
+    },
+    "ablation_hierarchical_only": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 18,
+      "best_itw_eer": 13.466407225404915,
+      "best_epoch": 3,
+      "use_glada": false
+    },
+    "ablation_no_cka": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 16,
+      "best_itw_eer": 12.720147243626165,
+      "best_epoch": 1,
+      "use_glada": true
+    },
+    "ablation_no_da": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 18,
+      "best_itw_eer": 14.296023006475316,
+      "best_epoch": 3,
+      "use_glada": false
+    },
+    "ablation_no_glada": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 16,
+      "best_itw_eer": 15.01449779248007,
+      "best_epoch": 1,
+      "use_glada": false
+    },
+    "ablation_no_hier": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 20,
+      "best_itw_eer": 17.493138160369874,
+      "best_epoch": 9,
+      "use_glada": true
+    },
+    "ablation_no_rawboost": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 20,
+      "best_itw_eer": 16.81778076001198,
+      "best_epoch": 12,
+      "use_glada": true
+    },
+    "ablation_no_speaker": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 18,
+      "best_itw_eer": 13.439211305302084,
+      "best_epoch": 3,
+      "use_glada": true
+    },
+    "ablation_no_vib": {
+      "backbone": "wavlm-base-plus",
+      "seed": 42,
+      "epochs": 17,
+      "best_itw_eer": 14.654149360473953,
+      "best_epoch": 2,
+      "use_glada": true
+    },
+    "multiseed_full_glada_s456": {
+      "backbone": "wavlm-base-plus",
+      "seed": 456,
+      "epochs": 17,
+      "best_itw_eer": 19.92472189834199,
+      "best_epoch": 2,
+      "use_glada": true
+    },
+    "multiseed_no_cka_s456": {
+      "backbone": "wavlm-base-plus",
+      "seed": 456,
+      "epochs": 20,
+      "best_itw_eer": 16.149992796422875,
+      "best_epoch": 7,
+      "use_glada": true
+    },
+    "multiseed_no_glada_s456": {
+      "backbone": "wavlm-base-plus",
+      "seed": 456,
+      "epochs": 20,
+      "best_itw_eer": 19.776134554070595,
+      "best_epoch": 8,
+      "use_glada": false
+    }
+  },
+  "comprehensive_eval": {
+    "full_glada": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.039248179602728,
+          "ci_low": 0.9158261767704113,
+          "ci_high": 1.1829043988170043
+        },
+        "ITW": {
+          "eer": 19.70756024745983,
+          "ci_low": 19.25005355433736,
+          "ci_high": 20.16606613606166
+        },
+        "2021_LA": {
+          "eer": 31.015516894697946,
+          "ci_low": 30.70977001434886,
+          "ci_high": 31.305011651628615
+        },
+        "2021_DF": {
+          "eer": 27.73855551682496,
+          "ci_low": 27.5139582351556,
+          "ci_high": 27.978507130891394
+        },
+        "WaveFake": {
+          "eer": 27.876371764241952,
+          "ci_low": 27.450259654887827,
+          "ci_high": 28.42140174068109
+        },
+        "CodecFake": {
+          "eer": 37.76664457726406,
+          "ci_low": 36.27157843437829,
+          "ci_high": 39.359461316891114
+        }
+      }
+    },
+    "no_glada": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.3648679794159075,
+          "ci_low": 1.2322879724120688,
+          "ci_high": 1.5065605240855366
+        },
+        "ITW": {
+          "eer": 14.891379451443532,
+          "ci_low": 14.509151469529707,
+          "ci_high": 15.301375114107302
+        },
+        "2021_LA": {
+          "eer": 31.52801210760312,
+          "ci_low": 31.217722752402953,
+          "ci_high": 31.839914894237705
+        },
+        "2021_DF": {
+          "eer": 27.95750084192519,
+          "ci_low": 27.732960736470403,
+          "ci_high": 28.18916068284125
+        },
+        "WaveFake": {
+          "eer": 26.764031989364167,
+          "ci_low": 26.387813409133376,
+          "ci_high": 27.17902976815648
+        },
+        "CodecFake": {
+          "eer": 36.96760291750033,
+          "ci_low": 35.58929603028397,
+          "ci_high": 38.51282703502715
+        }
+      }
+    },
+    "no_vib": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 0.7219033240055073,
+          "ci_low": 0.6059363472121282,
+          "ci_high": 0.8727229690484813
+        },
+        "ITW": {
+          "eer": 14.580394303259267,
+          "ci_low": 14.192861736914391,
+          "ci_high": 14.97360590191085
+        },
+        "2021_LA": {
+          "eer": 33.01703977833688,
+          "ci_low": 32.69338459875955,
+          "ci_high": 33.33913755491263
+        },
+        "2021_DF": {
+          "eer": 29.726449292730837,
+          "ci_low": 29.47963036861063,
+          "ci_high": 29.98979772449987
+        },
+        "WaveFake": {
+          "eer": 19.167368512976914,
+          "ci_low": 18.806107209880405,
+          "ci_high": 19.521987050961595
+        },
+        "CodecFake": {
+          "eer": 36.88092325206982,
+          "ci_low": 35.49338411352083,
+          "ci_high": 38.4685003183458
+        }
+      }
+    },
+    "no_speaker": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 0.9308575841023699,
+          "ci_low": 0.8140898132773022,
+          "ci_high": 1.1084177449067558
+        },
+        "ITW": {
+          "eer": 13.479101876725158,
+          "ci_low": 13.113445134290723,
+          "ci_high": 13.902815361995593
+        },
+        "2021_LA": {
+          "eer": 31.778925602420404,
+          "ci_low": 31.465723489369136,
+          "ci_high": 32.10039708034721
+        },
+        "2021_DF": {
+          "eer": 27.574258033834877,
+          "ci_low": 27.354206896522065,
+          "ci_high": 27.80675294993159
+        },
+        "WaveFake": {
+          "eer": 27.29831968510043,
+          "ci_low": 26.891776966222626,
+          "ci_high": 27.98948091805426
+        },
+        "CodecFake": {
+          "eer": 37.57901209394793,
+          "ci_low": 35.92921370709251,
+          "ci_high": 39.100674359709316
+        }
+      }
+    },
+    "no_cka": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.072411699928303,
+          "ci_low": 0.9063963584994179,
+          "ci_high": 1.181399929783529
+        },
+        "ITW": {
+          "eer": 12.97846259317042,
+          "ci_low": 12.59735549824594,
+          "ci_high": 13.333443608471233
+        },
+        "2021_LA": {
+          "eer": 32.15189943308033,
+          "ci_low": 31.836679108119895,
+          "ci_high": 32.47339493578661
+        },
+        "2021_DF": {
+          "eer": 29.503560940418904,
+          "ci_low": 29.256394603247006,
+          "ci_high": 29.76006457629098
+        },
+        "WaveFake": {
+          "eer": 29.74412340639062,
+          "ci_low": 29.329231376309973,
+          "ci_high": 30.159880897394984
+        },
+        "CodecFake": {
+          "eer": 37.88114839405795,
+          "ci_low": 36.47817344715277,
+          "ci_high": 39.41469954369292
+        }
+      }
+    },
+    "no_rawboost": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.0478383293841136,
+          "ci_low": 0.9321776241870249,
+          "ci_high": 1.1662380357560425
+        },
+        "ITW": {
+          "eer": 16.66328327751635,
+          "ci_low": 16.227550030474788,
+          "ci_high": 17.079623318851617
+        },
+        "2021_LA": {
+          "eer": 31.984989765668974,
+          "ci_low": 31.669799818556758,
+          "ci_high": 32.28192396727292
+        },
+        "2021_DF": {
+          "eer": 26.860288347939377,
+          "ci_low": 26.661086585321776,
+          "ci_high": 27.055484198659656
+        },
+        "WaveFake": {
+          "eer": 23.142279715224067,
+          "ci_low": 22.767843726578263,
+          "ci_high": 23.490024238342027
+        },
+        "CodecFake": {
+          "eer": 39.276285327114316,
+          "ci_low": 37.7930898776025,
+          "ci_high": 40.748257196313595
+        }
+      }
+    },
+    "no_hier": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.154683012916555,
+          "ci_low": 1.021741835120942,
+          "ci_high": 1.2809398017411513
+        },
+        "ITW": {
+          "eer": 17.470082007841793,
+          "ci_low": 17.0472781889013,
+          "ci_high": 17.88799720816367
+        },
+        "2021_LA": {
+          "eer": 33.23538809717095,
+          "ci_low": 32.90628744114883,
+          "ci_high": 33.557439617719474
+        },
+        "2021_DF": {
+          "eer": 28.523849191808686,
+          "ci_low": 28.291610929622845,
+          "ci_high": 28.77067327271684
+        },
+        "WaveFake": {
+          "eer": 26.694432710366556,
+          "ci_low": 26.335583766475207,
+          "ci_high": 27.072379649494863
+        },
+        "CodecFake": {
+          "eer": 39.590528319038945,
+          "ci_low": 38.1673883478963,
+          "ci_high": 41.047691195519874
+        }
+      }
+    },
+    "global_da_only": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.4187161998697837,
+          "ci_low": 1.2781546593098598,
+          "ci_high": 1.560744166849298
+        },
+        "ITW": {
+          "eer": 14.98518365950604,
+          "ci_low": 14.557938761701761,
+          "ci_high": 15.371700899531392
+        },
+        "2021_LA": {
+          "eer": 31.514769974872394,
+          "ci_low": 31.208212457408308,
+          "ci_high": 31.82409510164366
+        },
+        "2021_DF": {
+          "eer": 27.946616927901534,
+          "ci_low": 27.717918813091927,
+          "ci_high": 28.1871379848612
+        },
+        "WaveFake": {
+          "eer": 26.61303345313274,
+          "ci_low": 26.233855229175074,
+          "ci_high": 27.01580627628863
+        },
+        "CodecFake": {
+          "eer": 37.268135611940174,
+          "ci_low": 35.84613665988936,
+          "ci_high": 38.80443219770757
+        }
+      }
+    },
+    "hierarchical_only": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.022476944926354,
+          "ci_low": 0.901329783902141,
+          "ci_high": 1.1642259052928234
+        },
+        "ITW": {
+          "eer": 13.280813157014817,
+          "ci_low": 12.922383143807878,
+          "ci_high": 13.62841463612322
+        },
+        "2021_LA": {
+          "eer": 29.355139463889664,
+          "ci_low": 29.078015007135374,
+          "ci_high": 29.621726412889373
+        },
+        "2021_DF": {
+          "eer": 27.239858881011937,
+          "ci_low": 27.026854681921392,
+          "ci_high": 27.45690800110937
+        },
+        "WaveFake": {
+          "eer": 23.247660363846496,
+          "ci_low": 22.92968303118465,
+          "ci_high": 23.569365886408473
+        },
+        "CodecFake": {
+          "eer": 39.086486383157684,
+          "ci_low": 37.48761522285192,
+          "ci_high": 40.46208093769746
+        }
+      }
+    },
+    "no_da": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 0.8002169022929341,
+          "ci_low": 0.692935855087141,
+          "ci_high": 0.903785304562436
+        },
+        "ITW": {
+          "eer": 14.19599706477973,
+          "ci_low": 13.820154555564242,
+          "ci_high": 14.629357593556715
+        },
+        "2021_LA": {
+          "eer": 30.36594187373315,
+          "ci_low": 30.083963493064513,
+          "ci_high": 30.65130814546831
+        },
+        "2021_DF": {
+          "eer": 27.00870704882489,
+          "ci_low": 26.778811973547068,
+          "ci_high": 27.214820849024576
+        },
+        "WaveFake": {
+          "eer": 24.541023043808558,
+          "ci_low": 24.17936826170582,
+          "ci_high": 24.80456005745402
+        },
+        "CodecFake": {
+          "eer": 37.977449693509534,
+          "ci_low": 36.48864241302692,
+          "ci_high": 39.450241889935015
+        }
+      }
+    },
+    "backbone_only": {
+      "backbone": "wavlm-base-plus",
+      "datasets": {
+        "2019_LA": {
+          "eer": 0.6210935181285017,
+          "ci_low": 0.5283668773317876,
+          "ci_high": 0.7318917100654135
+        },
+        "ITW": {
+          "eer": 13.596899355208624,
+          "ci_low": 13.210718067818094,
+          "ci_high": 13.982107410255137
+        },
+        "2021_LA": {
+          "eer": 32.36715752556611,
+          "ci_low": 32.051218829749146,
+          "ci_high": 32.693734099733874
+        },
+        "2021_DF": {
+          "eer": 28.49659040931462,
+          "ci_low": 28.257367781628677,
+          "ci_high": 28.738047467162826
+        },
+        "WaveFake": {
+          "eer": 23.331724719177142,
+          "ci_low": 22.958824853496164,
+          "ci_high": 23.713364007544975
+        },
+        "CodecFake": {
+          "eer": 37.455768095256296,
+          "ci_low": 35.86456405556305,
+          "ci_high": 38.98772400487159
+        }
+      }
+    },
+    "bb_wavlm-large_s42": {
+      "backbone": "wavlm-large",
+      "datasets": {
+        "2019_LA": {
+          "eer": 4.076309883976046,
+          "ci_low": 3.969422986955293,
+          "ci_high": 4.185592758465905
+        },
+        "ITW": {
+          "eer": 12.636895309470795,
+          "ci_low": 12.259953994445427,
+          "ci_high": 12.970972357854995
+        },
+        "2021_LA": {
+          "eer": 27.699619598183407,
+          "ci_low": 27.463657904426253,
+          "ci_high": 27.933139299134737
+        },
+        "2021_DF": {
+          "eer": 25.473804385528553,
+          "ci_low": 25.31105085137883,
+          "ci_high": 25.64641720692502
+        },
+        "WaveFake": {
+          "eer": 20.93230675849911,
+          "ci_low": 20.63511957465298,
+          "ci_high": 21.214854483499487
+        },
+        "CodecFake": {
+          "eer": 38.67492258089182,
+          "ci_low": 37.548365027408614,
+          "ci_high": 39.85796789847572
+        }
+      }
+    },
+    "bb_wavlm-large_s123": {
+      "backbone": "wavlm-large",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.2805691135451114,
+          "ci_low": 1.182190071382797,
+          "ci_high": 1.3924215475594948
+        },
+        "ITW": {
+          "eer": 15.93023960440559,
+          "ci_low": 15.535360025546865,
+          "ci_high": 16.347186702870744
+        },
+        "2021_LA": {
+          "eer": 29.39429047109925,
+          "ci_low": 29.12494386598572,
+          "ci_high": 29.654539813246245
+        },
+        "2021_DF": {
+          "eer": 25.631218151008806,
+          "ci_low": 25.455139999877556,
+          "ci_high": 25.814627366646157
+        },
+        "WaveFake": {
+          "eer": 19.52234569567554,
+          "ci_low": 19.130593791259724,
+          "ci_high": 19.823037557960216
+        },
+        "CodecFake": {
+          "eer": 34.78129367435972,
+          "ci_low": 33.457889917719235,
+          "ci_high": 36.11869446360308
+        }
+      }
+    },
+    "bb_xlsr-300m_s42": {
+      "backbone": "xlsr-300m",
+      "datasets": {
+        "2019_LA": {
+          "eer": 0.7061414494871605,
+          "ci_low": 0.6266338836280757,
+          "ci_high": 0.7920930993990133
+        },
+        "ITW": {
+          "eer": 18.404868234398837,
+          "ci_low": 17.960308168052077,
+          "ci_high": 18.85034440721206
+        },
+        "2021_LA": {
+          "eer": 32.39576403949812,
+          "ci_low": 32.08675503069993,
+          "ci_high": 32.707927970452026
+        },
+        "2021_DF": {
+          "eer": 28.17084691845467,
+          "ci_low": 27.946560117512245,
+          "ci_high": 28.416011183994044
+        },
+        "WaveFake": {
+          "eer": 23.19645961992049,
+          "ci_low": 22.916599145057532,
+          "ci_high": 23.526990443270606
+        },
+        "CodecFake": {
+          "eer": 34.18166197266861,
+          "ci_low": 32.78158565342941,
+          "ci_high": 35.60156587152164
+        }
+      }
+    },
+    "bb_data2vec-large": {
+      "backbone": "data2vec-large",
+      "datasets": {
+        "2019_LA": {
+          "eer": 1.6795407176100556,
+          "ci_low": 1.5727948261015539,
+          "ci_high": 1.8042772081548848
+        },
+        "ITW": {
+          "eer": 18.135763840830656,
+          "ci_low": 17.675501131493434,
+          "ci_high": 18.576781370502722
+        },
+        "2021_LA": {
+          "eer": 28.782228430387548,
+          "ci_low": 28.534120910407477,
+          "ci_high": 29.028993638084504
+        },
+        "2021_DF": {
+          "eer": 26.685211969549144,
+          "ci_low": 26.518787456997195,
+          "ci_high": 26.868958929043384
+        },
+        "WaveFake": {
+          "eer": 30.819595611900862,
+          "ci_low": 30.448469537092553,
+          "ci_high": 31.21976764449241
+        },
+        "CodecFake": {
+          "eer": 38.542757861915746,
+          "ci_low": 37.0186954305308,
+          "ci_high": 40.027256642499864
+        }
+      }
+    },
+    "bb_wav2vec2-robust": {
+      "backbone": "wav2vec2-robust",
+      "datasets": {
+        "2019_LA": {
+          "eer": 3.296565168133434,
+          "ci_low": 3.190851441105434,
+          "ci_high": 3.4096914067615423
+        },
+        "ITW": {
+          "eer": 21.977016654812758,
+          "ci_low": 21.46457888613509,
+          "ci_high": 22.426990311794235
+        },
+        "2021_LA": {
+          "eer": 26.622851891495756,
+          "ci_low": 26.41256704236971,
+          "ci_high": 26.84259706151119
+        },
+        "2021_DF": {
+          "eer": 27.83574680852996,
+          "ci_low": 27.621416986497287,
+          "ci_high": 28.05419634067742
+        },
+        "WaveFake": {
+          "eer": 30.674210917532623,
+          "ci_low": 30.251969860308215,
+          "ci_high": 31.067230412230842
+        },
+        "CodecFake": {
+          "eer": 39.73493778859592,
+          "ci_low": 38.26827689233898,
+          "ci_high": 41.299160826362986
+        }
+      }
+    }
+  }
+}

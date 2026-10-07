@@ -1,0 +1,16 @@
+{
+  "best_eer": 31.627560368876058,
+  "best_epoch": 20,
+  "bn_dim": 8,
+  "domain_weight": 0.05,
+  "max_lr": 5e-05,
+  "num_epochs": 30,
+  "elapsed_min": 43.9277348836263,
+  "constant_settings": {
+    "domain_noise_rate": 0.25,
+    "disc_dim": 32,
+    "disc_lr_mult": 0.1,
+    "feature_noise_std": 0.1,
+    "grl_warmup_epochs": 5
+  }
+}

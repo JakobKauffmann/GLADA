@@ -1,0 +1,49 @@
+[2026-01-08 03:24:14] Experiment: ablation_baseline_frozen
+[2026-01-08 03:24:14] Run ID: 20260108_032414
+[2026-01-08 03:24:14] Logging to: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline_frozen/20260108_032414
+[2026-01-08 03:24:14] 
+Verifying paths:
+[2026-01-08 03:24:14] ASV Train Protocol: True
+[2026-01-08 03:24:14] ASV Eval Protocol: True
+[2026-01-08 03:24:14] ITW Metadata: True
+[2026-01-08 03:24:14] 
+Initializing datasets...
+[2026-01-08 03:24:14] Source train samples: 25380
+[2026-01-08 03:24:14]   Class distribution: bonafide=2580, spoof=22800
+[2026-01-08 03:24:14] Target train samples: 31779
+[2026-01-08 03:24:14] Source eval samples: 71237
+[2026-01-08 03:24:14]   Class distribution: bonafide=7355, spoof=63882
+[2026-01-08 03:24:14] Target eval samples: 31779
+[2026-01-08 03:24:14]   Class distribution: bonafide=0, spoof=31779
+[2026-01-08 03:24:14] 
+Initializing model...
+[2026-01-08 03:24:15] Class counts: bonafide=2580, spoof=22800
+[2026-01-08 03:24:15] Class weights: bonafide=1.797, spoof=0.203
+[2026-01-08 03:24:15] 
+============================================================
+[2026-01-08 03:24:15] Training Configuration
+[2026-01-08 03:24:15] ============================================================
+[2026-01-08 03:24:15] Model: microsoft/wavlm-base-plus
+[2026-01-08 03:24:15] LoRA: False (r=8)
+[2026-01-08 03:24:15] Domain Adversarial: False
+[2026-01-08 03:24:15] Class Weighting: True
+[2026-01-08 03:24:15] Focal Loss: False
+[2026-01-08 03:24:15] Batch size: 32 x 4
+[2026-01-08 03:24:15] GRL warmup epochs: 5
+[2026-01-08 03:24:15] Domain loss weight: 0.05
+[2026-01-08 03:24:15] Device: cuda
+[2026-01-08 03:24:15] Parameters: 90,577,268 trainable / 94,777,716 total (95.57%)
+[2026-01-08 03:24:15] ============================================================
+
+[2026-01-08 03:27:45] 
+Confusion Matrix (ASVspoof_eval):
+[2026-01-08 03:27:45]                  Predicted
+[2026-01-08 03:27:45]                  Bonafide  Spoof
+[2026-01-08 03:27:45] Actual Bonafide     7350        5
+[2026-01-08 03:27:45] Actual Spoof        6731    57151
+[2026-01-08 03:28:19] 
+Confusion Matrix (In-the-Wild):
+[2026-01-08 03:28:19]                  Predicted
+[2026-01-08 03:28:19]                  Bonafide  Spoof
+[2026-01-08 03:28:19] Actual Bonafide        0        0
+[2026-01-08 03:28:19] Actual Spoof       16090    15689

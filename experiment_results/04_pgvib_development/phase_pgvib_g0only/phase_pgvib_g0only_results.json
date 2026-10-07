@@ -1,0 +1,22 @@
+{
+  "g0_only_vib_s42": {
+    "best_eer": 13.01766723075469,
+    "best_epoch": 6,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_g0only/g0_only_vib_s42/20260507_192923"
+  },
+  "g0_only_vib_s123": {
+    "best_eer": 13.929568788243357,
+    "best_epoch": 7,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_g0only/g0_only_vib_s123/20260507_221612"
+  },
+  "g0_only_vib_s456": {
+    "best_eer": 13.301021709051389,
+    "best_epoch": 2,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_g0only/g0_only_vib_s456/20260508_010328"
+  },
+  "g0_only_large_s42": {
+    "best_eer": 12.952203790960468,
+    "best_epoch": 2,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_g0only/g0_only_large_s42/20260508_032430"
+  }
+}

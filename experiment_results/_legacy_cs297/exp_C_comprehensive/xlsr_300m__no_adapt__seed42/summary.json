@@ -1,0 +1,12 @@
+{
+  "best_eer": 22.304995623080764,
+  "best_epoch": 10,
+  "backbone": "xlsr_300m",
+  "method": "no_adapt",
+  "seed": 42,
+  "domain_weight": 0.0,
+  "lr": 0.0001,
+  "input_dim": 1024,
+  "num_epochs": 30,
+  "elapsed_min": 0.7563416997591654
+}

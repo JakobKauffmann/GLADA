@@ -1,0 +1,67 @@
+{
+  "config": {
+    "experiment_name": "ablation_baseline",
+    "ablation_mode": "dann_kd",
+    "run_id": "20260113_063247",
+    "model_name": "microsoft/wavlm-base-plus",
+    "hidden_size": 768,
+    "teacher_embedding_dim": 1024,
+    "use_lora": false,
+    "lora_r": 8,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "lora_target_modules": [
+      "q_proj",
+      "v_proj",
+      "k_proj",
+      "out_proj"
+    ],
+    "domain_loss_weight": 0.0,
+    "kd_loss_weight": 0.0,
+    "batch_size": 96,
+    "effective_batch_size": 512,
+    "grad_accum_steps": 2,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "num_epochs": 10,
+    "warmup_epochs": 1,
+    "num_workers": 4,
+    "use_amp": true,
+    "compile_model": false,
+    "pin_memory": true,
+    "prefetch_factor": 2,
+    "persistent_workers": false,
+    "max_audio_len": 64000,
+    "drive_log_dir": "/content/drive/MyDrive/Jakob/Experiments",
+    "save_every_epoch": true,
+    "keep_last_n_checkpoints": 3,
+    "use_dann": true,
+    "use_kd": true,
+    "alpha_task": 1.0,
+    "alpha_dann": 0.0,
+    "alpha_kd": 0.0
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train": {
+        "task_loss": 0.20199586680841589,
+        "domain_loss": 0.0,
+        "kd_loss": 0.0
+      },
+      "eval": {
+        "eer": 12.9319952389239,
+        "auc": 0.9430899940787546,
+        "accuracy": 0.7452091003492872,
+        "precision": 0.9847222222222223,
+        "recall": 0.6037669688924511,
+        "f1": 0.7485637984038754
+      },
+      "time": 259.83659648895264,
+      "lr": 5.228668355672455e-05
+    }
+  ],
+  "best_epoch": 1,
+  "best_eer": 12.9319952389239,
+  "total_training_time": 0
+}

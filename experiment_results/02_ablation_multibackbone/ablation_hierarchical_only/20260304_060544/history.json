@@ -1,0 +1,632 @@
+[
+  {
+    "epoch": 1,
+    "phase": 1,
+    "train": {
+      "spoof_loss": 0.15027353941015667,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.5629003736751759,
+      "total_loss": 0.1559025429408599,
+      "spoof_acc": 0.9278618825023311,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 17.197603481132038,
+        "auc": 0.8967733545040723,
+        "acc": 82.82828282828282,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.0567135688717026,
+        "auc": 0.9979286652559674,
+        "acc": 98.92471608854949,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.0,
+    "speaker_alpha": 0.0,
+    "lr": 0.0008399023461040262
+  },
+  {
+    "epoch": 2,
+    "phase": 1,
+    "train": {
+      "spoof_loss": 0.009965806292895207,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.41770793304425313,
+      "total_loss": 0.014142885540727465,
+      "spoof_acc": 0.9970435217065189,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 15.486508876899585,
+        "auc": 0.9184235461534782,
+        "acc": 84.5180779760219,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 0.9858479724609509,
+        "auc": 0.9941649160626309,
+        "acc": 98.93313867793422,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.2,
+    "speaker_alpha": 0.01,
+    "lr": 0.0002979237285560342
+  },
+  {
+    "epoch": 3,
+    "phase": 1,
+    "train": {
+      "spoof_loss": 0.004199180903505532,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.3864375674002782,
+      "total_loss": 0.008063556484582013,
+      "spoof_acc": 0.9985808906627356,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 13.466407225404915,
+        "auc": 0.9400829966378897,
+        "acc": 86.52883979986784,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.12809624287949,
+        "auc": 0.9930679666416737,
+        "acc": 98.72117017841852,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.4,
+    "speaker_alpha": 0.02,
+    "lr": 2.3424945727294787e-08
+  },
+  {
+    "epoch": 4,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.016417802214634777,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.3763002027795353,
+      "total_loss": 0.020180804187312103,
+      "spoof_acc": 0.996452226374887,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 16.26737968966352,
+        "auc": 0.9097109421386913,
+        "acc": 83.83209037414645,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.60242108947856,
+        "auc": 0.9646654880404815,
+        "acc": 93.6900767859399,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.6,
+    "speaker_alpha": 0.030000000000000006,
+    "lr": 0.00099976512447369
+  },
+  {
+    "epoch": 5,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.008049642383625384,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.32843899793126385,
+      "total_loss": 0.011334032300716952,
+      "spoof_acc": 0.9977924964173064,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 19.50158614357347,
+        "auc": 0.8756754519388288,
+        "acc": 80.49340759621133,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.9954831106324071,
+        "auc": 0.9816033687706541,
+        "acc": 96.71238261016045,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 0.8,
+    "speaker_alpha": 0.04,
+    "lr": 0.0009873771928599342
+  },
+  {
+    "epoch": 6,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.004564315587760426,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.2903281943123636,
+      "total_loss": 0.007467597493700958,
+      "spoof_acc": 0.9986991497741743,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 17.096560720949196,
+        "auc": 0.8906661014481395,
+        "acc": 82.92268479184366,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 2.397250807280612,
+        "auc": 0.9774785708635001,
+        "acc": 95.98102109858641,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.05,
+    "lr": 0.0009566049148866851
+  },
+  {
+    "epoch": 7,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0049303228804204935,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.21985996644961575,
+      "total_loss": 0.007128922488472566,
+      "spoof_acc": 0.9986597298447998,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 19.310480439931,
+        "auc": 0.8595710162989071,
+        "acc": 80.60983668460304,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.297699823035805,
+        "auc": 0.9891664123845267,
+        "acc": 98.05017055743505,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.06000000000000001,
+    "lr": 0.0009086090558633364
+  },
+  {
+    "epoch": 8,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0039022382399721335,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.20255126374841526,
+      "total_loss": 0.005927750832192396,
+      "spoof_acc": 0.9986991497741743,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 21.906966615388097,
+        "auc": 0.8400913643524203,
+        "acc": 78.01378268667987,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.4099790889520518,
+        "auc": 0.9895010325695888,
+        "acc": 98.1077249182307,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.07,
+    "lr": 0.000845200074157555
+  },
+  {
+    "epoch": 9,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0019412162352095874,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.18888575057855955,
+      "total_loss": 0.0038300737002450362,
+      "spoof_acc": 0.999448124090229,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 21.545350180840646,
+        "auc": 0.8529918742530824,
+        "acc": 78.46376537965322,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 0.9233015895150503,
+        "auc": 0.9939963002400906,
+        "acc": 98.90506337998512,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.08,
+    "lr": 0.0007687698286473881
+  },
+  {
+    "epoch": 10,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0022259309318865893,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.1799733547763432,
+      "total_loss": 0.004025664445397849,
+      "spoof_acc": 0.9993692846826032,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 20.396996249086534,
+        "auc": 0.855586683960452,
+        "acc": 79.57456181755246,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 5.35663817706384,
+        "auc": 0.9469423261715266,
+        "acc": 90.50072293892218,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.09,
+    "lr": 0.0006822013550851369
+  },
+  {
+    "epoch": 11,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0011677966575466784,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.16178578170071037,
+      "total_loss": 0.002785654453399469,
+      "spoof_acc": 0.9994875438504323,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 17.815091043006404,
+        "auc": 0.8945378418591658,
+        "acc": 82.23040372573082,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.5485653560223447,
+        "auc": 0.9860946458237678,
+        "acc": 97.51393236660724,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "lr": 0.0005887601147111286
+  },
+  {
+    "epoch": 12,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.000769412214316567,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.1575021357429738,
+      "total_loss": 0.0023444335420449445,
+      "spoof_acc": 0.9996846423694968,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 21.744679883580154,
+        "auc": 0.8157083050325566,
+        "acc": 78.2372006671072,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.0473070983974089,
+        "auc": 0.9907853090198956,
+        "acc": 98.35899883487514,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "lr": 0.0004919708173433086
+  },
+  {
+    "epoch": 13,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0011207259981605442,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.1422582667747419,
+      "total_loss": 0.0025433086534184927,
+      "spoof_acc": 0.9996452226656839,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 29.614071747017697,
+        "auc": 0.7591508873338492,
+        "acc": 70.11863180087478,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.885280987670782,
+        "auc": 0.982311727832828,
+        "acc": 96.83451015623903,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "lr": 0.0003954844653157521
+  },
+  {
+    "epoch": 14,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0014425729205320159,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.135737101079556,
+      "total_loss": 0.0027999438935989475,
+      "spoof_acc": 0.9997240620733097,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 20.89606801696205,
+        "auc": 0.8640067465196531,
+        "acc": 79.16233991000347,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.1631403549512631,
+        "auc": 0.991842477838399,
+        "acc": 98.52885438746719,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "lr": 0.0003029406335198887
+  },
+  {
+    "epoch": 15,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0005547699973635451,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.1289030568023955,
+      "total_loss": 0.001843800539886112,
+      "spoof_acc": 0.9996846423694968,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 19.989610476402337,
+        "auc": 0.8706993622867164,
+        "acc": 80.05601183171277,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 3.4571748544451575,
+        "auc": 0.9664598611678046,
+        "acc": 94.00452012296981,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "lr": 0.0002178301805018542
+  },
+  {
+    "epoch": 16,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0005262116035074157,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.12795544584178653,
+      "total_loss": 0.0018057660319751646,
+      "spoof_acc": 0.9998423211847484,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 19.91897836827515,
+        "auc": 0.8717602937811388,
+        "acc": 80.06230529595015,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 2.1537447176729736,
+        "auc": 0.9795962616832774,
+        "acc": 96.35301879641199,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "lr": 0.0001433635693094608
+  },
+  {
+    "epoch": 17,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0009591822332968477,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.12551486759306466,
+      "total_loss": 0.002214330890250737,
+      "spoof_acc": 0.999684642256716,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 20.023040212409203,
+        "auc": 0.8717214927337985,
+        "acc": 79.98363699298278,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 1.9298944938227498,
+        "auc": 0.9818673177821846,
+        "acc": 96.7544955570841,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "lr": 8.234976517613587e-05
+  },
+  {
+    "epoch": 18,
+    "phase": 2,
+    "train": {
+      "spoof_loss": 0.0005269128133239008,
+      "domain_loss": 0.0,
+      "glada_loss": 0.0,
+      "speaker_loss": 0.0,
+      "kl_loss": 0.0,
+      "kl_raw": 0.0,
+      "cka_loss": 0.12460142187950402,
+      "total_loss": 0.00177292700600524,
+      "spoof_acc": 0.9996846423694968,
+      "speaker_acc": 0.0
+    },
+    "kl_loss_raw": 0.0,
+    "kl_loss_clamped": 0.0,
+    "eval": {
+      "ITW": {
+        "eer": 20.210967430911715,
+        "auc": 0.8702636035263748,
+        "acc": 79.78224613738632,
+        "name": "ITW"
+      },
+      "2019_LA": {
+        "eer": 2.0637792815275455,
+        "auc": 0.9807097961100995,
+        "acc": 96.54673835226076,
+        "name": "2019_LA"
+      }
+    },
+    "domain_alpha": 1.0,
+    "speaker_alpha": 0.1,
+    "lr": 3.7090278158875144e-05
+  }
+]

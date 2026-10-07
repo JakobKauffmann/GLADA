@@ -1,0 +1,40 @@
+[2026-01-07 22:41:50] Experiment: ablation_baseline
+[2026-01-07 22:41:50] Run ID: 20260107_224150
+[2026-01-07 22:41:50] Logging to: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline/20260107_224150
+[2026-01-07 22:41:50] 
+Verifying paths:
+[2026-01-07 22:41:50] ASV Protocol exists: True
+[2026-01-07 22:41:50] ITW Metadata exists: True
+[2026-01-07 22:41:50] 
+Initializing datasets...
+[2026-01-07 22:41:51] Source samples: 25380
+[2026-01-07 22:41:51] Target samples: 31779
+[2026-01-07 22:41:51] Eval samples: 31779
+[2026-01-07 22:41:51] 
+Initializing model...
+[2026-01-07 22:41:51] 
+============================================================
+[2026-01-07 22:41:51] Training Configuration
+[2026-01-07 22:41:51] ============================================================
+[2026-01-07 22:41:51] Model: microsoft/wavlm-base-plus
+[2026-01-07 22:41:51] LoRA: True (r=8)
+[2026-01-07 22:41:51] Domain Adversarial: True
+[2026-01-07 22:41:51] Batch size: 64 x 4 = 256
+[2026-01-07 22:41:51] Mixed Precision: True
+[2026-01-07 22:41:51] Debug Mode: False
+[2026-01-07 22:41:51] Device: cuda
+[2026-01-07 22:41:51] Parameters: 985,604 trainable / 95,367,540 total (1.03%)
+[2026-01-07 22:41:51] ============================================================
+
+[2026-01-07 22:55:16] 
+Epoch 1/10
+[2026-01-07 22:55:16]   Task Loss: 0.4781 | Domain Loss: 0.3541
+[2026-01-07 22:55:16]   Eval EER: 50.00% | AUC: nan% | Acc: 98.79%
+[2026-01-07 22:55:16]   ★ New best EER!
+[2026-01-07 22:55:17] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline/20260107_224150/checkpoints/checkpoint_epoch_000.pt
+[2026-01-07 22:55:18] Saved best model: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline/20260107_224150/checkpoints/best_model.pt
+[2026-01-07 23:08:48] 
+Epoch 2/10
+[2026-01-07 23:08:48]   Task Loss: 0.1468 | Domain Loss: 0.0243
+[2026-01-07 23:08:48]   Eval EER: 50.00% | AUC: nan% | Acc: 99.29%
+[2026-01-07 23:08:55] Saved checkpoint: /content/drive/MyDrive/Jakob/Experiments/ablation_baseline/20260107_224150/checkpoints/checkpoint_epoch_001.pt

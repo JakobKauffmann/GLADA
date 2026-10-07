@@ -1,0 +1,32 @@
+{
+  "monolithic_vib_s42": {
+    "best_eer": 14.279335906498112,
+    "best_epoch": 2,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_monolithic/monolithic_vib_s42/20260507_192442"
+  },
+  "monolithic_vib_s123": {
+    "best_eer": 16.522601129964503,
+    "best_epoch": 2,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_monolithic/monolithic_vib_s123/20260507_215211"
+  },
+  "monolithic_vib_s456": {
+    "best_eer": 13.171650262871214,
+    "best_epoch": 2,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_monolithic/monolithic_vib_s456/20260508_001735"
+  },
+  "g0_only_beta_x0p5": {
+    "best_eer": 10.728026435907104,
+    "best_epoch": 6,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_monolithic/g0_only_beta_x0p5/20260508_024142"
+  },
+  "g0_only_beta_x5": {
+    "best_eer": 11.771975556607757,
+    "best_epoch": 6,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_monolithic/g0_only_beta_x5/20260508_053315"
+  },
+  "g0_only_beta_x10": {
+    "best_eer": 11.806262709913135,
+    "best_epoch": 5,
+    "run_dir": "/content/drive/MyDrive/Jakob/Experiments/phase_pgvib_monolithic/g0_only_beta_x10/20260508_082537"
+  }
+}

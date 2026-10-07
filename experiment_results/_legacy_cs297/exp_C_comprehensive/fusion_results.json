@@ -1,0 +1,53 @@
+{
+  "individual_eers": {
+    "wavlm_base_plus__no_adapt": 22.415885434092342,
+    "wavlm_base_plus__dann": 25.573899815538915,
+    "wavlm_base_plus__dann_ib": 14.24237263616092,
+    "wavlm_base_plus__caan": 14.506296279125186,
+    "wavlm_base_plus__mmd": 19.555475615670982,
+    "wavlm_base_plus__coral": 23.45983455479299,
+    "wav2vec2_base__no_adapt": 33.691967707964544,
+    "wav2vec2_base__dann": 30.11794505176486,
+    "wav2vec2_base__dann_ib": 28.383873995598698,
+    "wav2vec2_base__caan": 29.007583291106148,
+    "wav2vec2_base__mmd": 28.73770118083383,
+    "wav2vec2_base__coral": 34.217310360320965,
+    "wav2vec2_large__no_adapt": 32.147893754088265,
+    "wav2vec2_large__dann": 31.489725821815718,
+    "wav2vec2_large__mmd": 32.44627603381761,
+    "wav2vec2_large__coral": 32.28149675070851,
+    "xlsr_300m__no_adapt": 22.33021344226155,
+    "xlsr_300m__dann": 21.64510077394025,
+    "xlsr_300m__dann_ib": 19.00664206100175,
+    "xlsr_300m__mmd": 20.733976933155724,
+    "xlsr_300m__coral": 21.523243228476403,
+    "wavlm_large__no_adapt": 21.908246700200383,
+    "wavlm_large__dann": 19.690805529159206,
+    "wavlm_large__dann_ib": 18.389668949506483,
+    "wavlm_large__caan": 18.263579853602554,
+    "wavlm_large__mmd": 19.588378819027792,
+    "wavlm_large__coral": 22.268810069447703
+  },
+  "best_single": {
+    "backbone": "wavlm_base_plus",
+    "method": "dann_ib",
+    "eer": 14.24237263616092
+  },
+  "best_heterogeneous": {
+    "models": [
+      "wavlm_base_plus__dann_ib",
+      "xlsr_300m__dann_ib"
+    ],
+    "eer": 13.701052982208012
+  },
+  "best_same_method": {
+    "method": "dann_ib",
+    "eer": 17.4331187375046
+  },
+  "best_topk": {
+    "k": 2,
+    "eer": 14.450851373619395
+  },
+  "overall_best_fusion_eer": 13.701052982208012,
+  "improvement_vs_single": 0.5413196539529093
+}
