@@ -17,7 +17,7 @@ Modules
                         group's representations and classical acoustic
                         descriptors (MFCC, spectral centroid, ZCR).
 
-These tools follow Rule 13 (logic in the package, not in notebooks) so the
+These tools keep logic in the package, not in notebooks, so the
 orchestrator notebook ``glada_acoustic_analysis.ipynb`` is a thin import +
 plot layer.
 """

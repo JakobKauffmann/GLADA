@@ -19,7 +19,7 @@ Configs trained:
   C. per_group_vib_staggered  — fix 1 + fix 2
   (baseline full_glada at 19.71% comes from Coding/results.json — no need to retrain)
 
-Per Rule 13, all *stable* logic lives in the glada package. This notebook
+All *stable* logic lives in the glada package. This notebook
 intentionally inlines the experimental subclasses (PerGroupVIBModel,
 StaggeredAlphaTrainer) and the custom sweep loop because (a) they're prototypes
 testing reviewer feedback that may not pan out, and (b) the user explicitly

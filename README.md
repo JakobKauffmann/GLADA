@@ -52,9 +52,15 @@ L = L_spoof + α·L_GLADA + β·L_KL + γ·L_speaker + δ·L_CKA
 ```
 
 `L_GLADA` is the per-group domain-adversarial loss, `L_KL` the VIB term, and
-`L_CKA` a penalty that keeps the groups' representations diverse. Defaults in
-`GLADAConfig`: α = 0.1, β = 1e-3, γ = 0.01, δ = 0.01. Training uses ASVspoof
-2019 LA as the labelled source domain and ITW as an unlabelled target domain.
+`L_CKA` a penalty that keeps the groups' representations diverse. Training
+uses ASVspoof 2019 LA as the labelled source domain and ITW as an unlabelled
+target domain.
+
+The headline runs used α = 0.1, β = 0.01, γ = 0.1, δ = 0.01 (the
+`GLADAConfig` defaults), 3 frozen-backbone epochs then 17 fine-tuning epochs,
+batch 64 per domain with an effective batch of 384, backbone LR 5e-6 with
+layer-wise decay 0.9, and RawBoost. Every run's exact settings are in its
+`config.json`.
 
 ## Results
 
@@ -89,7 +95,7 @@ wins on ITW.
 
 **Supporting checks** (single seed, s42; directional only):
 
-- *β sensitivity:* g0-only with β = 5·10⁻⁴ reached 10.73% ITW EER.
+- *β sensitivity:* g0-only with β halved (0.005) reached 10.73% ITW EER.
 - *Other backbones:* g0-only reached 12.95% ITW EER on WavLM-Large and 18.40%
   on XLS-R 300M.
 - *Linear probes:* on the post-bottleneck representations of the best
@@ -98,44 +104,26 @@ wins on ITW.
 
 ## Repository layout
 
-```
-glada/                  Python package (pip install -e glada/)
-  glada/config.py         GLADAConfig (all hyperparameters) and BACKBONE_REGISTRY
-  glada/models/           GLADAModel, PerGroupVIBModel, attention pooling, VIB, GRL, discriminators
-  glada/trainers/         two-phase trainer (frozen heads, then LLRD fine-tuning), ablation sweeps
-  glada/datasets/         ASVspoof 2019/2021, In-the-Wild, WaveFake, CodecFake+ loaders
-  glada/augmentation/     RawBoost, MUSAN, RIR
-  glada/evaluation/       EER, bootstrap CIs, multi-dataset evaluator, checkpoint averaging
-  glada/optimizer/        layer-wise LR decay, OneCycle scheduler
-  glada/analysis/         representation extraction, linear probes, CKA vs acoustic features
-notebooks/              Colab notebooks, grouped by project phase (below)
-experiment_results/     config.json / history.json / eval results for every run, same phase layout
-reference/              earlier DANN / CORAL / MMD / hierarchical DA prototypes
-DATASETS.md             dataset downloads and expected directory layout
-```
+Every folder has a README describing each file in it.
+
+| Path | Contents |
+|---|---|
+| [`glada/`](glada) | The Python package: models, training, datasets, augmentation, evaluation, analysis. |
+| [`notebooks/`](notebooks) | Colab notebooks in six numbered phases. Each phase README says what every notebook did and what it found. |
+| [`experiment_results/`](experiment_results) | `config.json` and `history.json` for every run, in the same numbered phases, plus aggregated result files. Each README links runs back to their notebook. |
+| [`reference/`](reference) | Earlier CS 297 prototypes (DANN, CORAL, MMD, and the hierarchical predecessor of GLADA). |
+| [`DATASETS.md`](DATASETS.md) | Dataset downloads and the expected directory layout. |
 
 Model checkpoints and raw audio are not included.
 
-## Project phases
-
-`notebooks/` and `experiment_results/` share the same numbered folders.
-
-| Folder | What it covers |
+| Phase | Question |
 |---|---|
-| `01_baseline_glada` | First end-to-end GLADA training and evaluation on WavLM-Large |
-| `02_ablation_multibackbone` | Component ablation, backbone screen (WavLM-Large, XLS-R 300M, Data2Vec, Wav2Vec2-Robust), group-count screen, multi-seed runs |
-| `03_phase2_diagnosis` | Diagnosing instability once the backbone is unfrozen: LR / freezing sweeps, masking and augmentation checks, VIB staggering |
-| `04_pgvib_development` | Per-group VIB: leave-one-group-out, single vs per-group VIB, g0-only, multi-seed replication |
-| `05_cross_dataset_eval` | Evaluation on ITW, ASVspoof 2021 LA/DF, WaveFake, CodecFake+ |
-| `06_analysis_and_figures` | Acoustic CKA analysis, speaker-leakage probe, latency benchmark, figures |
-| `07_strengthening_may19` | Checkpoint-averaging runs after submission (not reported in the thesis) |
-| `experiment_results/_legacy_cs297` | Results from the earlier CS 297 prototypes in `reference/` |
-
-Most phase 03, 04, and 07 notebooks are generated from the Python builders in
-`notebooks/utilities/`. A few phase 03 notebooks (`phase_b_confirm`,
-`phase_c_experiment`, `phase_d_ablation`, `phase_e_multiseed`,
-`phase_f_evaluation`, `phase_g_diagnostics`) are unexecuted templates; the rest
-keep their Colab outputs.
+| `01_baseline_glada` | Does the full GLADA stack train end-to-end on WavLM-Large? |
+| `02_ablation_multibackbone` | Which components and backbones help, on six datasets? (Full GLADA turned out worse on ITW than every single-component removal.) |
+| `03_phase2_diagnosis` | Why does ITW get worse after the backbone unfreezes? (Led to per-group VIB.) |
+| `04_pgvib_development` | Which group's bottleneck matters, over three seeds? |
+| `05_cross_dataset_eval` | Do the results hold on four held-out datasets? |
+| `06_analysis_and_figures` | What does each layer group encode; thesis figures. |
 
 ## Setup
 
@@ -169,11 +157,12 @@ Only ASVspoof 2019 LA and In-the-Wild (about 13 GB) are needed for training.
    - `phase_pgvib_monolithic.ipynb` for the single post-pool VIB
    - `phase_pgvib_g0only.ipynb` for g0-only (`PerGroupVIBModel` with
      `vib_disabled_groups=(1, 2)`)
-   - `phase_pgvib_replicate.ipynb` for the remaining per-group and
-     all-but-g0 seeds
+   - `phase_pgvib_replicate.ipynb` for per-group and all-but-g0 seeds 123
+     and 456 (seed 42 of per-group VIB comes from
+     `03_phase2_diagnosis/phase_vib_stagger.ipynb`)
    - `phase_a_leaveout.ipynb` for the single-seed leave-one-group-out ablation
 2. **Cross-dataset evaluation.** Run `cross_dataset_eval_pgvib_part_a.ipynb`
-   (ITW, ASVspoof 2021 LA/DF), `cross_dataset_eval_pgvib_part_b.ipynb`
+   (ASVspoof 2021 LA/DF), `cross_dataset_eval_pgvib_part_b.ipynb`
    (WaveFake, CodecFake+), then `cross_dataset_eval_pgvib_aggregate.ipynb` in
    `notebooks/05_cross_dataset_eval/`.
 

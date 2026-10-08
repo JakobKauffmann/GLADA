@@ -22,7 +22,7 @@ Default loss weights (validated empirically):
 
 Key design choices preserved from glada_experiment.ipynb:
   - Ablation switches (use_vib, use_speaker_adversary, …) let us toggle every
-    novel component independently for the ablation study (Rule 4).
+    novel component independently for the ablation study.
   - grl_warmup_epochs prevents early domain-discriminator collapse
     (Ganin et al., JMLR 2016).
   - domain_loss_weight is hard-capped at 0.1 — tested higher (0.5) and it

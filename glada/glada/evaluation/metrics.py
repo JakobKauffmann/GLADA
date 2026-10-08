@@ -52,7 +52,7 @@ by repeatedly resampling the test set with replacement:
     CI = [percentile(eer_samples, alpha/2), percentile(eer_samples, 1-alpha/2)]
 
 Standard in the ASVspoof community (B=1000, alpha=5% for 95% CI).
-Required by Rule 3 (committee-ready quality) for the thesis defense.
+Used for the confidence intervals reported in the thesis.
 """
 
 import numpy as np
@@ -156,7 +156,7 @@ def compute_eer_with_ci(labels: np.ndarray, scores: np.ndarray,
     Note: bootstrap resamples that happen to contain only one class are skipped
     (EER is undefined in that case). This rarely occurs on large test sets.
 
-    Required by Rule 3 (committee-ready quality) and Rule 14 (documentation).
+    Used for the confidence intervals reported in the thesis.
 
     Args:
         labels: Ground truth integer labels (0 = spoof, 1 = bonafide).

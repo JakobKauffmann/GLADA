@@ -19,14 +19,13 @@ Package layout::
   augmentation  — RawBoost (Tak et al., 2022), MUSAN (Snyder et al., 2015),
                    RIR (Ko et al., 2017), CombinedAugmenter pipeline
   datasets      — ASVspoof 2019 LA, In-the-Wild, WaveFake, CodecFake+, ASVspoof 2021
-  backbones     — Namespace for SSL backbone utilities (models loaded via HuggingFace)
-  models        — GLADAModel, GRL, VIB, HierarchicalAttentionPooling, discriminators
+  models        — GLADAModel, PerGroupVIBModel, GRL, VIB, HierarchicalAttentionPooling, discriminators
   optimizer     — LLRD optimizer (Clark et al., 2020) and OneCycleLR schedulers
   trainers      — Two-phase training loop, checkpointing, ablation sweep runner
   evaluation    — EER, bootstrap CI, multi-dataset evaluator, checkpoint averaging
 
-Notebooks in ``Coding/notebooks/`` are thin orchestration layers that import from
-this package — model and training logic must never be inlined in notebooks (Rule 13).
+Notebooks in ``notebooks/`` are thin orchestration layers that import from
+this package; model and training logic is not inlined in notebooks.
 """
 
 from .config import BACKBONE_REGISTRY, GLADAConfig, set_seed
