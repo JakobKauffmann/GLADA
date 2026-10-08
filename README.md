@@ -1,31 +1,48 @@
 # GLADA: Grouped Layer Adversarial Domain Adaptation for Audio Deepfake Detection
 
-Code for the SJSU MS Computer Science thesis *Targeted Bottlenecking of
-Self-Supervised Speech Layers for Generalizable Audio Deepfake Detection*
-(Jakob Kauffmann, Spring 2026).
+GLADA is a research codebase for cross-domain audio deepfake detection. It was
+built to test one question: **where inside a self-supervised speech model
+should an information bottleneck go so that a deepfake detector trained on one
+dataset still works on audio from somewhere else?**
 
-- **Advisor:** Dr. Faranak Abri
-- **Committee:** Dr. Amith Kamath Belman, Dr. Saptarshi Sengupta
+This code produced the results in:
 
-## Overview
+- **J. Kauffmann, F. Abri, and J. Webb**, *Per-Layer-Group Bottlenecking for
+  Cross-Domain Audio Deepfake Detection*, accepted to IEEE ICTAI 2026.
+- **J. Kauffmann**, *Targeted Bottlenecking of Self-Supervised Speech Layers for
+  Generalizable Audio Deepfake Detection*, MS thesis, San José State
+  University, 2026. Advisor: Dr. Faranak Abri. Committee: Dr. Amith Kamath
+  Belman, Dr. Saptarshi Sengupta.
 
-Audio deepfake detectors trained on one corpus tend to break on unfamiliar
-recording channels, codecs, and synthesizers. GLADA groups the hidden layers
-of a self-supervised speech model (WavLM, XLS-R, Data2Vec, Wav2Vec2) and, per
-layer group, applies attentive statistics pooling, a Variational Information
-Bottleneck (VIB), and a gradient-reversed domain discriminator. A CKA penalty
-keeps the groups diverse and a speaker adversary limits speaker leakage.
+## Why GLADA
+
+Deepfake detectors trained on controlled benchmarks often fail on real-world
+audio. End-to-end systems below 1% Equal Error Rate (EER) on ASVspoof 2019
+Logical Access reach 31 to 38% EER on the In-the-Wild (ITW) dataset. Recent
+work narrows that gap by combining self-supervised (SSL) speech features,
+adversarial domain adaptation, and a Variational Information Bottleneck (VIB).
+However, the bottleneck is applied once, after all layers are pooled, even
+though SSL layers carry domain-shift information (channel, codec, recording
+conditions) differently at different depths.
+
+GLADA tests whether placing the bottleneck at the layer group that carries the
+strongest domain signal generalizes better than one global bottleneck. It
+splits the SSL layers into groups and, for each group, puts a VIB and an
+adversarial domain discriminator on the same gradient path. The bottleneck can
+then be switched on or off per group to see where it matters.
+
+## How it works
 
 ```
 Raw audio (16 kHz, 4 s)
   -> RawBoost (training only)
-  -> SSL backbone (unfrozen in phase 2, gradient checkpointing)
+  -> SSL backbone (WavLM, XLS-R, Data2Vec, Wav2Vec2; unfrozen in phase 2)
   -> per-layer LayerNorm
   -> layer groups g_1..g_K, attentive statistics pooling per group
-  -> VIB (one per group, or a single post-pool VIB)
+  -> VIB per group (or a single post-pool VIB for comparison)
   -> spoof classifier
-     + per-group domain discriminators (GRL)
-     + speaker adversary (GRL)
+     + per-group domain discriminators (gradient reversal)
+     + speaker adversary (gradient reversal)
 ```
 
 Training objective:
@@ -34,27 +51,50 @@ Training objective:
 L = L_spoof + α·L_GLADA + β·L_KL + γ·L_speaker + δ·L_CKA
 ```
 
-Defaults in `GLADAConfig`: α = 0.1, β = 1e-3, γ = 0.01, δ = 0.01. Training
-uses ASVspoof 2019 LA as the labelled source domain and In-the-Wild (ITW) as an
-unlabelled target domain.
+`L_GLADA` is the per-group domain-adversarial loss, `L_KL` the VIB term, and
+`L_CKA` a penalty that keeps the groups' representations diverse. Defaults in
+`GLADAConfig`: α = 0.1, β = 1e-3, γ = 0.01, δ = 0.01. Training uses ASVspoof
+2019 LA as the labelled source domain and ITW as an unlabelled target domain.
 
 ## Results
 
-Multi-seed EER (%) on `wavlm-base-plus` (3 layer groups, seeds 42/123/456),
-trained on ASVspoof 2019 LA only. Mean ± std over seeds; lower is better.
+All headline numbers are on WavLM-Base-Plus (12 layers, K = 3 groups),
+trained on ASVspoof 2019 LA only, over seeds 42, 123, and 456. EER (%),
+mean ± std; lower is better.
 
-| VIB placement | ITW | ASVspoof 2021 LA | ASVspoof 2021 DF | WaveFake | CodecFake+ |
+**Where the bottleneck goes.** Per-group placement beats a single post-pool
+bottleneck on ITW by 2.69 points and also lowers the seed variance.
+
+| Bottleneck placement | s42 | s123 | s456 | Mean ± std |
+|---|---|---|---|---|
+| Single post-pool VIB | 14.28 | 16.52 | 13.17 | 14.66 ± 1.71 |
+| Per-group VIB (all groups) | 11.67 | 13.40 | 10.83 | **11.97 ± 1.31** |
+| Per-group VIB, lowest group only (g0) | 13.02 | 13.93 | 13.30 | 13.42 ± 0.47 |
+| Per-group VIB, all but g0 | 17.61 | 14.46 | 14.61 | 15.56 ± 1.78 |
+
+**Which group matters.** In a single-seed leave-one-out sweep, making a
+group's bottleneck deterministic raises ITW EER by +5.94 points for g0, +2.13
+for g1, and +0.32 for g2. The benefit concentrates in the lowest layer group.
+
+**Generalization to held-out datasets.** Bottlenecking only g0 gives the lowest
+mean EER on all four held-out benchmarks, even though full per-group placement
+wins on ITW.
+
+| Bottleneck placement | ITW | ASVspoof 2021 LA | ASVspoof 2021 DF | WaveFake | CodecFake+ |
 |---|---|---|---|---|---|
 | Single post-pool VIB | 14.66 ± 1.71 | 28.69 ± 0.65 | 44.04 ± 0.01 | 21.36 ± 2.10 | 38.65 ± 1.02 |
 | Per-group VIB (all groups) | **11.97 ± 1.31** | 31.18 ± 2.09 | 43.97 ± 0.12 | 23.12 ± 3.81 | 37.49 ± 2.78 |
-| Per-group VIB, lowest group only (g0) | 13.42 ± 0.47 | **27.94 ± 0.65** | **43.89 ± 0.12** | **19.98 ± 2.94** | **36.46 ± 2.48** |
+| Per-group VIB, g0 only | 13.42 ± 0.47 | **27.94 ± 0.65** | **43.89 ± 0.12** | **19.98 ± 2.94** | **36.46 ± 2.48** |
 | Per-group VIB, all but g0 | 15.56 ± 1.78 | 29.67 ± 1.19 | 43.93 ± 0.15 | 22.61 ± 1.77 | 36.90 ± 1.59 |
 
-Bottlenecking every group gives the best ITW EER. Bottlenecking only the lowest
-group is best on every secondary out-of-domain dataset and is the most stable
-across seeds. Per-group linear probes and CKA against acoustic descriptors
-place most of the codec and channel signal in that lowest group. See the
-thesis for the full ablations and analysis.
+**Supporting checks** (single seed, s42; directional only):
+
+- *β sensitivity:* g0-only with β = 5·10⁻⁴ reached 10.73% ITW EER.
+- *Other backbones:* g0-only reached 12.95% ITW EER on WavLM-Large and 18.40%
+  on XLS-R 300M.
+- *Linear probes:* on the post-bottleneck representations of the best
+  per-group checkpoint, codec accuracy drops with depth (0.857, 0.774, 0.563
+  for g0, g1, g2) while spoof information is preserved in every group.
 
 ## Repository layout
 
@@ -137,12 +177,25 @@ Only ASVspoof 2019 LA and In-the-Wild (about 13 GB) are needed for training.
    (WaveFake, CodecFake+), then `cross_dataset_eval_pgvib_aggregate.ipynb` in
    `notebooks/05_cross_dataset_eval/`.
 
+3. **Supporting checks.** The β probe runs are under
+   `phase_pgvib_monolithic/g0_only_beta_*`, the WavLM-Large and XLS-R runs
+   under `phase_pgvib_g0only/g0_only_large_s42` and
+   `phase_pgvib_replicate/g0_only_xlsr_s42`, and the linear probes are in
+   `notebooks/06_analysis_and_figures/glada_acoustic_analysis.ipynb`.
+
 The exact configuration and per-epoch history of each run are in the
 matching `experiment_results/04_pgvib_development/` folder.
 
 ## Citation
 
 ```bibtex
+@inproceedings{kauffmann2026perlayergroup,
+  author    = {Kauffmann, Jakob and Abri, Faranak and Webb, Jade},
+  title     = {Per-Layer-Group Bottlenecking for Cross-Domain Audio Deepfake Detection},
+  booktitle = {Proceedings of the IEEE International Conference on Tools with Artificial Intelligence (ICTAI)},
+  year      = {2026}
+}
+
 @mastersthesis{kauffmann2026glada,
   author = {Kauffmann, Jakob},
   title  = {Targeted Bottlenecking of Self-Supervised Speech Layers for Generalizable Audio Deepfake Detection},
