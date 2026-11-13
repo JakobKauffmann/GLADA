@@ -32,9 +32,15 @@ This code produced the results in:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JakobKauffmann/GLADA/blob/main/notebooks/00_demo/glada_demo.ipynb)
 
 [`notebooks/00_demo/glada_demo.ipynb`](notebooks/00_demo/glada_demo.ipynb)
-installs the package from GitHub, builds the per-group VIB model on
-WavLM-Base-Plus, runs it on a clip of audio, and scores predictions with the
-EER utilities. No trained weights are released, so the demo model is untrained.
+downloads a trained detector and labels audio as real or deepfake with
+percentages: a real LibriSpeech recording, a text-to-speech clip, and any file
+you upload.
+
+**Released weights** (GitHub release
+[`v1.0-weights`](https://github.com/JakobKauffmann/GLADA/releases/tag/v1.0-weights)):
+per-group VIB on the lowest layer group, WavLM-Base-Plus, seed 42
+(`model.safetensors` and `config.json`, about 470 MB). The release page has the
+model card, including how the checkpoint was selected and its limits.
 
 ## Why GLADA
 
@@ -137,11 +143,11 @@ Every folder has a README describing each file in it.
 | [`DATASETS.md`](DATASETS.md) | Dataset downloads and the expected directory layout. |
 | [`docs/`](docs) | The MS thesis PDF. |
 
-Model checkpoints and raw audio are not included.
+Raw audio is not included. One trained checkpoint is published as a GitHub release (see Try it).
 
 | Phase | Question |
 |---|---|
-| `00_demo` | How do you install, build, and run the model? (Colab demo.) |
+| `00_demo` | Colab demo: load the released detector and label clips as real or deepfake. |
 | `01_baseline_glada` | Does the full GLADA stack train end-to-end on WavLM-Large? |
 | `02_ablation_multibackbone` | Which components and backbones help, on six datasets? (Full GLADA turned out worse on ITW than every single-component removal.) |
 | `03_phase2_diagnosis` | Why does ITW get worse after the backbone unfreezes? (Led to per-group VIB.) |

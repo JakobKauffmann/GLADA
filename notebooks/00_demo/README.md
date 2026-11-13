@@ -2,4 +2,4 @@
 
 | Notebook | What it does |
 |---|---|
-| `glada_demo.ipynb` | Installs `glada` from GitHub, builds the per-group VIB model on WavLM-Base-Plus, predicts real or deepfake (with percentages) for a LibriSpeech example clip, compares the three bottleneck placements, and computes EER with a bootstrap confidence interval on synthetic scores. The model is untrained; no weights are released. |
+| `glada_demo.ipynb` | Installs `glada`, downloads the released detector (per-group VIB on g0, WavLM-Base-Plus, seed 42) from the `v1.0-weights` GitHub release, and labels clips as real or deepfake with percentages: a LibriSpeech recording, an espeak-ng text-to-speech clip, and any file you upload. |
