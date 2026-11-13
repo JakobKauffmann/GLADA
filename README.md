@@ -14,6 +14,19 @@ This code produced the results in:
   University, 2026. Advisor: Dr. Faranak Abri. Committee: Dr. Amith Kamath
   Belman, Dr. Saptarshi Sengupta.
 
+## Paper and thesis
+
+<a href="docs/kauffmann_2026_ms_thesis.pdf"><img src="docs/thesis-preview.png" alt="First page of the MS thesis" width="220" align="right"></a>
+
+- **Thesis full text:** [docs/kauffmann_2026_ms_thesis.pdf](docs/kauffmann_2026_ms_thesis.pdf)
+  (134 pages). ScholarWorks record: https://doi.org/10.31979/etd.kmc6-t6vf
+  (the ScholarWorks download opens in May 2027). This copy matches the filed
+  thesis except for one sentence removed from the acknowledgments.
+- **ICTAI 2026 paper:** accepted to IEEE ICTAI 2026. The DOI and the author's
+  accepted manuscript will be added here once the proceedings DOI is available.
+
+<br clear="right">
+
 ## Why GLADA
 
 Deepfake detectors trained on controlled benchmarks often fail on real-world
@@ -113,6 +126,7 @@ Every folder has a README describing each file in it.
 | [`experiment_results/`](experiment_results) | `config.json` and `history.json` for every run, in the same numbered phases, plus aggregated result files. Each README links runs back to their notebook. |
 | [`reference/`](reference) | Earlier CS 297 prototypes (DANN, CORAL, MMD, and the hierarchical predecessor of GLADA). |
 | [`DATASETS.md`](DATASETS.md) | Dataset downloads and the expected directory layout. |
+| [`docs/`](docs) | The MS thesis PDF. |
 
 Model checkpoints and raw audio are not included.
 
@@ -192,3 +206,9 @@ matching `experiment_results/04_pgvib_development/` folder.
   year   = {2026}
 }
 ```
+
+## License
+
+The code is released under the [MIT License](LICENSE). The thesis PDF is
+copyright Jakob Kauffmann and is shared for reading and citation. Datasets are
+not redistributed here; see [`DATASETS.md`](DATASETS.md) for where to get them.
