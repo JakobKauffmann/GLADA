@@ -7,12 +7,12 @@ with Layer-Wise Domain Adversarial Training (LWDA)
 Architecture:
   Raw Audio -> RawBoost (train) -> SSL Backbone (frozen or unfrozen with LLRD)
   -> Per-Layer LayerNorm -> Hierarchical Attention Pooling (grouped layers + ASP)
-  -> [LWDA: Per-group GRL + Domain Discriminators] (NOVEL)
+  -> [LWDA: Per-group GRL + Domain Discriminators]
   -> VIB Bottleneck -> Task Classifier + Speaker Adversary (GRL)
 
 Loss: L_spoof + alpha*L_LWDA + beta*L_KL + gamma*L_speaker + delta*L_CKA
 
-Primary novel contribution: Layer-Wise Domain Adversarial Training (LWDA) — applying
+Layer-Wise Domain Adversarial Training (LWDA): applying
 separate domain discriminators with GRL at each SSL layer group to enforce domain
 invariance at every level of the representation hierarchy.
 
@@ -122,7 +122,7 @@ class HierDAConfig:
     use_cka_loss: bool = True         # Toggle CKA diversity between groups
     use_hierarchical: bool = True     # Grouped attention (flat weighted sum if False)
     use_rawboost: bool = True         # Toggle RawBoost augmentation
-    use_lwda: bool = True             # Per-group domain discriminators (NOVEL)
+    use_lwda: bool = True             # Per-group domain discriminators
 
     # --- LWDA architecture ---
     lwda_disc_hidden: int = 128       # Hidden dim for per-group domain discriminators
@@ -384,7 +384,7 @@ class HierarchicalAttentionPooling(nn.Module):
 class LayerWiseDomainDiscriminators(nn.Module):
     """Per-group domain discriminators for Layer-Wise Domain Adversarial (LWDA) training.
     Each layer group's ASP output gets its own GRL + lightweight domain discriminator.
-    This is the primary novel contribution: enforcing domain invariance at each
+    This enforces domain invariance at each
     abstraction level of the SSL representation hierarchy."""
 
     def __init__(self, num_groups, input_dim, hidden_dim=128):
@@ -523,7 +523,7 @@ class HierDAModel(nn.Module):
         else:
             self.domain_disc = None
 
-        # --- LWDA: Per-group Domain Discriminators (NOVEL) ---
+        # --- LWDA: Per-group Domain Discriminators ---
         if config.use_lwda:
             self.lwda_disc = LayerWiseDomainDiscriminators(
                 num_groups=config.num_groups,
@@ -592,7 +592,7 @@ class HierDAModel(nn.Module):
             z_domain = GradientReversal.apply(z, self.domain_grl_alpha)
             result["domain_logits"] = self.domain_disc(z_domain)
 
-        # 7. LWDA: per-group domain discriminators (NOVEL)
+        # 7. LWDA: per-group domain discriminators
         if self.lwda_disc is not None:
             result["lwda_domain_logits"] = self.lwda_disc(group_outputs, self.domain_grl_alpha)
             result["group_outputs"] = group_outputs
@@ -1043,7 +1043,7 @@ class HierDATrainer:
                 if 'domain_logits' in out:
                     domain_loss = self.ce_loss(out['domain_logits'], domain_labels)
 
-                # LWDA: per-group domain losses (NOVEL)
+                # LWDA: per-group domain losses
                 lwda_loss = torch.tensor(0.0, device=self.device)
                 if 'lwda_domain_logits' in out:
                     group_losses = [self.ce_loss(lg, domain_labels)

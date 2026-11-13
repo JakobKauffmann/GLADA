@@ -8,7 +8,7 @@ three adversarial objectives applied simultaneously:
 
   1. Per-group domain discriminators (GRL) — one discriminator per SSL layer group,
      encouraging each group to produce domain-invariant representations.
-     This is the primary architectural contribution of GLADA.
+     This is the main component GLADA studies.
   2. Speaker adversary (GRL) — suppresses speaker identity leakage in the bottleneck.
   3. VIB bottleneck — information-theoretic regularisation that limits reliance on
      spurious cues (Alemi et al., ICLR 2017).

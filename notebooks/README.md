@@ -8,6 +8,7 @@ in `experiment_results/`.
 
 | Folder | Question it answered |
 |---|---|
+| [`00_demo`](00_demo) | How do you install the package, build the model, and run it? (Colab demo, untrained model.) |
 | [`01_baseline_glada`](01_baseline_glada) | Does the full GLADA stack train end-to-end, and is the implementation correct? |
 | [`02_ablation_multibackbone`](02_ablation_multibackbone) | Which components and which backbone help on ITW, measured on six datasets? |
 | [`03_phase2_diagnosis`](03_phase2_diagnosis) | Why does ITW EER get worse once the backbone is unfrozen, and does moving the VIB help? |

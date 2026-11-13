@@ -14,7 +14,7 @@ Architecture (chap3.tex Section 3, matching notation):
               z ~ N(mu_phi(pooled), sigma^2_phi(pooled))
         -> Task Classifier (binary: spoof vs. bonafide)
          + Speaker Adversary via GRL (disentangles speaker identity)
-         + GLADA Domain Discriminators via GRL (one per layer group -- NOVEL)
+         + GLADA Domain Discriminators via GRL (one per layer group)
 
 Total loss (chap3.tex Section 3.5):
     L = L_task + alpha * L_GLADA + beta * L_KL + gamma * L_speaker + delta * L_CKA
@@ -31,12 +31,13 @@ Total loss (chap3.tex Section 3.5):
       L_CKA     = mean pairwise CKA between group outputs
                   (Kornblith et al., ICML 2019; Tran et al., ACM MM 2025)
 
-Novel contribution
-------------------
-GLADA is the thesis's primary novel contribution: applying separate GRL + domain
-discriminators at each SSL layer group to enforce domain invariance at every
-level of the representation hierarchy.  This has not been done in any speech
-task prior to this work.
+Per-group domain discriminators
+-------------------------------
+GLADA applies a separate GRL + domain discriminator at each SSL layer group,
+so domain invariance is encouraged at each level of the representation
+hierarchy rather than only after pooling. Multi-layer adversarial domain
+adaptation has prior work in other modalities (below); GLADA uses it with
+grouped SSL speech layers.
 
 Precedent in other modalities:
     - Vision: MLADA (Fang et al., Neurocomputing 2021) -- multi-layer adversarial
@@ -50,7 +51,7 @@ Empirical motivation:
     capture semantic/phonetic patterns.  A single global discriminator cannot
     adapt all abstraction levels simultaneously.
 
-Supporting components (each has prior work -- NOT individually novel):
+Supporting components (each builds on prior work):
     - VIB: Alemi et al. (ICLR 2017); applied to deepfake detection by Huang
       et al. (IB-CAAN, 2025, arxiv 2509.23618)
     - CKA diversity: Kornblith et al. (ICML 2019); used by Tran et al. (ACM
@@ -58,8 +59,7 @@ Supporting components (each has prior work -- NOT individually novel):
     - Speaker adversary: disentangles speaker identity from spoof features
     - RawBoost: Tak et al. (ICASSP 2022)
 
-The novelty is the COMBINATION: grouped-layer DA + these supporting components,
-applied for the first time to audio deepfake detection.
+GLADA combines grouped-layer DA with these supporting components.
 """
 
 import torch
@@ -85,7 +85,7 @@ class GLADAModel(nn.Module):
         4. pooled = W_proj * [g_1 ; ... ; g_K] + b_proj   in R^{B x D}
         5. z ~ N(mu_phi(pooled), sigma^2_phi(pooled))  (VIB, Alemi et al., ICLR 2017)
         6. y_hat_task = Classifier(z)
-        7. y_hat_domain^{(k)} = D_k(GRL(g_k, alpha))  for k=1..K  (GLADA -- NOVEL)
+        7. y_hat_domain^{(k)} = D_k(GRL(g_k, alpha))  for k=1..K  (GLADA)
              GRL: Ganin et al., JMLR 2016
         8. y_hat_speaker = S(GRL(z, alpha_spk))
 
@@ -203,8 +203,8 @@ class GLADAModel(nn.Module):
         else:
             self.domain_disc = None
 
-        # --- GLADA: Per-group Domain Discriminators (NOVEL) ---
-        # PRIMARY NOVEL CONTRIBUTION: Separate GRL + domain discriminator per layer group.
+        # --- GLADA: Per-group Domain Discriminators ---
+        # Main component studied: Separate GRL + domain discriminator per layer group.
         # Precedent: MLADA (Fang et al., Neurocomputing 2021, vision),
         #            DAA (Ngo Trung et al., ACL 2021, NLP).
         # First application to any speech task. Enforces domain invariance at each
@@ -303,7 +303,7 @@ class GLADAModel(nn.Module):
                 - ``features``:      (B, bottleneck_dim) bottleneck representation z.
                 - ``domain_logits``: (B, 2) global domain disc output (if enabled).
                 - ``glada_domain_logits``: List of K (B, 2) per-group domain logits
-                    (if GLADA enabled -- NOVEL).
+                    (if GLADA enabled).
                 - ``group_outputs``: List of K (B, 2D) per-group ASP outputs
                     (if GLADA enabled).
                 - ``speaker_logits``: (B, num_speakers) speaker adversary output
@@ -405,7 +405,7 @@ class GLADAModel(nn.Module):
             z_domain = GradientReversal.apply(z, self.domain_grl_alpha)
             result["domain_logits"] = self.domain_disc(z_domain)
 
-        # === Step 7: GLADA per-group domain discriminators (NOVEL) ===
+        # === Step 7: GLADA per-group domain discriminators ===
         # y_hat_domain^{(k)} = D_k(GRL(g_k, alpha)) for k=1..K
         # Each discriminator operates on the pre-VIB group output g_k, so domain
         # invariance is enforced at every level of the SSL hierarchy independently.

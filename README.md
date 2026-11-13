@@ -27,6 +27,15 @@ This code produced the results in:
 
 <br clear="right">
 
+## Try it
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JakobKauffmann/GLADA/blob/main/notebooks/00_demo/glada_demo.ipynb)
+
+[`notebooks/00_demo/glada_demo.ipynb`](notebooks/00_demo/glada_demo.ipynb)
+installs the package from GitHub, builds the per-group VIB model on
+WavLM-Base-Plus, runs it on a clip of audio, and scores predictions with the
+EER utilities. No trained weights are released, so the demo model is untrained.
+
 ## Why GLADA
 
 Deepfake detectors trained on controlled benchmarks often fail on real-world
@@ -132,6 +141,7 @@ Model checkpoints and raw audio are not included.
 
 | Phase | Question |
 |---|---|
+| `00_demo` | How do you install, build, and run the model? (Colab demo.) |
 | `01_baseline_glada` | Does the full GLADA stack train end-to-end on WavLM-Large? |
 | `02_ablation_multibackbone` | Which components and backbones help, on six datasets? (Full GLADA turned out worse on ITW than every single-component removal.) |
 | `03_phase2_diagnosis` | Why does ITW get worse after the backbone unfreezes? (Led to per-group VIB.) |

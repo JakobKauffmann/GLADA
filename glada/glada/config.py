@@ -22,7 +22,7 @@ Default loss weights (validated empirically):
 
 Key design choices preserved from glada_experiment.ipynb:
   - Ablation switches (use_vib, use_speaker_adversary, …) let us toggle every
-    novel component independently for the ablation study.
+    component independently for the ablation study.
   - grl_warmup_epochs prevents early domain-discriminator collapse
     (Ganin et al., JMLR 2016).
   - domain_loss_weight is hard-capped at 0.1 — tested higher (0.5) and it
@@ -48,8 +48,8 @@ from typing import Dict
 # Maps short backbone keys to HuggingFace model IDs and architecture params.
 #
 # num_groups: how many SSL layer groups GLADA trains separate per-group domain
-#   discriminators for. This is the primary novel contribution of GLADA —
-#   applying separate GRL + domain discriminators at each SSL layer group.
+#   discriminators for (a separate GRL + domain discriminator at each SSL
+#   layer group).
 #   Precedent in vision: MLADA (Fang et al., Neurocomputing 2021).
 #   Precedent in NLP: DAA (Ngo Trung et al., ACL-IJCNLP 2021 Findings).
 #   First for audio deepfake detection: GLADA (this work).
@@ -229,7 +229,7 @@ class GLADAConfig:
     use_cka_loss: bool = True         # Toggle CKA diversity loss (Kornblith/Tran et al.)
     use_hierarchical: bool = True     # Grouped hierarchical attention; flat weighted sum if False
     use_rawboost: bool = True         # Toggle RawBoost augmentation (Tak et al., ICASSP 2022)
-    use_glada: bool = True            # Per-group domain discriminators — primary GLADA contribution
+    use_glada: bool = True            # Per-group domain discriminators (the main GLADA component)
 
     # --- GLADA architecture ---
     glada_disc_hidden: int = 128      # Hidden dim for per-group domain discriminators

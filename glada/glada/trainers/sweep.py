@@ -318,7 +318,7 @@ def generate_ablation_configs(base_config: GLADAConfig) -> List[GLADAConfig]:
     full.experiment_name = "ablation_full"
     configs.append(full)
 
-    # 2. -GLADA (removes the novel contribution — key comparison)
+    # 2. -GLADA (removes the per-group component — key comparison)
     no_glada = copy.deepcopy(base_config)
     no_glada.use_glada = False
     no_glada.experiment_name = "ablation_no_glada"
